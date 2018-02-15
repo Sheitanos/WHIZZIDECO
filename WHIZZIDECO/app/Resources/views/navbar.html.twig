@@ -11,14 +11,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a id="haut" href="">
-                    <img class="pull-left logoNav" src="" alt="logoWhizziDeco">
+                    <img class="pull-left logoNav" href="{{ path ('homepage') }}" src="" alt="logoWhizziDeco">
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="linkNav text-center" href="">ACCUEIL</a></li>
+                    <li><a class="linkNav text-center" href="{{ path ('homepage') }}">ACCUEIL</a></li>
                     <li><a class="linkNav text-center" href="{{ path ('index_prestations') }}">PRESTATIONS</a></li>
                     <li><a class="linkNav text-center" href="{{ path ('index_realisations') }}">RÉALISATIONS</a></li>
                     <li><a class="linkNav text-center" href="{{ path ('index_actualites') }}">ACTUALITÉS</a></li>

@@ -17,28 +17,28 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="93" lean-forward="false" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
+            <state relative-caret-position="72">
+              <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StyleNavBar.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/assets/css/StyleNavBar.css">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/home/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="90">
+              <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StyleGlobal.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/assets/css/StyleGlobal.css">
+      <file leaf-file-name="StyleHome.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/assets/css/StyleHome.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="navbar.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/navbar.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+            <state relative-caret-position="108">
+              <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -69,13 +69,11 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/web/assets/css/StyleHome.css" />
         <option value="$PROJECT_DIR$/web/assets/css/StylePrestations.css" />
         <option value="$PROJECT_DIR$/web/assets/css/StyleRealisation.css" />
         <option value="$PROJECT_DIR$/web/assets/css/StyleActualites.css" />
         <option value="$PROJECT_DIR$/web/assets/css/StyleContact.css" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/home/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/home/actualites.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/home/prestations.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/home/realisations.html.twig" />
@@ -84,9 +82,11 @@
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/footer.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/css/StyleFooter.css" />
-        <option value="$PROJECT_DIR$/app/Resources/views/navbar.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/css/StyleGlobal.css" />
         <option value="$PROJECT_DIR$/web/assets/css/StyleNavBar.css" />
+        <option value="$PROJECT_DIR$/app/Resources/views/navbar.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/home/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/assets/css/StyleHome.css" />
       </list>
     </option>
   </component>
@@ -230,6 +230,13 @@
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="WHIZZIDECO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WHIZZIDECO" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -286,12 +293,12 @@
       <workItem from="1518123083331" duration="4710000" />
       <workItem from="1518177545988" duration="116000" />
       <workItem from="1518188346324" duration="4367000" />
-      <workItem from="1518281810480" duration="5831000" />
+      <workItem from="1518281810480" duration="7014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17460000" />
+    <option name="totallyTimeSpent" value="18643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1004" extended-state="6" />
@@ -463,13 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/StyleHome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/assets/css/StylePrestations.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -549,14 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/home/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/home/actualites.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -581,14 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="93" lean-forward="false" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/footer.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -605,10 +589,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/navbar.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/assets/css/StyleNavBar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+        <state relative-caret-position="200">
+          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -621,10 +605,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/StyleNavBar.css">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/navbar.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="108">
+          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/css/StyleHome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
