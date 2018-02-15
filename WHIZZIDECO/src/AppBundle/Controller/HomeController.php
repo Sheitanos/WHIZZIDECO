@@ -23,4 +23,14 @@ class HomeController extends Controller
         return $this->render("home/index.html.twig");
     }
 
+    /**
+     * @Route("/prestations", name="index_prestations")
+     */
+    public function prestationsAction()
+    {
+
+        return $this->render('home/prestations.html.twig');
+    }
+
+
 }
