@@ -32,5 +32,33 @@ class HomeController extends Controller
         return $this->render('home/prestations.html.twig');
     }
 
+    /**
+     * @Route("/realisations", name="index_realisations")
+     */
+    public function realisationsAction()
+    {
+
+        return $this->render('home/prestations.html.twig');
+    }
+
+    /**
+     * @Route("/ractualites", name="index_actualites")
+     */
+    public function actualitesAction()
+    {
+
+        return $this->render('home/actualites.html.twig');
+    }
+
+    /**
+     * @Route("/contact", name="index_contact")
+     */
+    public function contactAction()
+    {
+
+        return $this->render('home/contact.html.twig');
+    }
+
+
 
 }
