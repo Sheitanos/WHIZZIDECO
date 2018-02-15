@@ -38,7 +38,7 @@ class HomeController extends Controller
     public function realisationsAction()
     {
 
-        return $this->render('home/prestations.html.twig');
+        return $this->render('home/realisations.html.twig');
     }
 
     /**
