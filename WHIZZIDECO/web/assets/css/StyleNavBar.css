@@ -33,3 +33,9 @@
     background: white;
 }
 
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    color: green;
+    background-color: transparent;
+}
+
