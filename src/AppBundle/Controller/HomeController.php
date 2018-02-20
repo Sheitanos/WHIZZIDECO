@@ -21,9 +21,11 @@ class HomeController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $homes = $em->getRepository('AppBundle:Home')->findAll();
+        $sketchs = $em->getRepository('AppBundle:Sketch')->findAll();
 
         return $this->render('home/index.html.twig', array(
             'homes' => $homes,
+            'sketchs' => $sketchs,
         ));
     }
 

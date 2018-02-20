@@ -5,7 +5,8 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Sketch;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Sketch controller.
@@ -44,11 +45,19 @@ class SketchController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($sketch);
-            $em->flush();
+            if (!$sketch->getImageFile()) {
+                $this->addFlash('danger', 'No image');
+            } else {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($sketch);
+                $em->flush();
+                $this->addFlash(
+                    'notice',
+                    'Votre partenaire a été crée avec succès'
+                );
 
-            return $this->redirectToRoute('sketch_show', array('id' => $sketch->getId()));
+                return $this->redirectToRoute('sketch_index', array('id' => $sketch->getId()));
+            }
         }
 
         return $this->render('sketch/new.html.twig', array(
@@ -87,8 +96,12 @@ class SketchController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash(
+                'notice',
+                'Vos modifications ont été bien été prises en compte'
+            );
 
-            return $this->redirectToRoute('sketch_edit', array('id' => $sketch->getId()));
+            return $this->redirectToRoute('sketch_index', array('id' => $sketch->getId()));
         }
 
         return $this->render('sketch/edit.html.twig', array(

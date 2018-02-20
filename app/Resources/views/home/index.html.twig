@@ -6,12 +6,15 @@
     </div>
 
     <div class="container-fluid sketchs">
+        <h1 class="title">quelques une de mes réalisations</h1>
         <div class="row">
-            <div class="col-xs-6 col-md-3">
+            {% for sketch in sketchs %}
+            <div class="col-xs-6 col-md-4">
                 <a href="#" class="thumbnail">
-                    <img src="" alt="">
+                    <img src="{{ asset( 'uploads/sketch/' ~ sketch.imageName) }}" alt="image">
                 </a>
             </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

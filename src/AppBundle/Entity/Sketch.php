@@ -43,7 +43,7 @@ class Sketch
      *     mimeTypesMessage="Veuillez mettre un format .jpeg ou .png"
      *)
      *
-     * @Vich\UploadableField(mapping="skech_image", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="sketch_image", fileNameProperty="imageName")
      *
      *
      * @var File
