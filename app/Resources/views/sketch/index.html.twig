@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sketches list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Url</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sketch in sketches %}
+            <tr>
+                <td><a href="{{ path('sketch_show', { 'id': sketch.id }) }}">{{ sketch.id }}</a></td>
+                <td>{{ sketch.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('sketch_show', { 'id': sketch.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('sketch_edit', { 'id': sketch.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sketch_new') }}">Create a new sketch</a>
+        </li>
+    </ul>
+{% endblock %}

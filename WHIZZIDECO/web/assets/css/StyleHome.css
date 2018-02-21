@@ -1,0 +1,7 @@
+.backgroundIndex {
+    background-image: url("../images/picsW2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 900px;
+}
