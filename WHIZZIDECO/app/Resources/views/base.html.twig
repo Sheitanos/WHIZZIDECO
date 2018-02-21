@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}WHIZZI DECO{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleActualites.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleContact.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleFooter.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleHome.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleNavBar.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StylePresentations.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleRealisation.css') }}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleGlobal.css') }}"/>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block navbar %}{% include "navbar.html.twig" %}{% endblock %}
+{% block body %}{% endblock %}
+{% block footer %}{% include "footer.html.twig" %}{% endblock %}
+<script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+
