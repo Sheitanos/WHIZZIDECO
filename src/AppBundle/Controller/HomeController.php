@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $homes = $em->getRepository('AppBundle:Home')->findAll();
+        $homes = $em->getRepository('AppBundle:Home')->findOneBy([]);
         $sketchs = $em->getRepository('AppBundle:Sketch')->findAll();
 
         return $this->render('home/index.html.twig', array(
@@ -42,11 +42,19 @@ class HomeController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($home);
-            $em->flush();
+            if (!$home->getImageFile()) {
+                $this->addFlash('danger', 'No image');
+            } else {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($home);
+                $em->flush();
+                $this->addFlash(
+                    'notice',
+                    'Votre histoire a été crée avec succès'
+                );
 
-            return $this->redirectToRoute('home_show', array('id' => $home->getId()));
+                return $this->redirectToRoute('homepage');
+            }
         }
 
         return $this->render('home/new.html.twig', array(
@@ -85,8 +93,12 @@ class HomeController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash(
+                'notice',
+                'Vos modifications ont été bien été prises en compte'
+            );
 
-            return $this->redirectToRoute('home_edit', array('id' => $home->getId()));
+            return $this->redirectToRoute('homepage');
         }
 
         return $this->render('home/edit.html.twig', array(
@@ -113,7 +125,7 @@ class HomeController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('home_index');
+        return $this->redirectToRoute('homepage');
     }
 
     /**
