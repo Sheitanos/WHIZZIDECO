@@ -9,9 +9,21 @@
 .title {
     font-size: 3vw;
     text-align: center;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
 }
 
 .sketchs {
     margin-top: 10vh;
+}
+
+.gifts {
+    margin-top: 10vh;
+}
+
+.gifts-content {
+    margin-bottom: 7vh;
+}
+
+.advantage-content {
+    margin-bottom: 10vh;
 }
