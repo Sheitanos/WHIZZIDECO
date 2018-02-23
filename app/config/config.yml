@@ -79,3 +79,9 @@ vich_uploader:
             uri_prefix:         /uploads/history
             upload_destination: '%kernel.root_dir%/../web/uploads/history'
             namer:              vich_uploader.namer_uniqid
+
+ivory_ck_editor:
+    configs:
+        ck_home_config:
+            toolbar: [ ["Source", "Save", "cut", "Copy", "Paste", "-", "Bold", "Italic", "Strike", "-", "RemoveFormat" ],["NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote"],["Undo", "Redo", "Maximize"] ]
+

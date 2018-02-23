@@ -2,6 +2,7 @@
 
 namespace AppBundle\Form;
 
+use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -16,8 +17,9 @@ class HomeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('historyText', TextareaType::class, array(
-            'label' => "Entrez le texte de votre histoire"
+        $builder->add('historyText', CKEditorType::class, array(
+            'label' => "Entrez le texte de votre histoire",
+            'config_name' => 'ck_home_config'
         ))
             ->add('imageFile', VichImageType::class, array(
                 'label' => "Votre image",
