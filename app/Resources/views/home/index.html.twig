@@ -7,7 +7,7 @@
 
     <section class="container-fluid sketchs">
         <h1 class="title">quelques une de mes réalisations</h1>
-        <div class="row">
+        <div class="row sketchs-content">
             {% for sketch in sketchs %}
             <div class="col-xs-6 col-md-4">
                 <a href="#" class="thumbnail">
@@ -33,7 +33,7 @@
                 fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
             </p>
             <div class="gifts-img col-md-offset-2 col-md-3">
-                <img src="{{ asset('assets/images/giftcard.png') }}" alt="image cadeau">
+                <img  class="giftcard-image" src="{{ asset('assets/images/giftcard.png') }}" alt="image cadeau">
             </div>
         </div>
         <div class="row advantage-content">
@@ -74,7 +74,7 @@
     </section>
     <section class="container-fluid my-history">
         <p class="title">MON HISTOIRE</p>
-        <div class="row">
+        <div class="row ">
             <div class="history-img col-md-offset-2 col-md-3">
                 <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
             </div>
