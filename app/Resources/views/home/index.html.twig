@@ -33,7 +33,7 @@
                 fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
             </p>
             <div class="gifts-img col-md-offset-2 col-md-3">
-                <img src="" alt="image cadeau">
+                <img src="{{ asset('assets/images/giftcard.png') }}" alt="image cadeau">
             </div>
         </div>
         <div class="row advantage-content">
@@ -78,9 +78,9 @@
             <div class="history-img col-md-offset-2 col-md-3">
                 <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
             </div>
-            <p class="history-content col-md-6">
-                {{ homes.historyText }}
-            </p>
+            <div class="history-content col-md-6">
+                {{ homes.historyText|raw }}
+            </div>
         </div>
     </section>
 {% endblock %}

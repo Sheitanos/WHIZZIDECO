@@ -16,7 +16,7 @@
         {% for sketch in sketches %}
             <tr>
                 <td><a href="{{ path('sketch_show', { 'id': sketch.id }) }}">{{ sketch.id }}</a></td>
-                <td>{{ sketch.name }}</td>
+                <td><img src="{{ asset( 'uploads/sketch/' ~ sketch.imageName) }}" alt="image"></td>
                 <td>
                     <ul>
                         <li>

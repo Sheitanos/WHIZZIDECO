@@ -11,9 +11,9 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Sketch controller.
  *
- * @Route("sketch")
+ * @Route("admin/sketch")
  */
-class SketchController extends Controller
+class AdminSketchController extends Controller
 {
     /**
      * Lists all sketch entities.
@@ -27,7 +27,7 @@ class SketchController extends Controller
 
         $sketches = $em->getRepository('AppBundle:Sketch')->findAll();
 
-        return $this->render('sketch/index.html.twig', array(
+        return $this->render('admin/sketch/index.html.twig', array(
             'sketches' => $sketches,
         ));
     }
@@ -60,7 +60,7 @@ class SketchController extends Controller
             }
         }
 
-        return $this->render('sketch/new.html.twig', array(
+        return $this->render('admin/sketch/new.html.twig', array(
             'sketch' => $sketch,
             'form' => $form->createView(),
         ));
@@ -76,7 +76,7 @@ class SketchController extends Controller
     {
         $deleteForm = $this->createDeleteForm($sketch);
 
-        return $this->render('sketch/show.html.twig', array(
+        return $this->render('admin/sketch/show.html.twig', array(
             'sketch' => $sketch,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -104,7 +104,7 @@ class SketchController extends Controller
             return $this->redirectToRoute('sketch_index', array('id' => $sketch->getId()));
         }
 
-        return $this->render('sketch/edit.html.twig', array(
+        return $this->render('admin/sketch/edit.html.twig', array(
             'sketch' => $sketch,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
