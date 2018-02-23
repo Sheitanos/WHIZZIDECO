@@ -1,5 +1,5 @@
 .colorNav {
-    background: orangered;
+    background: darkgrey;
     margin: 0;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .logoNav {
-
+    width: 15vw;
 }
 
 .navbar-toggle {
@@ -33,9 +33,13 @@
     background: white;
 }
 
+.nav >li {
+    margin-top: 5%;
+}
+
 .nav > li > a:focus, .nav > li > a:hover {
     text-decoration: none;
-    color: green;
+    color: orangered;
     background-color: transparent;
 }
 
