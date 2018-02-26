@@ -3,15 +3,27 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 900px;
+    height: 860px;
+    margin-top: -7%;
 }
 
 body {
     padding-top: 150px;
 }
+
 .title {
-    font-size: 3vw;
+    padding-top: 3%;
+    padding-bottom: 1.5%;
     text-align: center;
+}
+
+.logoNav2 {
+    margin-top: 8%;
+    width: calc(500px - 5%);
+}
+
+.advantage-description {
+    padding-bottom: 2%;
 }
 
 .sketchs {
@@ -26,6 +38,11 @@ body {
     margin-top: 10vh;
 }
 
+.gift-icon {
+    width: 25%;
+    padding: 1%;
+}
+
 .gifts-content {
     margin-bottom: 7vh;
 }
@@ -35,9 +52,11 @@ body {
 }
 
 .giftcard-image {
-    width: 20vw;
+    width: 250px;
 }
 
 .advantage-content {
     margin-bottom: 10vh;
+    margin-left: 7%;
+    margin-right: 7%;
 }

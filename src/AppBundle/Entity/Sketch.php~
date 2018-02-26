@@ -106,7 +106,7 @@ class Sketch
     /*
     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
     *
-    * @return Partner
+    * @return Sketch
     */
 
     /**

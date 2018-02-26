@@ -6,22 +6,22 @@
     </div>
 
     <section class="container-fluid sketchs">
-        <h1 class="title">quelques une de mes réalisations</h1>
+        <h1 class="title">Quelques une de mes réalisations</h1>
         <div class="row sketchs-content">
             {% for sketch in sketchs %}
-            <div class="col-xs-6 col-md-4">
-                <a href="#" class="thumbnail">
-                    <img src="{{ asset( 'uploads/sketch/' ~ sketch.imageName) }}" alt="image">
-                </a>
-            </div>
+                <div class="col-xs-6 col-md-4">
+                    <a href="#" class="thumbnail">
+                        <img src="{{ asset( 'uploads/sketch/' ~ sketch.imageName) }}" alt="image">
+                    </a>
+                </div>
             {% endfor %}
         </div>
     </section>
 
     <section class="container-fluid gifts">
-        <p class="title">CARTE CADEAU</p>
+        <h1 class="title">Carte Cadeau</h1>
         <div class="row gifts-content">
-            <p class="gifts-description col-md-offset-1 col-md-6">
+            <p class="gifts-description col-offset-sm-1 col-sm-6 col-md-offset-1 col-md-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
                 dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
                 Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy
@@ -32,55 +32,63 @@
                 luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque
                 fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
             </p>
-            <div class="gifts-img col-md-offset-2 col-md-3">
-                <img  class="giftcard-image" src="{{ asset('assets/images/giftcard.png') }}" alt="image cadeau">
+            <div class="gifts-img col-sm-offset-2 col-sm-3col-md-offset-2 col-md-3">
+                <img class="giftcard-image img-responsive" src="{{ asset('assets/images/giftcard.png') }}" alt="image cadeau">
             </div>
         </div>
-        <div class="row advantage-content">
-            <div class="gifts-advantage col-md-offset-1 col-md-2">
-                <div class="gifts-icon">
-                    <img src="" alt="icône">
+        <div class="container-fluid">
+            <div class="row advantage-content">
+                <div class="gifts-advantage col-md-4">
+                    <div class="gifts-icon">
+                        <img class="gift-icon img-responsive" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
+                    </div>
+                    <p class="advantage-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
+                        tortor,
+                        dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+                        Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec
+                        nonummy
+                        molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+                    </p>
                 </div>
-                <p class="advantage-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-                    dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-                    Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy
-                    molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-                </p>
-            </div>
-            <div class="gifts-advantage col-md-offset-1 col-md-2">
-                <div class="gifts-icon">
-                    <img src="" alt="icône">
+                <div class="gifts-advantage  col-md-4">
+                    <div class="gifts-icon">
+                        <img class="gift-icon img-responsive" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
+                    </div>
+                    <p class="advantage-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
+                        tortor,
+                        dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+                        Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec
+                        nonummy
+                        molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+                    </p>
                 </div>
-                <p class="advantage-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-                    dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-                    Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy
-                    molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-                </p>
-            </div>
-            <div class="gifts-advantage col-md-offset-1 col-md-2">
-                <div class="gifts-icon">
-                    <img src="" alt="icône">
+                <div class="gifts-advantage col-md-4">
+                    <div class="gifts-icon">
+                        <img class="gift-icon img-responsive" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
+                    </div>
+                    <p class="advantage-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
+                        tortor,
+                        dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+                        Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec
+                        nonummy
+                        molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+                    </p>
                 </div>
-                <p class="advantage-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-                    dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-                    Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy
-                    molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="container-fluid my-history">
-        <p class="title">MON HISTOIRE</p>
-        <div class="row ">
-            <div class="history-img col-md-offset-2 col-md-3">
-                <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
-            </div>
-            <div class="history-content col-md-6">
-                {{ homes.historyText|raw }}
             </div>
         </div>
     </section>
+    {#<section class="container-fluid my-history">#}
+        {#<p class="title">MON HISTOIRE</p>#}
+        {#<div class="row ">#}
+            {#<div class="history-img col-md-offset-2 col-md-3">#}
+                {#<img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">#}
+            {#</div>#}
+            {#<div class="history-content col-md-6">#}
+
+            {#</div>#}
+        {#</div>#}
+    {#</section>#}
 {% endblock %}
