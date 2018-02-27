@@ -1,0 +1,23 @@
+.choiceImg {
+    background-color: #F2F2F2;
+    border: 1px solid black;
+    width: 251px;
+    height: 190px;
+    margin-top: 1%;
+    margin-bottom: 60%;
+}
+
+.title-prestation {
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+
+
+.linkChoiseImg {
+    color: black;
+}
+
+.linkChoiseImg:hover {
+    text-decoration: none;
+    color: black;
+}

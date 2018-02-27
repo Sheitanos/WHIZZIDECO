@@ -1,0 +1,18 @@
+.titleContact {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.addressContact {
+    color: black;
+    padding: 1%;
+}
+
+
+.contactLink:hover {
+    color: black;
+}
+
+.portraitImg {
+    margin-bottom: 15%;
+}

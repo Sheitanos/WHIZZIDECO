@@ -3,7 +3,20 @@
 {% block title %}Bienvenue sur {{ parent() }}{% endblock %}
 {% block body %}
     <div class="container-fluid">
-        <h1 class="text-center">CONTACT</h1>
+        <h1 class="titleContact text-center">CONTACT</h1>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-3">
+                <img class="portraitImg" src="{{ asset ('assets/images/portrait.png') }}" alt="portrait_pics" class="img-responsive">
+            </div>
+            <div class="col-md-4 text-center">
+                <p class="addressContact">Céline BRISSAIRE <br/></p>
+                <p class="addressContact">06-63-77-87-72<br/></p>
+                <p class="addressContact">150 Rue Marcel Belot<br/></p>
+                <p class="addressContact">45160 Olivet<br/></p>
+                    <a class="addressContact contactLink" href="#">cbrissaire@whizzideco.com</a><br/>
+                    <a class="addressContact contactLink" href="#">WWW.whizzideco.com</a>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
