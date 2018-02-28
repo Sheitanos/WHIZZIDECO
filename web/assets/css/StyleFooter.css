@@ -1,4 +1,59 @@
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
 .heightFooter {
+    margin-top: 2%;
     border-top: 1px solid green;
     border-bottom: 1px solid green;
+    background: darkgrey;
 }
+
+.mention {
+    padding-top: 1%;
+    color: white;
+}
+
+.nameDev {
+    color: white;
+}
+
+.nameDev:hover {
+    color: white;
+}
+
+.logoWDFooter {
+    width: 250px;
+    padding-top: 3%;
+}
+
+.backFooterShareIcon {
+    margin-top: 8%;
+}
+
+.logoFooter {
+    width: 60px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.addressFooter {
+    padding-top: 5%;
+    color: white;
+}
+
+.linkFooter {
+    color: white;
+}
+
+.linkFooter:hover {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+

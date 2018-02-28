@@ -1,15 +1,19 @@
 h1 {
-    font-size: 40px;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 55px;
+    font-family: 'Dancing Script', cursive;
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
 }
 
-p {
+p, a {
     font-size: 18px;
+    font-family: 'Telex', sans-serif;
 }
