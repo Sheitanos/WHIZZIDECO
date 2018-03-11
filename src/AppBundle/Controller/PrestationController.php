@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class PrestationController extends controller {
 
     /**
-     * @Route("/prestation", name="prestation_index")
+     * @Route("/prestation", name="app_prestation_index")
      */
     public function indexAction()
     {

@@ -6,17 +6,32 @@
         <h1 class="titleContact text-center">Contact</h1>
         <div class="row">
             <div class="col-md-offset-3 col-md-3">
-                <img class="portraitImg" src="{{ asset ('assets/images/portrait.png') }}" alt="portrait_pics" class="img-responsive">
+                <img class="portraitImg" src="{{ asset ('assets/images/portrait.png') }}" alt="portrait_pics"
+                     class="img-responsive">
             </div>
             <div class="col-md-4 text-center">
                 <p class="addressContact">Céline BRISSAIRE <br/></p>
                 <p class="addressContact">06-63-77-87-72<br/></p>
                 <p class="addressContact">150 Rue Marcel Belot<br/></p>
                 <p class="addressContact">45160 Olivet<br/></p>
-                    <a class="addressContact contactLink" href="#">cbrissaire@whizzideco.com</a><br/>
-                    <a class="addressContact contactLink" href="#">WWW.whizzideco.com</a>
+                <a class="addressContact contactLink" href="brissaire@whizzideco.com">cbrissaire@whizzideco.com</a><br/>
+                <a class="addressContact contactLink" href="www.whizzideco.com">www.whizzideco.com</a>
+            </div>
+        </div>
+
+        <div class="row api-map">
+            <div class="col-md-offset-3 col-md-6">
+                <iframe class="img-responsive"
+                        width="800"
+                        height="650"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAqvk3ULx2DgSsA4qzh6_JLn7ciE47YGIw
+    &q=whizzideco,Olivet+France" allowfullscreen>
+                </iframe>
             </div>
         </div>
     </div>
+
+
 
 {% endblock %}

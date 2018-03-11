@@ -1,6 +1,6 @@
 .titleContact {
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .addressContact {
@@ -15,4 +15,10 @@
 
 .portraitImg {
     margin-bottom: 15%;
+    margin-top: -10%;
+}
+
+.api-map {
+    padding-top: 1%;
+    padding-left: 3%;
 }
