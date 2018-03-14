@@ -2,36 +2,68 @@
 
 {% block title %}Bienvenue sur {{ parent() }}{% endblock %}
 {% block body %}
-    <div class="container-fluid">
-        <h1 class="titleContact text-center">Contact</h1>
+
+    <div class="container-fluid bloc-contact">
         <div class="row">
-            <div class="col-xs-offset-1 col-xs-11 col-md-offset-3 col-md-3">
-                <img class="portraitImg" src="{{ asset ('assets/images/portrait.png') }}" alt="portrait_pics"
-                     class="img-responsive">
-            </div>
-            <div class="col-md-4 text-center">
-                <p class="addressContact">Céline BRISSAIRE <br/></p>
-                <p class="addressContact">06-63-77-87-72<br/></p>
-                <p class="addressContact">150 Rue Marcel Belot<br/></p>
-                <p class="addressContact">45160 Olivet<br/></p>
-                <a class="addressContact contactLink" href="brissaire@whizzideco.com">cbrissaire@whizzideco.com</a><br/>
-                <a class="addressContact contactLink" href="www.whizzideco.com">www.whizzideco.com</a>
+            <div class="text-center">
+                <h1 class="title-contact">CONTACT</h1>
             </div>
         </div>
-
-        <div class="row api-map">
-            <div class="col-md-offset-3 col-md-6">
-                <iframe class="img-responsive"
-                        width="800"
-                        height="650"
+        <div class="row">
+            <div class="col-md-6">
+                <iframe class="api-map"
+                        width="90%"
+                        height="600px"
                         frameborder="0" style="border:0"
                         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAqvk3ULx2DgSsA4qzh6_JLn7ciE47YGIw
-    &q=whizzideco,Olivet+France" allowfullscreen>
+&q=whizzideco,Olivet+France" allowfullscreen>
                 </iframe>
+            </div>
+            <div class="col-md-6 bloc-info">
+                <div class="col-md-5">
+                    <h3>Céline BRISSAIRE</h3>
+                    <div class="contact-info">
+                        <p class="contact-text"><span class="glyphicon glyphicon-home"></span>150 Rue Marcel Belot 45160 Olivet</p>
+                        <p class="contact-text"><span class="glyphicon glyphicon-earphone"></span>06-63-77-87-72</p>
+                        <p class="contact-text"><a class="contactLink" href="brissaire@whizzideco.com"><span
+                                        class="glyphicon glyphicon-envelope"></span>cbrissaire@whizzideco.com</a>
+                        </p>
+                        <p class="contact-text"><a class="contactLink" href="www.whizzideco.com"><span
+                                        class="glyphicon glyphicon-envelope"></span>www.whizzideco.com</a></p>
+                    </div>
+                </div>
+                <div class="col-md-offset-2 col-md-1">
+                    <div class="portrait-pics text-center">
+                        <img src="{{ asset ('assets/images/portrait.png') }}" alt="celine-pics"/>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row bloc-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Nom">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                        <textarea name="" class="form-control" id="" cols="60" rows="7"
+                                  placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="submit" value="Envoyer" class="btn btn-lg btn-warning">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
 
 {% endblock %}

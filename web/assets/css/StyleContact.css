@@ -1,24 +1,46 @@
-.titleContact {
-    margin-top: 10%;
-    margin-bottom: 5%;
-}
 
-.addressContact {
-    color: black;
+
+li {
+    text-decoration: none;
+ }
+
+.glyphicon {
     padding: 1%;
 }
 
+.title-contact {
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.contact-text {
+    padding: 3% 0 3% 0;
+}
+
+.contactLink {
+    color: black;
+}
+
+.contact:hover {
+    color: black;
+}
 
 .contactLink:hover {
     color: black;
 }
 
-.portraitImg {
-    margin-bottom: 15%;
-    margin-top: -10%;
+.api-map {
+    margin-left: 3%;
+    margin-bottom: 5%;
 }
 
-.api-map {
-    padding-top: 1%;
-    padding-left: 3%;
+.portrait-pics {
+    font-size: 15%;
 }
+
+.bloc-form {
+    margin-top: 1%;
+}
+
+
+
