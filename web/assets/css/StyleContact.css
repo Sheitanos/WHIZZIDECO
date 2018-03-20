@@ -1,4 +1,6 @@
-
+.bloc-contact {
+    margin-top: 10%;
+}
 
 li {
     text-decoration: none;
@@ -19,10 +21,14 @@ li {
 
 .contactLink {
     color: black;
+    font-size: 18px;
+    font-family: 'Telex', sans-serif;
 }
 
 .contact:hover {
     color: black;
+    font-size: 18px;
+    font-family: 'Telex', sans-serif;
 }
 
 .contactLink:hover {

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container-fluid backgroundIndex">
+    <div id="haut" class="container-fluid backgroundIndex">
         <div class="logoHome"></div>
     </div>
 
@@ -19,7 +19,7 @@
     </section>
 
     <section>
-        <video id="videoContainer" class="whizziVideo" src="{{ asset('assets/images/SPORTEDUC1.mp4') }}"
+        <video id="videoContainer" class="whizziVideo" src=""
                width="800"
                loop preload controls></video>
     </section>
@@ -97,4 +97,7 @@
             </div>
         </div>
     </section>
+    <div class="positionAncretop text-center">
+        <a class="ancre-top" href="#haut">Retour haut de page</a>
+    </div>
 {% endblock %}

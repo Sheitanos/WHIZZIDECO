@@ -14,10 +14,13 @@
 
 .nameDev {
     color: white;
+    font-size: 18px;
+    font-family: 'Telex', sans-serif;
 }
 
 .nameDev:hover {
     color: white;
+
 }
 
 .logoWDFooter {
@@ -38,14 +41,24 @@
 .addressFooter {
     padding-top: 5%;
     color: white;
+    font-size: 18px;
+    font-family: 'Telex', sans-serif;
+}
+
+.img-mention-legal {
+    margin-top: -2%;
 }
 
 .linkFooter {
     color: white;
+    font-size: 18px;
+    font-family: 'Telex', sans-serif;
 }
 
 .linkFooter:hover {
     color: white;
+    font-size: 18px;
+    font-family: 'Telex', sans-serif;
 }
 
 
