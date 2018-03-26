@@ -4,7 +4,10 @@
     width: 251px;
     height: 190px;
     margin-top: 1%;
-    margin-bottom: 60%;
+}
+
+.prestation-content {
+  margin-bottom: 6%;
 }
 
 .title-prestation-index {
@@ -43,15 +46,11 @@
 
 .prestation-description {
     color: black;
-    margin-bottom: 20%;
-}
-
-.ancre-prestation {
-
 }
 
 .colorAncre {
     color: black;
+    margin-top: 9%;
 }
 
 
@@ -80,7 +79,25 @@
 }
 
 .section-prestation2 {
-    background-color: orange;
+    background-color: #c7decc;
+    padding-bottom: 2%;
+    height: 41vw;
+}
+
+.section-prestation3 {
+    background-color: #86b68e;
+    padding-bottom: 2%;
+    height: 41vw;
+}
+
+.section-prestation4 {
+    background-color: #197b30;
+    padding-bottom: 2%;
+    height: 41vw;
+}
+
+.section-prestation5 {
+    background-color: #5cb85c;
     padding-bottom: 2%;
     height: 41vw;
 }
@@ -93,10 +110,6 @@
 }
 
 .position {
-
     position: relative;
     top: -1em;
 }
-
-
-
