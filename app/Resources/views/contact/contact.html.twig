@@ -38,21 +38,22 @@
                     </div>
                 </div>
                 <div class="col-md-12">
+
                     <div class="row bloc-form">
+                        {{ form_start(form) }}
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Nom">
+                                {{ form_widget(form.name, {'attr': {'class': 'form-control', 'placeholder': 'Nom'}}) }}
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email">
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                        <textarea name="" class="form-control" id="" cols="60" rows="7"
-                                  placeholder="Message"></textarea>
+                                {{ form_widget(form.message, {'attr': {'class': 'form-control', 'placeholder': 'Message'}}) }}
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -60,6 +61,7 @@
                                 <input type="submit" value="Envoyer" class="btn btn-lg btn-warning">
                             </div>
                         </div>
+                        {{ form_end(form) }}
                     </div>
                 </div>
             </div>
