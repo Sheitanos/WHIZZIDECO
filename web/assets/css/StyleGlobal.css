@@ -1,5 +1,5 @@
-h1 {
-    font-size: 50px;
+h1, a {
+    font-size: 60px;
     font-family: 'Dancing Script', cursive;
 }
 
@@ -13,7 +13,18 @@ h3 {
     font-family: 'Dancing Script', cursive;
 }
 
-p, a {
+p {
     font-size: 18px;
     font-family: 'Telex', sans-serif;
+}
+
+.ancre-top {
+    color: black;
+    font-size: 18px;
+    font-family: 'Telex', sans-serif;
+    margin-top: 2%;
+}
+
+.ancre-top:hover {
+    color:black;
 }

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container-fluid backgroundIndex">
+    <div id="haut" class="container-fluid backgroundIndex">
         <div class="logoHome"></div>
     </div>
 
@@ -16,6 +16,12 @@
                 </div>
             {% endfor %}
         </div>
+    </section>
+
+    <section>
+        <video id="videoContainer" class="whizziVideo" src=""
+               width="800"
+               loop preload controls></video>
     </section>
 
     <section class="container-fluid gifts">
@@ -84,11 +90,14 @@
         <h1 class="title">Mon histoire</h1>
         <div class="row ">
             <div class="history-img col-md-offset-2 col-md-3">
-                <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
+                <img src="" alt="image">
             </div>
             <div class="history-content col-md-6">
-                {{ homes.historyText|raw }}
+
             </div>
         </div>
     </section>
+    <div class="positionAncretop text-center">
+        <a class="ancre-top" href="#haut">Retour haut de page</a>
+    </div>
 {% endblock %}

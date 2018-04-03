@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div id="hautPage" class="container-fluid backgroundPrestation">
+        <h1 class="title-prestation text-center">Professionel</h1>
+        <p class="text-center"><strong>Décoratrice d'intérieur et extérieur</strong><br/>
+            à votre service pour tous vos projets professionnels
+        </p>
+
+        <p class="text-center sous-title-prestation">Plusieurs missions vous sont proposées :</p>
+    </div>
+    <div class="row prestation-content text-center">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="gifts-advantage col-md-3">
+                <a class="colorAncre" href="#1">
+                    <div class="gifts-icon">
+                        <img class="icon-prestations img-responsive" src="{{ asset ('assets/images/bulle.png') }}"
+                             alt="icône">
+                    </div>
+                    <p class="prestation-description">
+                        Visite conseils
+                    </p>
+                </a>
+            </div>
+            <div class="gifts-advantage  col-md-3">
+                <a class="colorAncre" href="#2">
+                    <div class="gifts-icon">
+                        <img class="icon-prestations img-responsive" src="{{ asset ('assets/images/equaire.png') }}"
+                             alt="icône">
+                    </div>
+                    <p class="prestation-description">
+                        Etudes avant projet<br/> (Esquisses, plans...)
+                    </p>
+                </a>
+            </div>
+            <div class="gifts-advantage col-md-3">
+                <a class="colorAncre" href="#3">
+                    <div class="gifts-icon">
+                        <img class="icon-prestations img-responsive" src="{{ asset ('assets/images/pinceau.png') }}"
+                             alt="icône">
+                    </div>
+                    <p class="prestation-description">
+                        Assistance travaux
+                    </p>
+                </a>
+            </div>
+            <div class="gifts-advantage col-md-3">
+                <a class="colorAncre" href="#4">
+                    <div class="gifts-icon">
+                        <img class="icon-prestations img-responsive" src="{{ asset ('assets/images/maison.png') }}"
+                             alt="icône">
+                    </div>
+                    <p class="prestation-description">
+                        Homestaging
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid width-container text-center center-block">
+        <a class="position" name="1"></a>
+        <div class="row section-prestation1">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10 color-block">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ asset ('assets/images/planche-pics.png') }}" alt="visite-pics"
+                                 class="img-prestation1 img-responsive center-block"/>
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="colorAncre">Visite conseils</h1>
+                            <p class="text-presta-description"> Lorem Ipsum est simplement du faux texte employé dans la
+                                composition et la mise en page
+                                avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les
+                                années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour
+                                réaliser
+                                un livre spécimen de polices de texte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="position" name="2"></a>
+        <div class="row section-prestation2">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10 color-block">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 class="colorAncre">Etudes avant projet</h1>
+                            <p class="text-presta-description"> Lorem Ipsum est simplement du faux texte employé dans la
+                                composition et la mise en page
+                                avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les
+                                années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour
+                                réaliser
+                                un livre spécimen de polices de texte.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{{ asset ('assets/images/etude-pics.png') }}" alt="visite-pics"
+                                 class="img-prestation2 img-responsive center-block"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="position" name="3"></a>
+        <div class="row section-prestation1">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10 color-block">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ asset ('assets/images/travaux-pics.jpg') }}" alt="visite-pics"
+                                 class="img-prestation1 img-responsive center-block"/>
+                        </div>
+                        <div class="col-md-6">
+                            <h1 class="colorAncre">Assistance travaux</h1>
+                            <p class="text-presta-description"> Lorem Ipsum est simplement du faux texte employé dans la
+                                composition et la mise en page
+                                avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les
+                                années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour
+                                réaliser
+                                un livre spécimen de polices de texte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="position" name="4"></a>
+        <div class="row section-prestation2">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10 color-block">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1 class="colorAncre">Homestaging</h1><br/>
+                            <p class="text-presta-description"> Lorem Ipsum est simplement du faux texte employé
+                                dans la
+                                composition et la mise en page
+                                avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis
+                                les
+                                années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour
+                                réaliser
+                                un livre spécimen de polices de texte.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="{{ asset ('assets/images/homestaging-pics2.jpg') }}" alt="visite-pics"
+                                 class="img-prestation2 img-responsive center-block"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <a class="ancre-top" href="#hautPage">Retour haut de page</a>
+    </div>
+{% endblock %}

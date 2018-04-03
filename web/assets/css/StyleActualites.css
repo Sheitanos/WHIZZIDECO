@@ -1,0 +1,20 @@
+.title-actualite {
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.img-actu {
+    width: 800px;
+    height: 450px;
+}
+
+.width-text-actu {
+    margin-left: 5%;
+    margin-bottom: 7%;
+}
+
+.logoActu {
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
