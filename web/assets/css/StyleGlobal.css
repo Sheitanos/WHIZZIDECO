@@ -17,3 +17,7 @@ p, a {
     font-size: 18px;
     font-family: 'Telex', sans-serif;
 }
+
+body{
+    padding-top: 150px;
+}
