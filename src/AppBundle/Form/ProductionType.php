@@ -17,15 +17,16 @@ class ProductionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class)
-            ->add('productionText', CKEditorType::class, array(
-                'label' => "Entrez le texte lié à cette réalisation",
+            ->add('title', TextType::class, array(
+                'label' => "titre",
+            ))
+            ->add('textBefore', CKEditorType::class, array(
+                'label' => "texte avant projet",
                 'config_name' => 'ck_home_config'
             ))
-            ->add('imageFile', VichImageType::class, array(
-                'label' => "Votre image",
-                'allow_delete' => false,
-                'image_uri' => false,
+            ->add('textAfter', CKEditorType::class, array(
+                'label' => "Texte après projet",
+                'config_name' => 'ck_home_config'
             ));
     }/**
      * {@inheritdoc}
@@ -33,7 +34,7 @@ class ProductionType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Production'
+            'data_class' => 'AppBundle\Entity\ProductionPicture'
         ));
     }
 

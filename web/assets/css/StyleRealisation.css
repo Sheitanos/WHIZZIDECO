@@ -1,24 +1,26 @@
 .title-realisation {
-    margin-top: 15%;
     margin-bottom: 5%;
 }
 
 .production-content{
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 
 .item {
-    height: 100vh;
-    width: 100vw;
+    background-size: cover;
 }
 
 .item>img {
     width: 100%;
-    visibility: hidden;
 }
 
 #myCarousel{
-    width: 50%;
-    height: 50%;
+    width: 60%;
+}
+
+.production-title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3vw;
 }

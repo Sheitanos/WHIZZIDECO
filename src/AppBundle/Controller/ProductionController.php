@@ -2,7 +2,7 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\Production;
+use AppBundle\Entity\ProductionPicture;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -25,9 +25,20 @@ class ProductionController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $productions = $em->getRepository('AppBundle:Production')->findAll();
+        $productionPictures = $em->getRepository('AppBundle:ProductionPicture')->findAll();
+        $tabLastTimeAfterProductionPictures = $this->getDoctrine()->getRepository(ProductionPicture::class)->findAfterPicturesWhithMaxUpdateAt();
+
+        $newTabs = [];
+        foreach ($tabLastTimeAfterProductionPictures as $tabLastTimeAfterProductionPicture){
+            $lastUpdateAt = new \DateTime($tabLastTimeAfterProductionPicture[1]);
+            $tabLastTimeAfterProductionPicture[1] = $lastUpdateAt;
+            $newTabs[] = $tabLastTimeAfterProductionPicture;
+        }
 
         return $this->render('production/index.html.twig', array(
             'productions' => $productions,
+            'newTabs' => $newTabs,
+            'productionPictures' => $productionPictures,
         ));
     }
 
@@ -39,7 +50,7 @@ class ProductionController extends Controller
      */
     public function newAction(Request $request)
     {
-        $production = new Production();
+        $production = new ProductionPicture();
         $form = $this->createForm('AppBundle\Form\ProductionType', $production);
         $form->handleRequest($request);
 
@@ -63,7 +74,7 @@ class ProductionController extends Controller
      * @Route("/{id}", name="production_show")
      * @Method("GET")
      */
-    public function showAction(Production $production)
+    public function showAction(ProductionPicture $production)
     {
         $deleteForm = $this->createDeleteForm($production);
 
@@ -79,7 +90,7 @@ class ProductionController extends Controller
      * @Route("/{id}/edit", name="production_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, Production $production)
+    public function editAction(Request $request, ProductionPicture $production)
     {
         $deleteForm = $this->createDeleteForm($production);
         $editForm = $this->createForm('AppBundle\Form\ProductionType', $production);
@@ -104,7 +115,7 @@ class ProductionController extends Controller
      * @Route("/{id}", name="production_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, Production $production)
+    public function deleteAction(Request $request, ProductionPicture $production)
     {
         $form = $this->createDeleteForm($production);
         $form->handleRequest($request);
@@ -121,11 +132,11 @@ class ProductionController extends Controller
     /**
      * Creates a form to delete a production entity.
      *
-     * @param Production $production The production entity
+     * @param ProductionPicture $production The production entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Production $production)
+    private function createDeleteForm(ProductionPicture $production)
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('production_delete', array('id' => $production->getId())))

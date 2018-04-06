@@ -3,15 +3,11 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Production
  *
  * @ORM\Table(name="production")
- * @Vich\Uploadable()
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ProductionRepository")
  */
 class Production
@@ -28,56 +24,39 @@ class Production
     /**
      * @var string
      *
-     * @ORM\Column(name="production_text", type="text")
-     */
-    private $productionText;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
 
     /**
-     * NOTE: This is not a mapped field of entity metadata, just a simple property.
-     *
-     * @Assert\File(
-     *     maxSize="1M",
-     *     maxSizeMessage="Le fichier ne doit pas faire plus de 1Mo",
-     *     mimeTypes={"image/png", "image/jpeg"},
-     *     mimeTypesMessage="Veuillez mettre un format .jpeg ou .png"
-     *)
-     *
-     * @Vich\UploadableField(mapping="production_image", fileNameProperty="imageName")
-     *
-     *
-     * @var File
-     */
-    private $imageFile;
-
-    //     * @Assert\Expression("this.getImageName()", message="Vous devez envoyer une image.")
-
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     *
      * @var string
+     *
+     * @ORM\Column(name="text_before", type="text")
      */
-    private $imageName;
+    private $textBefore;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @var string
      *
-     * @var \DateTime
+     * @ORM\Column(name="text_after", type="text")
      */
-    private $updatedAt;
+    private $textAfter;
 
     /**
-     * Get id
      *
-     * @return int
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\ProductionPicture", mappedBy="beforeProduction")
+     * @ORM\JoinColumn(name="beforePictures", nullable=true)
+     *
      */
+    private $beforePictures;
+
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\ProductionPicture", mappedBy="afterProduction")
+     * @ORM\JoinColumn(name="afterPictures", nullable=true)
+     *
+     */
+    private $afterPictures;
 
 
     /**
@@ -88,30 +67,6 @@ class Production
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set productionText.
-     *
-     * @param string $productionText
-     *
-     * @return Production
-     */
-    public function setProductionText($productionText)
-    {
-        $this->productionText = $productionText;
-
-        return $this;
-    }
-
-    /**
-     * Get productionText.
-     *
-     * @return string
-     */
-    public function getProductionText()
-    {
-        return $this->productionText;
     }
 
     /**
@@ -138,78 +93,135 @@ class Production
         return $this->title;
     }
 
-    /*
-    * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
-    *
-    * @return Home
-    */
-
     /**
-     * @return File|null
+     * Set textBefore.
+     *
+     * @param string $textBefore
+     *
+     * @return Production
      */
-    public function getImageFile()
+    public function setTextBefore($textBefore)
     {
-        return $this->imageFile;
-    }
-
-    public function setImageFile(File $image = null)
-    {
-        $this->imageFile = $image;
-
-        if ($image) {
-            // It is required that at least one field changes if you are using doctrine
-            // otherwise the event listeners won't be called and the file is lost
-            $this->updatedAt = new \DateTimeImmutable();
-        }
+        $this->textBefore = $textBefore;
 
         return $this;
     }
 
     /**
-     * Get imageName
+     * Get textBefore.
      *
      * @return string
      */
-    public function getImageName()
+    public function getTextBefore()
     {
-        return $this->imageName;
+        return $this->textBefore;
     }
 
     /**
-     * Set imageName
+     * Set textAfter.
      *
-     * @param string $imageName
+     * @param string $textAfter
      *
      * @return Production
      */
-    public function setImageName($imageName)
+    public function setTextAfter($textAfter)
     {
-        $this->imageName = $imageName;
+        $this->textAfter = $textAfter;
 
         return $this;
     }
 
     /**
-     * Get updatedAt
+     * Get textAfter.
      *
-     * @return \DateTime
+     * @return string
      */
-    public function getUpdatedAt()
+    public function getTextAfter()
     {
-        return $this->updatedAt;
+        return $this->textAfter;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->beforePictures = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->afterPictures = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
-     * Set updatedAt
+     * Add beforePicture.
      *
-     * @param \DateTime $updatedAt
+     * @param \AppBundle\Entity\ProductionPicture $beforePicture
      *
      * @return Production
      */
-    public function setUpdatedAt($updatedAt)
+    public function addBeforePicture(\AppBundle\Entity\ProductionPicture $beforePicture)
     {
-        $this->updatedAt = $updatedAt;
+        $this->beforePictures[] = $beforePicture;
 
         return $this;
+    }
+
+    /**
+     * Remove beforePicture.
+     *
+     * @param \AppBundle\Entity\ProductionPicture $beforePicture
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeBeforePicture(\AppBundle\Entity\ProductionPicture $beforePicture)
+    {
+        return $this->beforePictures->removeElement($beforePicture);
+    }
+
+    /**
+     * Get beforePictures.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getBeforePictures()
+    {
+        return $this->beforePictures;
+    }
+
+    /**
+     * Add afterPicture.
+     *
+     * @param \AppBundle\Entity\ProductionPicture $afterPicture
+     *
+     * @return Production
+     */
+    public function addAfterPicture(\AppBundle\Entity\ProductionPicture $afterPicture)
+    {
+        $this->afterPictures[] = $afterPicture;
+
+        return $this;
+    }
+
+    /**
+     * Remove afterPicture.
+     *
+     * @param \AppBundle\Entity\ProductionPicture $afterPicture
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeAfterPicture(\AppBundle\Entity\ProductionPicture $afterPicture)
+    {
+        return $this->afterPictures->removeElement($afterPicture);
+    }
+
+    /**
+     * Get afterPictures.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAfterPictures()
+    {
+        return $this->afterPictures;
+    }
+
+    public function __toString() {
+        return $this->title;
     }
 }
