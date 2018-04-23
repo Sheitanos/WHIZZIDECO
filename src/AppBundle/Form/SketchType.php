@@ -22,6 +22,7 @@ class SketchType extends AbstractType
                     'label' => "Votre image",
                     'allow_delete' => false,
                     'image_uri' => false,
+                    'download_uri' => false,
             ));
     }
     
