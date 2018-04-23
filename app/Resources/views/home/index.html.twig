@@ -19,7 +19,7 @@
     </section>
 
     <section>
-        <video id="videoContainer" class="whizziVideo" src="{{ asset('assets/images/SPORTEDUC1.mp4') }}"
+        <video id="videoContainer" class="whizziVideo" src="{{ asset('assets/images/salon-lerouge.avi') }}"
                width="800"
                loop preload controls></video>
     </section>
@@ -90,10 +90,10 @@
         <h1 class="title">Mon histoire</h1>
         <div class="row ">
             <div class="history-img col-md-offset-2 col-md-3">
-                <img src="" alt="image">
+                <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
             </div>
             <div class="history-content col-md-6">
-
+                {{ homes.historyText|raw }}
             </div>
         </div>
     </section>

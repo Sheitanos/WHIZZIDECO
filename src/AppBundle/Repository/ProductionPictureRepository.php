@@ -24,4 +24,30 @@ class ProductionPictureRepository extends EntityRepository
             ->getResult();
 
     }
+
+    public function findPicturesBeforeByProductionId($id){
+
+        return $this->createQueryBuilder('p')
+            ->select('p')
+            ->leftJoin('p.beforeProduction','beforeProduction')
+            ->addSelect('beforeProduction.id')
+            ->where('beforeProduction.id =:id')
+            ->setParameter('id',$id)
+            ->getQuery()
+            ->getResult();
+
+    }
+
+    public function findPicturesAfterByProductionId($id){
+
+        return $this->createQueryBuilder('p')
+            ->select('p')
+            ->leftJoin('p.afterProduction','afterProduction')
+            ->addSelect('afterProduction.id')
+            ->where('afterProduction.id =:id')
+            ->setParameter('id',$id)
+            ->getQuery()
+            ->getResult();
+
+    }
 }

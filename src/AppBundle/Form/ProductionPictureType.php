@@ -21,21 +21,22 @@ class ProductionPictureType extends AbstractType
                 'label' => "Votre image",
                 'allow_delete' => false,
                 'image_uri' => false,
+                'download_uri' => false,
             ))
             ->add('beforeProduction', EntityType::class, array(
                 'class' => Production::class,
-                'choice_label' => 'id',
+                'choice_label' => 'title',
                 'empty_data'  => null,
-                'required' => false
+                'required' => false,
+                'label' => 'Attribuer à une Réalisation (avant)',
             ))
             ->add('afterProduction', EntityType::class, array(
                 'class' => Production::class,
-                'choice_label' => 'id',
+                'choice_label' => 'title',
                 'empty_data'  => null,
-                'required' => false
-            ))
-                ->add('beforeProduction')
-                ->add('afterProduction');
+                'required' => false,
+                'label' => 'Attribuer à une Réalisation (après)',
+            ));
     }/**
      * {@inheritdoc}
      */

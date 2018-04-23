@@ -8,16 +8,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Productionpicture controller.
+ * ProductionPicture controller.
  *
- * @Route("productionpicture")
+ * @Route("admin/productionPicture")
  */
-class ProductionPictureController extends Controller
+class AdminProductionPictureController extends Controller
 {
     /**
      * Lists all productionPicture entities.
      *
-     * @Route("/", name="productionpicture_index")
+     * @Route("/", name="productionPicture_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -26,15 +26,23 @@ class ProductionPictureController extends Controller
 
         $productionPictures = $em->getRepository('AppBundle:ProductionPicture')->findAll();
 
-        return $this->render('productionpicture/index.html.twig', array(
+        $deleteForms = [];
+
+        foreach ($productionPictures as $productionPicture) {
+            $deleteForm = $this->createDeleteForm($productionPicture)->createView();
+            $deleteForms[$productionPicture->getId()] = $deleteForm;
+        }
+
+        return $this->render('admin/productionPicture/index.html.twig', array(
             'productionPictures' => $productionPictures,
+            'delete_form' => $deleteForms,
         ));
     }
 
     /**
      * Creates a new productionPicture entity.
      *
-     * @Route("/new", name="productionpicture_new")
+     * @Route("/new", name="productionPicture_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -48,10 +56,10 @@ class ProductionPictureController extends Controller
             $em->persist($productionPicture);
             $em->flush();
 
-            return $this->redirectToRoute('productionpicture_index');
+            return $this->redirectToRoute('productionPicture_index');
         }
 
-        return $this->render('productionpicture/new.html.twig', array(
+        return $this->render('admin/productionPicture/new.html.twig', array(
             'productionPicture' => $productionPicture,
             'form' => $form->createView(),
         ));
@@ -61,7 +69,7 @@ class ProductionPictureController extends Controller
     /**
      * Displays a form to edit an existing productionPicture entity.
      *
-     * @Route("/{id}/edit", name="productionpicture_edit")
+     * @Route("/{id}/edit", name="productionPicture_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, ProductionPicture $productionPicture)
@@ -73,10 +81,10 @@ class ProductionPictureController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('productionpicture_index');
+            return $this->redirectToRoute('productionPicture_index');
         }
 
-        return $this->render('productionpicture/edit.html.twig', array(
+        return $this->render('admin/productionPicture/edit.html.twig', array(
             'productionPicture' => $productionPicture,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -86,7 +94,7 @@ class ProductionPictureController extends Controller
     /**
      * Deletes a productionPicture entity.
      *
-     * @Route("/{id}", name="productionpicture_delete")
+     * @Route("/{id}", name="productionPicture_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, ProductionPicture $productionPicture)
@@ -100,7 +108,7 @@ class ProductionPictureController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('productionpicture_index');
+        return $this->redirectToRoute('productionPicture_index');
     }
 
     /**
@@ -113,7 +121,7 @@ class ProductionPictureController extends Controller
     private function createDeleteForm(ProductionPicture $productionPicture)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('productionpicture_delete', array('id' => $productionPicture->getId())))
+            ->setAction($this->generateUrl('productionPicture_delete', array('id' => $productionPicture->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;

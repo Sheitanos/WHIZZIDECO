@@ -2,14 +2,15 @@
 
 {% block body %}
 
-    <section class="container-fluid sketchs">
-        <h1 class="title">Mes Projets</h1>
-        <div class="row sketchs-content">
+    <section class="container-fluid">
+        <h1 class="title-realisation text-center">Mes Projets</h1>
+        <div class="row">
             {% for productionPicture in productionPictures %}
                 {% for newTab in newTabs %}
                     {% if productionPicture.updatedAt == newTab[1] %}
                     <div class="col-xs-6 col-md-4">
-                        <a href="#" class="thumbnail">
+                        <p class="title-production">{{ productionPicture.afterProduction.title }}</p>
+                        <a href="{{ path('production_show', { 'id': productionPicture.afterProduction.id }) }}" class="thumbnail">
                             <img src="{{ asset( 'uploads/production/' ~ productionPicture.imageName) }}" alt="image">
                         </a>
                     </div>

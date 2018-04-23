@@ -18,23 +18,25 @@ class ProductionType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, array(
-                'label' => "titre",
+                'label' => "Titre",
             ))
             ->add('textBefore', CKEditorType::class, array(
-                'label' => "texte avant projet",
+                'label' => "Texte (avant)",
                 'config_name' => 'ck_home_config'
             ))
             ->add('textAfter', CKEditorType::class, array(
-                'label' => "Texte après projet",
+                'label' => "Texte (après)",
                 'config_name' => 'ck_home_config'
             ));
-    }/**
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\ProductionPicture'
+            'data_class' => 'AppBundle\Entity\Production'
         ));
     }
 
