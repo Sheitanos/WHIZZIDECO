@@ -1,4 +1,51 @@
 .title-realisation {
-    margin-top: 15%;
     margin-bottom: 5%;
+}
+
+.title-production {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.production-after {
+    margin-top: 8%;
+}
+
+.item {
+    background-size: cover;
+}
+
+.item>img {
+    width: 100%;
+}
+
+#myCarousel1{
+    width: 70%;
+    margin-left: 10%;
+}
+
+#myCarousel2{
+    width: 70%;
+    margin-left: 20%;
+}
+
+.production-title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2vw;
+}
+/*admin*/
+.productionPicture {
+    margin-bottom: 5%;
+}
+
+.admin-title-center {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 5%;
+}
+
+.whizzi-form {
+    width: 30%;
+    margin-left: 35%;
 }
