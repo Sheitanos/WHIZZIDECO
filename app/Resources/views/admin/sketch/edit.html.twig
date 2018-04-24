@@ -1,7 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>Sketch edit</h1>
 
     {% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
     <div class="container-fluid">
@@ -15,7 +14,7 @@
             {{ form_end(edit_form) }}
         </div>
         <div class="col-md-offset-10 col-md-1 back-button">
-            <a href="{{ path('productionPicture_index') }}">
+            <a href="{{ path('sketch_index') }}">
                 <button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour</button>
             </a>
         </div>

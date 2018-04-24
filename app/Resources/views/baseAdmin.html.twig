@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}WHIZZIDECO{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Telex" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleActualites.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleContact.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleFooter.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleHome.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleNavBar.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StylePrestations.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleRealisation.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleGlobal.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/StyleBoutique.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/css/styleAdmin.css') }}"/>
+    {% endblock %}
+</head>
+<body>
+{% block navbar %}{% include "navBarAdmin.html.twig" %}{% endblock %}
+{% block body %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+{% endblock %}
+</body>
+</html>
+
