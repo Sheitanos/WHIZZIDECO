@@ -1,21 +1,22 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>Sketch edit</h1>
 
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
-    {{ form_end(edit_form) }}
+    {% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+    <div class="container-fluid">
 
-    <ul>
-        <li>
-            <a href="{{ path('sketch_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        <h1 class="admin-title-center">Editer ce Croquis</h1>
+
+        <div class="whizzi-form">
+            {{ form_start(edit_form) }}
+            {{ form_widget(edit_form) }}
+            <input type="submit" class="btn btn-success"  value="Valider"/>
+            {{ form_end(edit_form) }}
+        </div>
+        <div class="col-md-offset-10 col-md-1 back-button">
+            <a href="{{ path('sketch_index') }}">
+                <button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour</button>
+            </a>
+        </div>
+    </div>
 {% endblock %}

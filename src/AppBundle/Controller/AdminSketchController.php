@@ -27,8 +27,16 @@ class AdminSketchController extends Controller
 
         $sketches = $em->getRepository('AppBundle:Sketch')->findAll();
 
+        $deleteForms = [];
+
+        foreach ($sketches as $sketch) {
+            $deleteForm = $this->createDeleteForm($sketch)->createView();
+            $deleteForms[$sketch->getId()] = $deleteForm;
+        }
+
         return $this->render('admin/sketch/index.html.twig', array(
             'sketches' => $sketches,
+            'delete_form' => $deleteForms,
         ));
     }
 

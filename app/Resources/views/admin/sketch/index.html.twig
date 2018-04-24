@@ -1,40 +1,21 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <h1>Sketches list</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Url</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for sketch in sketches %}
-            <tr>
-                <td><a href="{{ path('sketch_show', { 'id': sketch.id }) }}">{{ sketch.id }}</a></td>
-                <td><img src="{{ asset( 'uploads/sketch/' ~ sketch.imageName) }}" alt="image"></td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('sketch_show', { 'id': sketch.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('sketch_edit', { 'id': sketch.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('sketch_new') }}">Create a new sketch</a>
-        </li>
-    </ul>
+    <section class="container-fluid">
+        <h1 class="text-center title-realisation">Mes croquis page d'accueil</h1>
+        <div class="row sketchs-content">
+            {% for sketch in sketches %}
+                <div class="col-xs-6 col-md-4 productionPicture">
+                    <a href="{{ path('sketch_edit', { 'id': sketch.id }) }}" class="thumbnail">
+                        <img src="{{ asset( 'uploads/sketch/' ~ sketch.imageName) }}" alt="image">
+                    </a>
+                    <div class="col-md-offset-4 col-md-5">
+                        {{ form_start(delete_form[sketch.id]) }}
+                        <input type="submit" class="btn btn-danger"  value="Supprimer"/>
+                        {{ form_end(delete_form[sketch.id]) }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}

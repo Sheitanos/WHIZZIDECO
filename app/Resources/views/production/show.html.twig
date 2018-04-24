@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur {{ parent() }}{% endblock %}
+{% block body %}
+
+    <div class="container-fluid production-before">
+        <h1 class="text-center title-realisation">Avant</h1>
+        <div class="row">
+            <div class="pictures col-md-6">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                {% for key in tabProductionBeforePicturesById|keys %}
+                                    {% if key  == 0 %}
+                                        <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                                    {% else %}
+                                        <li data-target="#myCarousel1" data-slide-to="{{ key }}"></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ol>
+
+                            <div class="carousel-inner">
+                                {% for tabProductionBeforePictureById in tabProductionBeforePicturesById %}
+                                    {% if tabProductionBeforePictureById[0].beforeProduction.id == production.id %}
+                                        {% if loop.first %}
+                                            <div class="item active">
+                                                <a href="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" target="_blank">
+                                                    <img src="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" alt="Photo"/>
+                                                </a>
+                                            </div>
+                                        {% else %}
+                                            <div class="item">
+                                                <a href="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" target="_blank">
+                                                    <img src="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" alt="Photo"/>
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="production-text col-md-6">
+                <p class="">
+                    {{ production.textBefore|raw }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid production-after">
+        <h1 class="text-center title-realisation">Après</h1>
+        <div class="row">
+            <div class="production-text col-md-6">
+                <p class="">
+                    {{ production.textAfter|raw }}
+                </p>
+            </div>
+            <div class="pictures col-md-6">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                {% for key in tabProductionAfterPicturesById|keys %}
+                                    {% if key  == 0 %}
+                                        <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                                    {% else %}
+                                        <li data-target="#myCarousel2" data-slide-to="{{ key }}"></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ol>
+
+                            <div class="carousel-inner">
+                                {% for tabProductionAfterPictureById in tabProductionAfterPicturesById %}
+                                    {% if tabProductionAfterPictureById[0].afterProduction.id == production.id %}
+                                        {% if loop.first %}
+                                            <div class="item active">
+                                                <a href="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" target="_blank">
+                                                    <img src="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" alt="Photo">
+                                                </a>
+                                            </div>
+                                        {% else %}
+                                            <div class="item">
+                                                <a href="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" target="_blank">
+                                                    <img src="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" alt="Photo">
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

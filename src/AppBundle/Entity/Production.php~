@@ -1,0 +1,143 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Production
+ *
+ * @ORM\Table(name="production")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ProductionRepository")
+ */
+class Production
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="text_before", type="text")
+     */
+    private $textBefore;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="text_after", type="text")
+     */
+    private $textAfter;
+
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductionPicture", mappedBy="production")
+     * @ORM\JoinColumn(name="beforePictures", nullable=true)
+     *
+     */
+    private $beforePictures;
+
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductionPicture", mappedBy="production")
+     * @ORM\JoinColumn(name="afterPictures", nullable=true)
+     *
+     */
+    private $afterPictures;
+
+
+    /**
+     * Get id.
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title.
+     *
+     * @param string $title
+     *
+     * @return Production
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title.
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set textBefore.
+     *
+     * @param string $textBefore
+     *
+     * @return Production
+     */
+    public function setTextBefore($textBefore)
+    {
+        $this->textBefore = $textBefore;
+
+        return $this;
+    }
+
+    /**
+     * Get textBefore.
+     *
+     * @return string
+     */
+    public function getTextBefore()
+    {
+        return $this->textBefore;
+    }
+
+    /**
+     * Set textAfter.
+     *
+     * @param string $textAfter
+     *
+     * @return Production
+     */
+    public function setTextAfter($textAfter)
+    {
+        $this->textAfter = $textAfter;
+
+        return $this;
+    }
+
+    /**
+     * Get textAfter.
+     *
+     * @return string
+     */
+    public function getTextAfter()
+    {
+        return $this->textAfter;
+    }
+}
