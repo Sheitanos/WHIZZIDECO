@@ -1,26 +1,19 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
 
-    <section class="container-fluid sketchs">
-        <h1 class="title">Mes images de projet</h1>
+    <section class="container-fluid">
+        <h1 class="text-center title-realisation">Mes images de projet</h1>
         <div class="row sketchs-content">
             {% for productionPicture in productionPictures %}
                 <div class="col-xs-6 col-md-4 productionPicture">
                     <a href="{{ path('productionPicture_edit', { 'id': productionPicture.id }) }}" class="thumbnail">
                         <img src="{{ asset( 'uploads/production/' ~ productionPicture.imageName) }}" alt="image">
                     </a>
-                    <div class="row">
-                        <div class="col-md-offset-1 col-md-5">
-                            <a href="{{ path('productionPicture_edit', { 'id': productionPicture.id }) }}"
-                               role="button"><button class="btn btn-success" type="submit">Editer</button>
-                            </a>
-                        </div>
-                        <div class="col-md-offset-1 col-md-5">
+                    <div class="col-md-offset-4 col-md-5">
                             {{ form_start(delete_form[productionPicture.id]) }}
                             <input type="submit" class="btn btn-danger"  value="Supprimer"/>
                             {{ form_end(delete_form[productionPicture.id]) }}
-                        </div>
                     </div>
                 </div>
             {% endfor %}
