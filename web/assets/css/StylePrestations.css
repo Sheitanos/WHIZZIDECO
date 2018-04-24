@@ -6,13 +6,17 @@
     margin-top: 1%;
 }
 
+.backgroundPrestation{
+  margin-bottom: 10%;
+}
+
 .prestation-content {
   margin-bottom: 6%;
 }
 
 .title-prestation-index {
-    margin-top: 15%;
-    margin-bottom: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .link-choise {
@@ -20,7 +24,7 @@
 }
 
 .title-prestation {
-    margin-top: 12%;
+    margin-top: 5%;
     margin-bottom: 5%;
 }
 
@@ -53,7 +57,6 @@
     margin-top: 9%;
 }
 
-
 .img-prestation1 {
     width: 781px;
     height: 450px;
@@ -79,31 +82,13 @@
 }
 
 .section-prestation2 {
-    background-color: #c7decc;
-    padding-bottom: 2%;
-    height: 41vw;
-}
-
-.section-prestation3 {
-    background-color: #86b68e;
-    padding-bottom: 2%;
-    height: 41vw;
-}
-
-.section-prestation4 {
-    background-color: #197b30;
-    padding-bottom: 2%;
-    height: 41vw;
-}
-
-.section-prestation5 {
-    background-color: #5cb85c;
+    background-color: white;
     padding-bottom: 2%;
     height: 41vw;
 }
 
 .color-block {
-    background-color: yellow;
+    background-color: white;
     padding-top: 1%;
     margin-top: 7%;
     border-radius: 5px;
