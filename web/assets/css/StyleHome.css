@@ -13,6 +13,13 @@
     text-align: center;
 }
 
+.title-my-history {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+    color: orangered;
+}
+
 .logoNav2 {
     margin-top: 8%;
     width: calc(500px - 5%);
@@ -37,6 +44,7 @@
 
 .gifts {
     margin-top: 10vh;
+    background: url("../images/damier-gris.jpg");
 }
 
 .gift-icon {
@@ -62,4 +70,21 @@
     margin-top: 5vh;
     margin-left: 7%;
     margin-right: 7%;
+}
+
+.my-history {
+    background: url("../images/feuilles-tressees.jpg");
+    background-size: cover;
+}
+
+.history-img {
+    margin-top: 10%;
+}
+
+.history-content {
+    background-color: rgba(242,242,242,0.8);
+    border-radius: 15px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
 }
