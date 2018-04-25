@@ -10,7 +10,7 @@
 }
 
 .colorBox {
-  border: 1px solid #5cb85c;
+  /* border: 1px solid #5cb85c; */
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 1%;
@@ -19,6 +19,7 @@
 .contactLinkBoutique {
     color: black;
     font-size: 25px;
+    padding-top: 2%;
 }
 
 .textBoutique {
