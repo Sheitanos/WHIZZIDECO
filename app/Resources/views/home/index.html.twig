@@ -20,9 +20,10 @@
 
     <section>
 
-        <video id="videoContainer" class="whizziVideo" src="{{ asset('assets/images/salon-lerouge.avi') }}"
-               width="800"
-               loop preload controls></video>
+        <video id="videoContainer" class="whizziVideo" src="{{ asset('assets/images/film.mp4') }}"
+               width="600"
+               loop preload controls>
+       </video>
     </section>
 
     <section class="container-fluid gifts">
@@ -88,8 +89,8 @@
         </div>
     </section>
     <section class="container-fluid my-history">
-        <h1 class="title">Mon histoire</h1>
-        <div class="row ">
+        <h1 class="title-my-history">Mon histoire</h1>
+        <div class="row my-history-content ">
             <div class="history-img col-md-offset-2 col-md-3">
                 <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
             </div>
@@ -98,7 +99,5 @@
             </div>
         </div>
     </section>
-    <div class="positionAncretop text-center">
-        <a class="ancre-top" href="#haut">Retour haut de page</a>
-    </div>
+
 {% endblock %}
