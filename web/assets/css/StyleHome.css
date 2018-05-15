@@ -45,8 +45,8 @@
 }
 
 .gifts {
-    margin-top: 10vh;
-    background: url("../images/damier-gris.jpg");
+    /*margin-top: 10vh;*/
+    background-color: #86b68e;
 
 }
 
@@ -76,8 +76,7 @@
 }
 
 .my-history {
-    background: url("../images/feuilles-tressees.jpg");
-    background-size: cover;
+    background-color: #c7dece;
 }
 
 .history-img {
@@ -85,9 +84,12 @@
 }
 
 .history-content {
-    background-color: rgba(242,242,242,0.8);
+    background-color: white;
     border-radius: 15px;
     padding-top: 2%;
     padding-bottom: 2%;
     margin-bottom: 2%;
+}
+.video{
+    background-color: #b3c396;
 }
