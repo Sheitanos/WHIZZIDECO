@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 h1, a {
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
@@ -18,6 +20,11 @@ p {
     font-family: 'Telex', sans-serif;
 }
 
+ul,ol
+{
+    list-style:none;
+}
+
 .ancre-top {
     color: black;
     font-size: 18px;
@@ -29,6 +36,6 @@ p {
     color:black;
 }
 
-body{
-    padding-top: 8%;
+.positionBody {
+  padding-top: 9%;
 }

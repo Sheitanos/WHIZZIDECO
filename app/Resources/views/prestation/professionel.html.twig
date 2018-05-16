@@ -1,173 +1,120 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Bienvenue sur {{ parent() }}{% endblock %}
+
+{% block body %}
+
+ <section>
+   <div class="container-fluid backgroundParticulier">
+
+       <h1 class="title-prestation padding-title text-center">Professionnel</h1>
+       <p class="text-center sous-title-prestation1"><strong>Décoratrice d'intérieur et extérieur</strong><br/>
+           à votre service pour tous vos projets professionnel
+       </p>
+       <p class="text-center sous-title-prestation2">Plusieurs missions vous sont proposées :</p>
+
+              <div class="row bottomIndexPresta">
+                 <div class="col-md-4 col-xs-12">
+                     <img src="{{ asset ('assets/images/vert.png') }}" alt="losange1-pics"
+                          class="losangePics img-responsive center-block"/>
+                      <p class="text-center">1 S'inspirer</p>
+                 </div>
+                 <div class="col-md-4 col-xs-12">
+                     <img src="{{ asset ('assets/images/2losanges.png') }}" alt="losange2-pics"
+                          class="losangePics img-responsive center-block"/>
+                      <p class="text-center">2 Accompagner</p>
+                 </div>
+                 <div class="col-md-4 col-xs-12">
+                     <img src="{{ asset ('assets/images/3losanges.png') }}" alt="losange3-pics"
+                          class="heightLosangePics img-responsive center-block"/>
+                      <p class="positionOptionPresta text-center">3 Choisir</p>
+                 </div>
+             </div>
+          </div>
+       </div>
+
+   </div>
+ </section>
+
+  <section class="section" id="about">
+    <div class="container colorBlock">
+      <div class="row">
+        <div class="col-md-4">
+            <img src="{{ asset ('assets/images/vert.png') }}" alt="losange1-pics"
+                 class="losangePics img-responsive"/>
+        </div>
+        <div class="col-md-3">
+            <h2 class="title_position_presta text-center">S'inspirer</h2>
+        </div>
+      </div>
+      <p class="text-presta-description">Vous êtes inspirés, avez un projet et des idées
+       pleins la tête, mais comment faire, pour être sûr de faire les bons choix ?</p>
+
+      <p class="sous_description_presta_particulier">LA VISITE CONSEIL vous permet d’échanger
+       avec un professionnel de l’aménagement,
+       vous confortez dans vos intentions ou vous proposez un autre point de vue.</p>
+    </div>
+
+  </section>
+
+    <div id="bg1" class="fixedbg">
+    </div>
+  </div>
 
 
-  {% block body %}
-  <div id="hautPage" class="container-fluid backgroundProfessionnel">
-      <h1 class="title-prestation text-center">Professionnel</h1>
-      <p class="text-center"><strong>Décoratrice d'intérieur et extérieur</strong><br/>
-          à votre service pour tous vos projets professionnels
+  <section class="section" id="offer">
+
+    <div class="container colorBlock">
+      <div class="row">
+        <div class="col-md-4">
+            <img src="{{ asset ('assets/images/2losanges.png') }}" alt="losange2-pics"
+                 class="losangePics img-responsive"/>
+        </div>
+        <div class="col-md-4">
+          <h2 class="text-center">Accompagner</h2>
+        </div>
+      </div>
+
+      <p>Le projet se précise mais visuellement c’est encore difficile.</p>
+      <p>
+        Quelle implantation, quel design, style, quel matière, matériaux, hauteur, lumière, ergonomie, couleur,
+        motifs, texture...?</p>
+        <p>L’étude Avant Projet constituée de 3 phases permet de répondre à toutes ces questions et de visualiser à
+        l’aide de plans, d’esquisses et vidéo virtuelle 3D et des
+        planches mobiliers matériaux et d’en connaître le budget estimatif grâce aux devis réalisés par mon équipe d’artisan.
       </p>
+    </div>
 
-          <p class="text-center sous-title-prestation">Plusieurs missions vous sont proposées :</p>
+  </section>
+
+    <div id="bg2" class="fixedbg">
+    </div>
+  </div>
+
+  <section class="section" id="link">
+
+    <div class="container colorBlock">
+    <div class="row">
+      <div class="col-md-4">
+          <img src="{{ asset ('assets/images/3losanges.png') }}" alt="losange3-pics"
+               class="PositionLosangPics img-responsive"/>
       </div>
-      <div class="row prestation-content text-center">
-          <div class="col-md-offset-2 col-md-10">
-              <div class="gifts-advantage col-md-2">
-                  <a class="colorAncre" href="#1">
-                      <div class="gifts-icon">
-                          <img class="icon-prestations img-responsive" src="{{ asset ('assets/images/bulle.png') }}"
-                               alt="icône">
-                      </div>
-                      <p class="prestation-description">
-                          JE PENSE MON PROJET
-                      </p>
-                  </a>
-              </div>
-              <div class="gifts-advantage  col-md-2">
-                  <a class="colorAncre" href="#2">
-                      <div class="gifts-icon">
-                          <img class="icon-prestations img-responsive" src="{{ asset ('assets/images/equaire.png') }}"
-                               alt="icône">
-                      </div>
-                      <p class="prestation-description">
-                          JE STRUCTURE,<br/> J’AMENAGE
-                      </p>
-                  </a>
-              </div>
-              <div class="gifts-advantage col-md-2">
-                  <a class="colorAncre" href="#3">
-                      <div class="gifts-icon">
-                          <img class="icon-prestations img-responsive" src="{{ asset ('assets/images/eolienne.svg') }}"
-                               alt="icône">
-                      </div>
-                      <p class="prestation-description">
-                          JE CHOISIS MES ENERGIES
-                      </p>
-                  </a>
-              </div>
-
-              <div class="gifts-advantage col-md-2">
-                  <a class="colorAncre" href="#4">
-                      <div class="gifts-icon">
-                          <img class="icon-prestations img-responsive" src="{{ asset ('assets/images/pinceau.png') }}"
-                               alt="icône">
-                      </div>
-                      <p class="prestation-description">
-                          JE M’INSTALLE,<br/> JE DECORE
-                      </p>
-                  </a>
-              </div>
-              <div class="gifts-advantage col-md-2">
-                  <a class="colorAncre" href="#5">
-                      <div class="gifts-icon">
-                          <img class="icon-prestations img-responsive" src="{{ asset ('assets/images/garden.png') }}"
-                               alt="icône">
-                      </div>
-                      <p class="prestation-description">
-                          J’AMENAGE MON JARDIN
-                      </p>
-                  </a>
-              </div>
-          </div>
+      <div class="col-md-3">
+        <h2 class="text-center">Choisir</h2>
       </div>
+    </div>
+      <p>Le projet est bouclé, toutes les cartes sont entre vos mains, pour lancer la réalisation de vos envies,<br/> de vos rêves et de votre projet.</p>
+      <p>Vous avez des devis d’artisans sélectionnés et les shopping listes pour mener à bien votre projet.
+      <br/>Mais le temps vous manque, vous n’êtes pas sur place et ou la gestion de chantier vous inquiète ?<br/>
+      L’assistance travaux, vous permet alors de vivre cette période en toute tranquillité.
+      Je serai votre unique interlocuteur et ferais l’intermédiaire entre vous et mon
+      équipe d’artisans.
+      Il ne s’agit pas de maîtrise d’œuvre puisque vous restez le seul décisionnaire de votre projet.</p>
+    </div>
+  </section>
 
-      <div class="container-fluid width-container text-center center-block">
-          <a class="position" name="1"></a>
-          <div class="row section-prestation1">
+    <div id="bg3" class="fixedbg">
+    </div>
+  </div>
 
-                  <div class="col-md-offset-1 col-md-10 color-block">
-                      <div class="row">
-                          <div class="col-md-6">
-                              <img src="{{ asset ('assets/images/planche-pics.png') }}" alt="visite-pics"
-                                   class="img-prestation1 img-responsive center-block"/>
-                          </div>
-                          <div class="col-md-6">
-                              <h1 class="colorAncre">Je pense à mon projet</h1>
-                              <p class="text-presta-description"> Les besoins, les envies, les contraintes, les idées.<br/>
-                                  Pensez son projet avec un professionnel de l’aménagement <br/>c’est réfléchir à un ensemble,
-                                  optimiser les aménagements,<br/> organiser la circulation des flux, faire des choix esthétiques,<br/> techniques,
-                                  cohérent, harmonieux et innovant<br/> en tenant compte de votre budget.</p>
-                          </div>
-                      </div>
-
-              </div>
-          </div>
-
-          <a class="position" name="2"></a>
-          <div class="row section-prestation2">
-              <div class="row">
-                  <div class="col-md-offset-1 col-md-10 color-block">
-                      <div class="row">
-                          <div class="col-md-6">
-                              <h1 class="colorAncre">Je structure, j'amènage</h1>
-                              <p class="text-presta-description"> Menuiserie, miroiterie, ferronnerie,<br/> cloison, ouvrant,
-                                  porte, fenêtre, <br/>cuisine, salle de bains,<br/> aménagement de combles.</p>
-                          </div>
-                          <div class="col-md-6">
-                              <img src="{{ asset ('assets/images/etude-pics.png') }}" alt="visite-pics"
-                                   class="img-prestation2 img-responsive center-block"/>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <a class="position" name="3"></a>
-          <div class="row section-prestation1">
-              <div class="row">
-                  <div class="col-md-offset-1 col-md-10 color-block">
-                      <div class="row">
-                          <div class="col-md-6">
-                              <img src="{{ asset ('assets/images/energie.png') }}" alt="visite-pics"
-                                   class="img-prestation1 img-responsive center-block"/>
-                          </div>
-                          <div class="col-md-6">
-                              <h1 class="colorAncre">Je choisis mes énergies</h1>
-                              <p class="text-presta-description">Electricite,<br/> plomberie, chauffage,<br/> pôële, cheminée.</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <a class="position" name="4"></a>
-          <div class="row section-prestation2">
-              <div class="row">
-                  <div class="col-md-offset-1 col-md-10 color-block">
-                      <div class="row">
-                          <div class="col-md-6">
-                              <h1 class="colorAncre">Je m'installe, je décore</h1>
-                              <p class="text-presta-description"> Peinture enduit, <br/>revêtement, carrelage,<br/> mobilier,
-                                  tapisserie...</p>
-                          </div>
-                          <div class="col-md-6">
-                              <img src="{{ asset ('assets/images/decore.jpg') }}" alt="visite-pics"
-                                   class="img-prestation1 img-responsive center-block"/>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-          <a class="position" name="5"></a>
-          <div class="row section-prestation1">
-              <div class="row">
-                  <div class="col-md-offset-1 col-md-10 color-block">
-                      <div class="row">
-                        <div class="col-md-6">
-                            <img src="{{ asset ('assets/images/jardin.jpg') }}" alt="visite-pics"
-                                 class="img-prestation2 img-responsive center-block"/>
-                        </div>
-                        <div class="col-md-6">
-                            <h1 class="colorAncre">J’amènage mon jardin</h1><br/>
-                            <p class="text-presta-description"> Aménagement extérieur,<br/> terrasse, balcon, paysage,<br/>
-                                piscine, équipement extérieur.</p>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-  {% endblock %}
+{% endblock %}
