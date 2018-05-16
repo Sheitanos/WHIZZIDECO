@@ -1,9 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div id="haut" class="container-fluid backgroundIndex">
-        <div class="logoHome"></div>
-    </div>
+    <section class="positionBody">
+        <div id="haut" class="container-fluid backgroundIndex">
+            <div class="logoHome"></div>
+        </div>
+    </section>
 
     <section class="container-fluid sketchs">
         <h1 class="title">Quelques une de mes réalisations</h1>
@@ -40,8 +42,8 @@
                 luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque
                 fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
             </p>
-            <div class="gifts-img col-sm-offset-2 col-sm-3col-md-offset-2 col-md-3">
-                <img class="giftcard-image img-responsive" src="{{ asset('assets/images/giftcard.png') }}" alt="image cadeau">
+            <div class="gifts-img col-sm-offset-2 col-sm-3 col-md-offset-1 col-md-3">
+                <img class="giftcard-image img-responsive" src="{{ asset('assets/images/kdo.jpg') }}" alt="image cadeau">
             </div>
         </div>
         <div class="container-fluid">
@@ -51,12 +53,10 @@
                         <img class="gift-icon img-responsive" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
                     </div>
                     <p class="advantage-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
-                        tortor,
-                        dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-                        Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec
-                        nonummy
-                        molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+                        <strong>Avantages du coffret cadeau :</strong><br/>
+                        - Cadeau Original, Unique et Personnalisé<br/>
+                        - Coup de pouce pour vos proches<br/>
+                        - Accéder à un moment privilégié avec <br/>un professionnel de l'habitat
                     </p>
                 </div>
                 <div class="gifts-advantage  col-md-4">
@@ -64,12 +64,11 @@
                         <img class="gift-icon img-responsive" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
                     </div>
                     <p class="advantage-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
-                        tortor,
-                        dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-                        Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec
-                        nonummy
-                        molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+                      <strong>En quoi consiste le coffret Cadeau ?</strong><br/>
+                      - une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet<br/>
+                      - un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs, éclairages, mobiliers...<br/>
+                      - une planche d'ambiance, de style et ou concept décoratif<br/>
+                      - une esquisse
                     </p>
                 </div>
                 <div class="gifts-advantage col-md-4">
@@ -77,12 +76,12 @@
                         <img class="gift-icon img-responsive" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
                     </div>
                     <p class="advantage-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus
-                        tortor,
-                        dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-                        Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec
-                        nonummy
-                        molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+                        <strong>Comment ça marche ?</strong><br/>
+                        - Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
+                        - Après réception du règlement, vous recevez par courrier ou par email la carte coffret
+                         cadeau personnalisée au nom du destinataire.<br/>
+                        - Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "Conseils déco"
+                        pour bénéficier des conseils de qualité d'un professionnel de l'habitat
                     </p>
                 </div>
             </div>
@@ -92,10 +91,10 @@
         <h1 class="title">Mon histoire</h1>
         <div class="row ">
             <div class="history-img col-md-offset-2 col-md-3">
-                <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
+
             </div>
             <div class="history-content col-md-6">
-                {{ homes.historyText|raw }}
+
             </div>
         </div>
     </section>

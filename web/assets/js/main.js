@@ -6,3 +6,5 @@ videoContainer.on('click', function () {
         videoContainer[0].pause();
     }
 });
+
+/*--*/
