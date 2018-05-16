@@ -1,5 +1,5 @@
 .backgroundIndex {
-  background-image: url("../images/salon_design.jpg");
+  background-image: url("../images/v2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,17 +37,21 @@
   margin-top: 5vh;
 }
 
+.videoBlock {
+  padding-bottom: 5%;
+}
+
+.descriptionVirtuel {
+  padding-top: 4%;
+}
+
 .whizziVideo {
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 70%;
+  width: 90%;
   height: auto;
 }
 
-.gifts {
-    /*margin-top: 10vh;*/
-    background-color: #86b68e;
-
+.positionAvantage {
+  padding-bottom: 2%;
 }
 
 .gift-icon {
@@ -66,6 +70,7 @@
 
 .giftcard-image {
   width: 550px;
+  marging-bottom: 2%;
 }
 
 .advantage-content {
@@ -73,10 +78,6 @@
     margin-top: 5vh;
     margin-left: 7%;
     margin-right: 7%;
-}
-
-.my-history {
-    background-color: #c7dece;
 }
 
 .history-img {
@@ -89,7 +90,4 @@
     padding-top: 2%;
     padding-bottom: 2%;
     margin-bottom: 2%;
-}
-.video{
-    background-color: #b3c396;
 }
