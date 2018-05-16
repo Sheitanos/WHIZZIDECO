@@ -33,14 +33,22 @@
                    </video>
                  </div>
 
-               <div class="col-md-3">
-                  <p class="descriptionVirtuel">Le home staging 3D permet d'effectuer une transformation en 3D
-                    par un relooking virtuel et une décoration d’intérieur adaptés.<br/>
-                    L’utilisateur a ainsi accès à l’environnement numérisé, dans lequel
-                    il peut ajouter canapé, lampe, plante ou encore table basse, le tout
-                    en réalité virtuelle.<br/> Le catalogue du mobilier se trouvant directement
-                     sur l’application.<br/> les
-                   clients pourront tester l’expérience immersive.</p>
+               <div class="col-md-3 border-virtual">
+                  <p>
+                      Le home staging 3D permet d'effectuer une transformation en 3D
+                      par un relooking virtuel et une décoration d’intérieur adaptés.
+                    </p>
+                    <p class="descriptionVirtuel">
+                      L’utilisateur a ainsi accès à l’environnement numérisé, dans lequel
+                      il peut ajouter canapé, lampe, plante ou encore table basse, le tout
+                      en réalité virtuelle.
+                    </p>
+                    <p class="descriptionVirtuel">
+                      Le catalogue du mobilier se trouvant directement sur l’application.
+                     </p>
+                     <p class="descriptionVirtuel">
+                      les clients pourront tester l’expérience immersive.
+                     </p>
                     <img src="{{asset ('assets/images/virtuel.jpeg')}}" alt="virtual-pics"/>
                </div>
              </div>
@@ -118,10 +126,11 @@
         <h1 class="title-my-history">Mon histoire</h1>
         <div class="row my-history-content ">
             <div class="history-img col-md-offset-2 col-md-3">
-              <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
+            <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
+        </div>
             </div>
             <div class="history-content col-md-6">
-              {{ homes.historyText|raw }}
+                {{ homes.historyText|raw }}
             </div>
         </div>
 
