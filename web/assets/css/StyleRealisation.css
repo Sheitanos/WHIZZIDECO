@@ -11,13 +11,13 @@
 }
 
 .production-before {
-    background: url("../images/bambou.jpg");
+    background-color: #86b68e;
     background-size: cover;
 }
 
 .production-after {
     /*margin-top: 6%;*/
-    background: url("../images/damier-gris.jpg");
+    background-color: #c7dece;
 }
 
 .item {
@@ -63,11 +63,12 @@
 }
 
 .text-production {
-    background-color: rgba(242,242,242,0.8);
+    background-color: white;
     border-radius: 15px;
     padding: 4%;
+    margin-bottom: 10%;
 }
 
 .production-content {
-    background: url("../images/damier-gris.jpg");
+    background-color: #c7dece;
 }
