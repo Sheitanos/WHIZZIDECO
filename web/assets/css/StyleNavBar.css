@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 .colorNav {
     background: white;
     margin: 0;
@@ -7,6 +8,7 @@
     color: black;
     font-size: calc(10px + 1vw);
     margin-right: 1%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .logoNav {

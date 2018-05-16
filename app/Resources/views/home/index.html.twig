@@ -20,7 +20,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="video">
 
         <video id="videoContainer" class="whizziVideo" src="{{ asset('assets/images/film.mp4') }}"
                width="600"
@@ -88,13 +88,13 @@
         </div>
     </section>
     <section class="container-fluid my-history">
-        <h1 class="title">Mon histoire</h1>
-        <div class="row ">
+        <h1 class="title-my-history">Mon histoire</h1>
+        <div class="row my-history-content ">
             <div class="history-img col-md-offset-2 col-md-3">
-
+               <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
             </div>
             <div class="history-content col-md-6">
-
+               {{ homes.historyText|raw }}
             </div>
         </div>
     </section>

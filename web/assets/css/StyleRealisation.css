@@ -1,15 +1,23 @@
 .title-realisation {
     margin-top: 5%;
     margin-bottom: 5%;
+    color: orangered;
 }
 
 .title-production {
     text-align: center;
     font-family: 'Dancing Script', cursive;
+    font-size: 2vw;
+}
+
+.production-before {
+    background: url("../images/bambou.jpg");
+    background-size: cover;
 }
 
 .production-after {
-    margin-top: 6%;
+    /*margin-top: 6%;*/
+    background: url("../images/damier-gris.jpg");
 }
 
 .item {
@@ -23,11 +31,14 @@
 #myCarousel1{
     width: 70%;
     margin-left: 10%;
+    margin-bottom: 5%;
+
 }
 
 #myCarousel2{
     width: 70%;
     margin-left: 20%;
+    margin-bottom: 5%;
 }
 
 .production-title {
@@ -49,4 +60,14 @@
 .whizzi-form {
     width: 30%;
     margin-left: 35%;
+}
+
+.text-production {
+    background-color: rgba(242,242,242,0.8);
+    border-radius: 15px;
+    padding: 4%;
+}
+
+.production-content {
+    background: url("../images/damier-gris.jpg");
 }

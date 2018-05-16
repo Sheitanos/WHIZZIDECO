@@ -1,6 +1,10 @@
-/* .bloc-contact {
-    margin-top: 6%;
-} */
+.bloc-contact {
+    background: url("../images/damier-gris.jpg");
+}
+
+.contact-content {
+    margin-top: 5%;
+}
 
 li {
     text-decoration: none;
