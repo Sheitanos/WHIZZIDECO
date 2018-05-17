@@ -26,8 +26,12 @@
   width: calc(500px - 5%);
 }
 
+.sous-title-advantage {
+  padding-bottom: 3%;
+}
+
 .advantage-description {
-  padding-bottom: 2%;
+  padding-bottom: 1%;
 }
 
 .sketchs {
@@ -51,14 +55,35 @@
   height: auto;
 }
 
+.border-virtual {
+  margin-top: 2%;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  padding: 1%;
+}
+
 .positionAvantage {
   padding-bottom: 2%;
 }
 
-.gift-icon {
-  width: 25%;
+.gift-icon1 {
+  width: 150px;
   padding: 1%;
-  margin-left: 30%;
+  margin-left: 23%;
+  border: 5px solid black;
+  border-radius: 50%;
+}
+
+.gift-icon2 {
+  width: 150px;
+  padding: 1%;
+  border: 5px solid black;
+  border-radius: 50%;
+}
+
+.gift-icon3 {
+  width: 149px;
+  padding: 1%;
 }
 
 .gifts-content {

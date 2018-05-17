@@ -34,7 +34,7 @@
                  </div>
 
                <div class="col-md-3 border-virtual">
-                  <p>
+                    <p>
                       Le home staging 3D permet d'effectuer une transformation en 3D
                       par un relooking virtuel et une décoration d’intérieur adaptés.
                     </p>
@@ -43,13 +43,10 @@
                       il peut ajouter canapé, lampe, plante ou encore table basse, le tout
                       en réalité virtuelle.
                     </p>
-                    <p class="descriptionVirtuel">
-                      Le catalogue du mobilier se trouvant directement sur l’application.
-                     </p>
                      <p class="descriptionVirtuel">
-                      les clients pourront tester l’expérience immersive.
+                      les clients pourront tester l’expérience immersive directement à la boutique.
                      </p>
-                    <img src="{{asset ('assets/images/virtuel.jpeg')}}" alt="virtual-pics"/>
+                    <img class="img-responsive center-block" src="{{asset ('assets/images/virtuel.jpeg')}}" alt="virtual-pics"/>
                </div>
              </div>
 
@@ -78,42 +75,56 @@
         </div>
         <div class="container-fluid">
             <div class="row advantage-content">
-                <div class="gifts-advantage col-md-4">
+                <div class="gifts-advantage col-md-4 col-sm-6">
                     <div class="gifts-icon">
-                        <img class="gift-icon img-responsive" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
+                        <img class="gift-icon1 img-responsive center-block" src="{{ asset ('assets/images/pointDinterrogation.png') }}" alt="icône">
                     </div>
+                    <h2 class="sous-title-advantage">Avantages du coffret cadeau :</h2>
                     <p class="advantage-description">
-                        <strong>Avantages du coffret cadeau :</strong><br/>
-                        - Cadeau Original, Unique et Personnalisé<br/>
-                        - Coup de pouce pour vos proches<br/>
-                        - Accéder à un moment privilégié avec <br/>un professionnel de l'habitat
+                        Cadeau Original, Unique et Personnalisé.
+                    </p>
+                    <p class="advantage-description">
+                        Coup de pouce pour vos proches.
+                    </p>
+                    <p class="advantage-description">
+                        Accéder à un moment privilégié avec <br/>un professionnel de l'habitat.
                     </p>
                 </div>
 
-                <div class="gifts-advantage col-md-4">
+                <div class="gifts-advantage col-md-4 col-sm-6">
                     <div class="gifts-icon">
-                        <img class="gift-icon img-responsive" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
+                        <img class="gift-icon2 img-responsive center-block" src="{{ asset ('assets/images/loupe.jpg') }}" alt="icône">
                     </div>
+                    <h2 class="sous-title-advantage">En quoi consiste le coffret Cadeau ?</h2>
                     <p class="advantage-description">
-                      <strong>En quoi consiste le coffret Cadeau ?</strong><br/>
-                      - une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet<br/>
-                      - un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs, éclairages, mobiliers...<br/>
-                      - une planche d'ambiance, de style et ou concept décoratif<br/>
-                      - une esquisse
+                      Une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet.
+                    </p>
+                    <p class="advantage-description">
+                      Un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs, éclairages, mobiliers...
+                    </p>
+                    <p class="advantage-description">
+                      Une planche d'ambiance, de style et ou concept décoratif.
+                    </p>
+                    <p class="advantage-description">
+                      Une esquisse
                     </p>
                 </div>
 
-                <div class="gifts-advantage col-md-4">
+                <div class="gifts-advantage col-md-4 col-sm-6">
                     <div class="gifts-icon">
-                        <img class="gift-icon img-responsive" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
+                        <img class="gift-icon3 img-responsive center-block" src="{{ asset ('assets/images/Poignée.png') }}" alt="icône">
                     </div>
+                    <h2 class="sous-title-advantage text-center">Comment ça marche ?</h2>
                     <p class="advantage-description">
-                        <strong>Comment ça marche ?</strong><br/>
-                        - Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
-                        - Après réception du règlement, vous recevez par courrier ou par email la carte coffret
-                         cadeau personnalisée au nom du destinataire.<br/>
-                        - Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "Conseils déco"
-                        pour bénéficier des conseils de qualité d'un professionnel de l'habitat
+                        Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.
+                    </p>
+                    <p class="advantage-description">
+                        Après réception du règlement, vous recevez par courrier ou par email la carte coffret
+                         cadeau personnalisée au nom du destinataire.
+                     </p>
+                     <p class="advantage-description">
+                        Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "Conseils déco"
+                        pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
                     </p>
                 </div>
             </div>
@@ -126,7 +137,7 @@
         <h1 class="title-my-history">Mon histoire</h1>
         <div class="row my-history-content ">
             <div class="history-img col-md-offset-2 col-md-3">
-            <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
+              <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
         </div>
             </div>
             <div class="history-content col-md-6">

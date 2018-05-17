@@ -19,12 +19,6 @@ li {
     padding: 3% 0 3% 0;
 }
 
-.border-virtual {
-  border: 1px solid orangered;
-  border-radius: 5px;
-  padding: 1%;
-}
-
 .contactLink {
     color: black;
     font-size: 18px;
