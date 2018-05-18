@@ -1,0 +1,28 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+
+    <section class="container-fluid production-content">
+        <h1 class="title-realisation text-center">Mes différentes réalisations</h1>
+        <div class="row">
+            {% for productionPicture in productionPictures %}
+                {% for newTab in newTabs %}
+                    {% if productionPicture.updatedAt == newTab[1] %}
+                        <div class="col-xs-6 col-md-4">
+                            <p class="title-production">{{ productionPicture.afterProduction.title }}</p>
+                            <a href="{{ path('production_edit', { 'id': productionPicture.afterProduction.id }) }}" class="thumbnail">
+                                <img src="{{ asset( 'uploads/production/' ~ productionPicture.imageName) }}" alt="image">
+                            </a>
+                            <div class="col-md-offset-4 col-md-5">
+                                {{ form_start(delete_form[productionPicture.afterProduction.id]) }}
+                                <input type="submit" class="btn btn-danger"  value="Supprimer"/>
+                                {{ form_end(delete_form[productionPicture.afterProduction.id]) }}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

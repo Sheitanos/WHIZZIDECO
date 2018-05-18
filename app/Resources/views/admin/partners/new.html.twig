@@ -1,22 +1,21 @@
 {% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    {% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
     <div class="container-fluid">
 
-        <h1 class="admin-title-center">Editer Mon Histoire</h1>
+        <h1 class="admin-title-center">Ajouter un nouveau Partenaire</h1>
 
         <div class="whizzi-form">
-            {{ form_start(edit_form) }}
-            {{ form_widget(edit_form) }}
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
             <input type="submit" class="btn btn-success"  value="Valider"/>
-            {{ form_end(edit_form) }}
+            {{ form_end(form) }}
         </div>
         <div class="col-md-offset-10 col-md-1 back-button">
-            <a href="{{ path('admin') }}">
+            <a href="{{ path('productionPicture_index') }}">
                 <button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour</button>
             </a>
         </div>
     </div>
-
 {% endblock %}

@@ -18,9 +18,33 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a class="linkNav text-center" href="{{ path ('homepage') }}">Accueil</a></li>
-                <li><a class="linkNav text-center" href="{{ path ('production_index') }}">Réalisations</a></li>
-                <li><a class="linkNav text-center" href="{{ path ('app_boutique_index') }}">Boutique</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle linkNav text-center" data-toggle="dropdown" href="#">Accueil
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('sketch_index') }}" class="subLinknav">Liste des croquis</a></li>
+                        <li><a href="{{ path('sketch_new') }}" class="subLinknav">Ajouter un croquis</a></li>
+                        <li><a href="{{ path('home_edit', { 'id': 0 }) }}" class="subLinknav">Editer mon histoire</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle linkNav text-center" data-toggle="dropdown" href="#">Réalisations
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('adminProduction_index') }}" class="subLinknav">Liste des realisation</a></li>
+                        <li><a href="{{ path('production_new') }}" class="subLinknav">Ajouter une Réalisation</a></li>
+                        <li><a href="{{ path('productionPicture_index') }}" class="subLinknav">Liste des images</a></li>
+                        <li><a href="{{ path('productionPicture_new') }}" class="subLinknav">Ajouter une images</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle linkNav text-center" data-toggle="dropdown" href="#">Partenaires
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ path('adminPartners_index') }}" class="subLinknav">Liste des Partenaires</a></li>
+                        <li><a href="{{ path('partners_new') }}" class="subLinknav">Ajouter une partenaire</a></li>
+                    </ul>
+                </li>
                 <li><a class="linkNav text-center" href="{{ path ('app_actualite_index') }}">Actualités</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

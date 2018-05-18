@@ -1,0 +1,25 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+
+    <section class="container-fluid">
+        <h1 class="text-center title-boutique">Liste des Articles</h1>
+        <div class="row sketchs-content">
+            {% for article in articles %}
+                <div class="col-xs-6 col-md-4 productionPicture">
+                    <a href="{{ path('article_edit', { 'id': article.id }) }}" class="thumbnail">
+                        <img src="{{ asset( 'uploads/article/' ~ article.imageName) }}" alt="image">
+                    </a>
+                    <div class="col-md-offset-4 col-md-5">
+                        {{ form_start(delete_form[article.id]) }}
+                        <input type="submit" class="btn btn-danger"  value="Supprimer"/>
+                        {{ form_end(delete_form[article.id]) }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}
+
+
