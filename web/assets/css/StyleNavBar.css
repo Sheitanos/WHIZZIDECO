@@ -11,6 +11,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.subLinknav {
+    color: black;
+    font-size: calc(2px + 1vw);
+    margin-right: 1%;
+    font-family: 'Roboto', sans-serif;
+}
+
 .logoNav {
     padding-top: 1%;
     padding-left: 1%;

@@ -83,6 +83,14 @@ vich_uploader:
             uri_prefix:         /uploads/production
             upload_destination: '%kernel.root_dir%/../web/uploads/production'
             namer:              vich_uploader.namer_uniqid
+        partner_image:
+            uri_prefix:         /uploads/partner
+            upload_destination: '%kernel.root_dir%/../web/uploads/partner'
+            namer:              vich_uploader.namer_uniqid
+        article_image:
+                    uri_prefix:         /uploads/article
+                    upload_destination: '%kernel.root_dir%/../web/uploads/article'
+                    namer:              vich_uploader.namer_uniqid
 
 ivory_ck_editor:
     configs:
