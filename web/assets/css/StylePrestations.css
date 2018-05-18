@@ -11,7 +11,7 @@
 .backgroundPrestation{
   background-image: url("../images/above-art.jpg");
   background-position: top right;
-  padding-bottom: 10%;
+  padding-bottom: 12%;
 }
 
 .prestation-content {
@@ -140,6 +140,7 @@
 .fixedbg h2 {
   color: white;
   font-family: sans-serif;
+
   text-align: center;
   padding: 15px;
   text-shadow: 1px 1px 0 black;
