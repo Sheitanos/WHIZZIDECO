@@ -2,22 +2,6 @@
   margin-top: -7%;
 }
 
-/* .carousel-fullscreen .carousel-inner .item {
-  height: 100vh;
-  min-height: 800px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.carousel-fullscreen .carousel-caption {
-  top: 50%;
-  bottom: auto;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-} */
-
 .carousel-fade .carousel-inner .item {
     -webkit-transition-property: opacity;
     transition-property: opacity;
