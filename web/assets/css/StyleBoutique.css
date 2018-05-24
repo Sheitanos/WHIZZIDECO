@@ -1,16 +1,17 @@
-.title-boutique {
-    margin-top: 15%;
-    margin-bottom: 8%;
+
+
+.logoPartenaire1 {
+  margin-bottom: 10px;
+  width: 150px;
+  height: 100px;
 }
 
-.sousTitleBoutique {
-  padding-bottom: 2%;
-}
-
-.logoPartenaire {
+.logoPartenaire2 {
   border: 1px solid #5cb85c;
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 200px;
+  height: 150px;
 }
 
 .colorBox {
@@ -21,11 +22,15 @@
 }
 
 .contactLinkBoutique {
-    color: black;
-    font-size: 25px;
-    padding-top: 2%;
+  color: black;
+  font-size: 25px;
+  padding-top: 2%;
 }
 
 .textBoutique {
   margin-top: 2%;
+}
+
+#haut {
+  padding-top: 5%;
 }

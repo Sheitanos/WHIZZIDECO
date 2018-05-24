@@ -2,8 +2,42 @@
 
 {% block body %}
     <section class="positionBody">
-        <div id="haut" class="container-fluid backgroundIndex">
-            <div class="logoHome"></div>
+        <div class="container-fluid">
+            <div class="row backgroundIndex">
+
+                <!-- fullscreen -->
+
+                <div id="carousel-example-generic2" class="carousel slide carousel-fullscreen carousel-fade" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active" style="background-image: url('../assets/images/APS-SAM-orange.jpg');">
+                      <div class="overlay"></div>
+                      <div class="carousel-caption">
+
+                      </div>
+                  </div>
+                  <div class="item" style="background-image: url('../assets/images/ESQUISSE-FINALE.jpg');">
+                      <div class="overlay"></div>
+                      <div class="carousel-caption">
+
+                      </div>
+                  </div>
+                  <div class="item" style="background-image: url('../assets/images/APS-CHEMINEE.jpg');">
+                      <div class="overlay"></div>
+                      <div class="carousel-caption">
+
+                      </div>
+                  </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -58,18 +92,18 @@
 
         <h1 class="title">Carte Cadeau</h1>
         <div class="row gifts-content">
-            <p class="gifts-description col-offset-sm-1 col-sm-6 col-md-offset-1 col-md-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-                dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-                Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy
-                molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa,
-                scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero
-                pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu
-                enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci
-                luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque
-                fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
-            </p>
-            <div class="gifts-img col-sm-offset-2 col-sm-3 col-md-offset-1 col-md-3">
+              <p class="gifts-description col-sm-offset-1 col-sm-6">
+                <strong>En quoi consiste le coffret Cadeau ?</strong><br/>
+                une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet
+                un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs, éclairages, mobiliers...<br/>
+                une planche d'ambiance, de style et ou concept décoratif, une esquisse.<br/>
+
+                <strong class="title-cadeau2">Comment ça marche ?</strong><br/>
+                Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
+                Après réception du règlement, vous recevez par courrier ou par email la carte coffret cadeau personnalisée au nom du destinataire.<br/>
+                Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "<strong>Conseils déco</strong>" pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
+              </p>
+            <div class="gifts-img  col-sm-5">
                 <img class="giftcard-image img-responsive" src="{{ asset('assets/images/kdo.jpg') }}" alt="image cadeau">
             </div>
         </div>
@@ -77,54 +111,32 @@
             <div class="row advantage-content">
                 <div class="gifts-advantage col-md-4 col-sm-6">
                     <div class="gifts-icon">
-                        <img class="gift-icon1 img-responsive center-block" src="{{ asset ('assets/images/pointDinterrogation.png') }}" alt="icône">
+                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
                     </div>
-                    <h2 class="sous-title-advantage">Avantages du coffret cadeau :</h2>
+
                     <p class="advantage-description">
-                        Cadeau Original, Unique et Personnalisé.
-                    </p>
-                    <p class="advantage-description">
-                        Coup de pouce pour vos proches.
-                    </p>
-                    <p class="advantage-description">
-                        Accéder à un moment privilégié avec <br/>un professionnel de l'habitat.
+                        Cadeau Original,<br/>
+                        Unique,<br/>Personnalisé.
                     </p>
                 </div>
 
                 <div class="gifts-advantage col-md-4 col-sm-6">
                     <div class="gifts-icon">
-                        <img class="gift-icon2 img-responsive center-block" src="{{ asset ('assets/images/loupe.jpg') }}" alt="icône">
+                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
                     </div>
-                    <h2 class="sous-title-advantage">En quoi consiste le coffret Cadeau ?</h2>
+
                     <p class="advantage-description">
-                      Une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet.
-                    </p>
-                    <p class="advantage-description">
-                      Un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs, éclairages, mobiliers...
-                    </p>
-                    <p class="advantage-description">
-                      Une planche d'ambiance, de style et ou concept décoratif.
-                    </p>
-                    <p class="advantage-description">
-                      Une esquisse.
+                        Offrez un coup de pouce<br/> à vos proche.
                     </p>
                 </div>
 
                 <div class="gifts-advantage col-md-4 col-sm-6">
                     <div class="gifts-icon">
-                        <img class="gift-icon3 img-responsive center-block" src="{{ asset ('assets/images/Poignée.png') }}" alt="icône">
+                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
                     </div>
-                    <h2 class="sous-title-advantage text-center">Comment ça marche ?</h2>
+
                     <p class="advantage-description">
-                        Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.
-                    </p>
-                    <p class="advantage-description">
-                        Après réception du règlement, vous recevez par courrier ou par email la carte coffret
-                         cadeau personnalisée au nom du destinataire.
-                     </p>
-                     <p class="advantage-description">
-                        Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "Conseils déco"
-                        pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
+                        Accéder à un moment privilégié avec<br/> un professionnel de l'habitat.
                     </p>
                 </div>
             </div>
