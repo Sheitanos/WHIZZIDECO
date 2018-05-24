@@ -16,7 +16,7 @@ class SketchType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('name', TextType::class, array(
-                    'label' => "Le nom de votre image"
+                    'label' => "Le nom de votre croquis"
                     ))
                 ->add('imageFile', VichImageType::class, array(
                     'label' => "Votre image",

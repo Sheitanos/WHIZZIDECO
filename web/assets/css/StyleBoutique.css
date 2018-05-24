@@ -6,8 +6,8 @@
   height: 100px;
 }
 
-.logoPartenaire2 {
-  border: 1px solid #5cb85c;
+.logoPartenaire {
+  border: 1px solid black;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 200px;
@@ -31,6 +31,9 @@
   margin-top: 2%;
 }
 
+<<<<<<< HEAD
 #haut {
   padding-top: 5%;
 }
+=======
+>>>>>>> 83c6ad859800f319392a4eb8564269be5729205c
