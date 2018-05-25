@@ -10,8 +10,10 @@
 
 .backgroundPrestation{
   background-image: url("../images/above-art.jpg");
-  background-position: top right;
-  padding-bottom: 12%;
+  padding-bottom: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .prestation-content {
