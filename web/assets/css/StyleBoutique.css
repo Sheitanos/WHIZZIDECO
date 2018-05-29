@@ -1,4 +1,7 @@
-
+.blockBoutique {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
 
 .logoPartenaire1 {
   margin-bottom: 10px;
@@ -6,13 +9,13 @@
   height: 100px;
 }
 
-.logoPartenaire {
-  border: 1px solid black;
-  margin-top: 10px;
+.logoPartenaire2 {
   margin-bottom: 10px;
-  width: 200px;
+  width: 150px;
   height: 150px;
 }
+
+
 
 .colorBox {
   background-color: white;
@@ -30,10 +33,3 @@
 .textBoutique {
   margin-top: 2%;
 }
-
-<<<<<<< HEAD
-#haut {
-  padding-top: 5%;
-}
-=======
->>>>>>> 83c6ad859800f319392a4eb8564269be5729205c
