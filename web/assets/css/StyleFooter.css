@@ -6,13 +6,13 @@
 }
 
 .mention {
-    padding-top: 1%;
+    /* padding-top: 1%; */
     color: black;
 }
 
 .nameDev {
     color: black;
-    font-size: 18px;
+    font-size: 13px;
     font-family: 'Telex', sans-serif;
 }
 
@@ -21,35 +21,39 @@
 }
 
 .logoWDFooter {
-    width: 250px;
+    width: 150px;
     padding-top: 3%;
 }
 
 .backFooterShareIcon {
-    margin-top: 8%;
+    margin-top: 4%;
 }
 
 .logoFooter {
-    width: 60px;
+    width: 40px;
     background-color: white;
     border-radius: 50%;
 }
 
+.textMentions {
+  font-size: 13px;
+}
+
 .addressFooter {
-    padding-top: 5%;
+    padding-top: 1%;
     color: black;
-    font-size: 18px;
+    font-size: 13px;
     font-family: 'Telex', sans-serif;
 }
 
 .linkFooter {
     color: black;
-    font-size: 18px;
+    font-size: 13px;
     font-family: 'Telex', sans-serif;
 }
 
 .linkFooter:hover {
     color: black;
-    font-size: 18px;
+    font-size: 13px;
     font-family: 'Telex', sans-serif;
 }

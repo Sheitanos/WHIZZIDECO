@@ -5,8 +5,13 @@ imports:
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     #esi: ~
@@ -97,3 +102,11 @@ ivory_ck_editor:
         ck_home_config:
             toolbar: [ ["Source", "Save", "cut", "Copy", "Paste", "-", "Bold", "Italic", "Strike", "-", "RemoveFormat" ],["NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote"],["Undo", "Redo", "Maximize"] ]
 
+# FOSUserBundle
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+    from_email:
+        address: "whizzideco@gmail.com"
+        sender_name: "Whizzidéco"

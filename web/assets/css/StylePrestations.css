@@ -10,25 +10,21 @@
 
 .backgroundPrestation{
   background-image: url("../images/above-art.jpg");
-  background-position: top right;
-  padding-bottom: 12%;
+  padding-bottom: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .prestation-content {
   margin-bottom: 6%;
 }
 
-.title-prestation-index {
-  text-shadow: 1px 1px 0 black;
-  color: white;
-  margin-top: 15%;
-  margin-bottom: 5%;
-}
-
 .link-choise {
   text-shadow: 1px 1px 0 black;
   color: white;
-  padding-bottom: 1%;
+  padding-bottom: 6%;
+  margin-top: 100%;
 }
 
 .linkChoiseImg {
@@ -41,11 +37,13 @@
 }
 
 /*--partiulier and professionel--*/
+
 .colorBlock {
   background-color: white;
   border-radius: 5px;
   border: 2px solid #e85919;
   padding: 1%;
+  box-shadow: 6px 6px 6px grey;
 }
 
 .title_position_presta {

@@ -1,17 +1,21 @@
-.title-boutique {
-    margin-top: 15%;
-    margin-bottom: 8%;
+.blockBoutique {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.sousTitleBoutique {
-  padding-bottom: 2%;
-}
-
-.logoPartenaire {
-  border: 1px solid black;
-  margin-top: 10px;
+.logoPartenaire1 {
   margin-bottom: 10px;
+  width: 150px;
+  height: 100px;
 }
+
+.logoPartenaire2 {
+  margin-bottom: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+
 
 .colorBox {
   background-color: white;
@@ -21,12 +25,11 @@
 }
 
 .contactLinkBoutique {
-    color: black;
-    font-size: 25px;
-    padding-top: 2%;
+  color: black;
+  font-size: 25px;
+  padding-top: 2%;
 }
 
 .textBoutique {
   margin-top: 2%;
 }
-

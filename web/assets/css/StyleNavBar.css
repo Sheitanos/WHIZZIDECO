@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 .colorNav {
-    background: white;
-    margin: 0;
+  background: white;
+  margin: 0;
 }
 
 .linkNav {
-    color: black;
-    font-size: calc(10px + 1vw);
-    margin-right: 1%;
-    font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 15px;
+  margin-right: 10%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .subLinknav {
@@ -19,49 +19,54 @@
 }
 
 .logoNav {
-    padding-top: 1%;
-    padding-left: 1%;
-    width: 230px;
+  padding-top: 1%;
+  padding-left: 3%;
+  width: 180px;
 }
 
 .navbar-toggle {
-    position: relative;
-    float: right;
-    padding: 14px 15px;
-    margin-top: 45px;
-    margin-right: 20px;
-    background-color: transparent;
-    background-image: none;
-    border: 1px solid white;
-    border-radius: 4px;
+  position: relative;
+  float: right;
+  padding: 14px 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid white;
+  border-radius: 4px;
 }
 
 .navbar-toggle .icon-bar {
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
-    background: black;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background: black;
 }
-
 .nav > li {
-    margin-top: 5%;
+  margin-top: 3%;
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
-    text-decoration: none;
-    color: orangered;
-    border-bottom: 1px solid orangered;
-    background-color: transparent;
+  text-decoration: none;
+  color: orangered;
+  background-color: transparent;
+}
+
+.logoNavShare {
+  margin-top: -6px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .incline-divider {
   clear: both;
-	position: absolute;
-	margin-top :10px;
-	margin-left: 250px;
-	height: 100px;
-	width : 1px;
-	background: black;
+  position: absolute;
+  margin-top :10px;
+  margin-left: 200px;
+  height: 70px;
+  width : 1px;
+  background: black;
 }
 
 .black-divider
@@ -69,5 +74,5 @@
   width: 100%;
   height: 2px;
   background: black;
-  margin-top: 110px;
+  margin-top: 80px;
 }
