@@ -7,43 +7,54 @@
 
                 <!-- fullscreen -->
 
-                <div id="carousel-example-generic2" class="carousel slide carousel-fullscreen carousel-fade" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
-                </ol>
+                <div id="carousel-example-generic2" class="carousel slide carousel-fullscreen carousel-fade"
+                     data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+                    </ol>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                  <div class="item active" style="background-image: url('../assets/images/APS-SAM-orange.jpg');">
-                      <div class="overlay"></div>
-                      <div class="carousel-caption">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active" style="background-image: url('../assets/images/APS-SAM-orange.jpg');">
+                            <div class="overlay"></div>
+                            <div class="carousel-caption">
 
-                      </div>
-                  </div>
-                  <div class="item" style="background-image: url('../assets/images/ESQUISSE-FINALE.jpg');">
-                      <div class="overlay"></div>
-                      <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url('../assets/images/ESQUISSE-FINALE.jpg');">
+                            <div class="overlay"></div>
+                            <div class="carousel-caption">
 
-                      </div>
-                  </div>
-                  <div class="item" style="background-image: url('../assets/images/APS-CHEMINEE.jpg');">
-                      <div class="overlay"></div>
-                      <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url('../assets/images/APS-CHEMINEE.jpg');">
+                            <div class="overlay"></div>
+                            <div class="carousel-caption">
 
-                      </div>
-                  </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
             </div>
-        </div>
     </section>
 
     <section class="container-fluid sketchs">
-
         <h1 class="title">Quelques une de mes réalisations</h1>
+
         <div class="row sketchs-content">
             {% for sketch in sketchs %}
                 <div class="col-xs-6 col-md-4">
@@ -56,62 +67,71 @@
 
     </section>
 
+    <div id="bgHome1" class="fixedbgHome"></div>
+
     <section class="container-fluid videoBlock">
-      <div class="row">
-        <div class="col-md-offset-1 col-md-10">
-            <div class="row">
-                <div class="col-md-9">
-                    <video id="videoContainer" class="whizziVideo" src="{{ asset('assets/images/film.mp4') }}"
-                           width="600"
-                           loop preload controls>
-                   </video>
-                 </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="row">
+                    <div class="col-md-9">
+                        <video id="videoContainer" class="whizziVideo" src="{{ asset('assets/images/film.mp4') }}"
+                               width="600"
+                               loop preload controls>
+                        </video>
+                    </div>
 
-               <div class="col-md-3 border-virtual">
-                    <p>
-                      Le home staging 3D permet d'effectuer une transformation en 3D
-                      par un relooking virtuel et une décoration d’intérieur adaptés.
-                    </p>
-                    <p class="descriptionVirtuel">
-                      L’utilisateur a ainsi accès à l’environnement numérisé, dans lequel
-                      il peut ajouter canapé, lampe, plante ou encore table basse, le tout
-                      en réalité virtuelle.
-                    </p>
-                     <p class="descriptionVirtuel">
-                      les clients pourront tester l’expérience immersive directement à la boutique.
-                     </p>
-                    <img class="img-responsive center-block" src="{{asset ('assets/images/virtuel.jpeg')}}" alt="virtual-pics"/>
-               </div>
-             </div>
+                    <div class="col-md-3 border-virtual">
+                        <p>
+                            Le home staging 3D permet d'effectuer une transformation en 3D
+                            par un relooking virtuel et une décoration d’intérieur adaptés.
+                        </p>
+                        <p class="descriptionVirtuel">
+                            L’utilisateur a ainsi accès à l’environnement numérisé, dans lequel
+                            il peut ajouter canapé, lampe, plante ou encore table basse, le tout
+                            en réalité virtuelle.
+                        </p>
+                        <p class="descriptionVirtuel">
+                            les clients pourront tester l’expérience immersive directement à la boutique.
+                        </p>
+                        <img class="img-responsive center-block" src="{{ asset ('assets/images/virtuel.jpeg') }}"
+                             alt="virtual-pics"/>
+                    </div>
+                </div>
 
-         </div>
-       </div>
+            </div>
+        </div>
     </section>
-
+    <div id="bgHome2" class="fixedbgHome">
+    </div>
     <section class="container-fluid gifts">
 
         <h1 class="title">Carte Cadeau</h1>
         <div class="row gifts-content">
-              <p class="gifts-description col-sm-offset-1 col-sm-6">
+            <p class="gifts-description col-sm-offset-1 col-sm-6">
                 <strong>En quoi consiste le coffret Cadeau ?</strong><br/>
                 une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet
-                un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs, éclairages, mobiliers...<br/>
+                un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs,
+                éclairages, mobiliers...<br/>
                 une planche d'ambiance, de style et ou concept décoratif, une esquisse.<br/>
 
                 <strong class="title-cadeau2">Comment ça marche ?</strong><br/>
                 Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
-                Après réception du règlement, vous recevez par courrier ou par email la carte coffret cadeau personnalisée au nom du destinataire.<br/>
-                Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "<strong>Conseils déco</strong>" pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
-              </p>
+                Après réception du règlement, vous recevez par courrier ou par email la carte coffret cadeau
+                personnalisée au nom du destinataire.<br/>
+                Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "<strong>Conseils déco</strong>"
+                pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
+            </p>
             <div class="gifts-img  col-sm-5">
-                <img class="giftcard-image img-responsive" src="{{ asset('assets/images/kdo.jpg') }}" alt="image cadeau">
+                <img class="giftcard-image img-responsive" src="{{ asset('assets/images/kdo.jpg') }}"
+                     alt="image cadeau">
             </div>
         </div>
         <div class="container-fluid">
             <div class="row advantage-content">
                 <div class="gifts-advantage col-md-4 col-sm-6">
                     <div class="gifts-icon">
-                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
+                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}"
+                             alt="icône">
                     </div>
 
                     <p class="advantage-description">
@@ -122,7 +142,8 @@
 
                 <div class="gifts-advantage col-md-4 col-sm-6">
                     <div class="gifts-icon">
-                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
+                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}"
+                             alt="icône">
                     </div>
 
                     <p class="advantage-description">
@@ -132,7 +153,8 @@
 
                 <div class="gifts-advantage col-md-4 col-sm-6">
                     <div class="gifts-icon">
-                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}" alt="icône">
+                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}"
+                             alt="icône">
                     </div>
 
                     <p class="advantage-description">
@@ -143,18 +165,19 @@
         </div>
 
     </section>
-
+    <div id="bgHome3" class="fixedbgHome">
+    </div>
     <section class="container-fluid my-history">
 
-        <h1 class="title-my-history">Mon histoire</h1>
+        <h1 class="title">Mon histoire</h1>
         <div class="row my-history-content ">
             <div class="history-img col-md-offset-2 col-md-3">
                 <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
             </div>
         </div>
-            <div class="history-content col-md-6">
-                {{ homes.historyText|raw }}
-            </div>
+        <div class="history-content col-md-6">
+            {{ homes.historyText|raw }}
+        </div>
         </div>
 
     </section>
