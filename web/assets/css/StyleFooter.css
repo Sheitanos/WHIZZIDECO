@@ -6,7 +6,6 @@
 }
 
 .mention {
-    /* padding-top: 1%; */
     color: black;
 }
 
@@ -22,12 +21,9 @@
 
 .logoWDFooter {
     width: 150px;
-    padding-top: 3%;
+    padding-top: 1%;
 }
 
-.backFooterShareIcon {
-    margin-top: 4%;
-}
 
 .logoFooter {
     width: 40px;
@@ -47,6 +43,7 @@
 }
 
 .linkFooter {
+    padding-top: 1%;
     color: black;
     font-size: 13px;
     font-family: 'Telex', sans-serif;
