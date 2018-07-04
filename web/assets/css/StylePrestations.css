@@ -6,6 +6,11 @@
   width: 251px;
   height: 190px;
   margin-top: 1%;
+  box-shadow: 6px 6px 6px grey;
+}
+
+.choiceImg:hover {
+  border: 2px solid orangered;
 }
 
 .backgroundPrestation{
@@ -21,8 +26,7 @@
 }
 
 .link-choise {
-  text-shadow: 1px 1px 0 black;
-  color: white;
+  color: black;
   padding-bottom: 6%;
   margin-top: 100%;
 }
@@ -33,7 +37,7 @@
 
 .linkChoiseImg:hover {
   text-decoration: none;
-  color: black;
+  color: #e85b0d;
 }
 
 /*--partiulier and professionel--*/
@@ -41,7 +45,7 @@
 .colorBlock {
   background-color: white;
   border-radius: 5px;
-  border: 2px solid #e85919;
+  border: 2px solid #e85b0d;
   padding: 1%;
   box-shadow: 6px 6px 6px grey;
 }
