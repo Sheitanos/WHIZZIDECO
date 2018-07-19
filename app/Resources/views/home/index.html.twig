@@ -6,7 +6,6 @@
             <div class="row backgroundIndex">
 
                 <!-- fullscreen -->
-
                 <div id="carousel-example-generic2" class="carousel slide carousel-fullscreen carousel-fade"
                      data-ride="carousel">
                     <!-- Indicators -->
@@ -50,26 +49,13 @@
                 </a>
 
             </div>
-    </section>
-
-    <section class="container-fluid sketchs">
-        <h1 class="title">Quelques une de mes réalisations</h1>
-
-        <div class="row sketchs-content">
-            {% for sketch in sketchs %}
-                <div class="col-xs-6 col-md-4">
-                    <a href="#" class="thumbnail">
-                        <img src="{{ asset( 'uploads/sketch/' ~ sketch.imageName) }}" alt="image">
-                    </a>
-                </div>
-            {% endfor %}
         </div>
-
     </section>
 
     <div id="bgHome1" class="fixedbgHome"></div>
-
+    <h1 class="title">Conception 3D</h1>
     <section class="container-fluid videoBlock">
+
         <div class="row">
             <div class="col-md-offset-1 col-md-10">
                 <div class="row">
@@ -168,18 +154,15 @@
     <div id="bgHome3" class="fixedbgHome">
     </div>
     <section class="container-fluid my-history">
-
         <h1 class="title">Mon histoire</h1>
         <div class="row my-history-content ">
             <div class="history-img col-md-offset-2 col-md-3">
                 <img src="{{ asset( 'uploads/history/' ~ homes.imageName) }}" alt="image">
             </div>
-        </div>
-        <div class="history-content col-md-6">
+            <div class="history-content col-md-6">
                 {{ homes.historyText|raw }}
+            </div>
         </div>
-        </div>
-
     </section>
 
 {% endblock %}
