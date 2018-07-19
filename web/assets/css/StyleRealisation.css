@@ -10,14 +10,19 @@
     font-size: 1vw;
 }
 
+.title-realisation-carousel{
+    margin-top: 15vh;
+    color: orangered;
+}
+
 .production-before {
-    background-color: #86b68e;
+    /*background-color: #86b68e;*/
     background-size: cover;
 }
 
 .production-after {
     /*margin-top: 6%;*/
-    background-color: #c7dece;
+    /*background-color: #c7dece;*/
 }
 
 .item {
@@ -30,14 +35,14 @@
 
 #myCarousel1{
     width: 70%;
-    margin-left: 10%;
+    margin-left: 14%;
     margin-bottom: 5%;
 
 }
 
 #myCarousel2{
     width: 70%;
-    margin-left: 20%;
+    margin-left: 14%;
     margin-bottom: 5%;
 }
 
@@ -71,4 +76,9 @@
 
 .production-content {
     /*background-color: #c7dece;*/
+}
+
+.content-row {
+    display: flex;
+    justify-content: center;
 }
