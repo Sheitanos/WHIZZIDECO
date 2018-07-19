@@ -1,5 +1,5 @@
 .title-realisation {
-    margin-top: 5%;
+    margin-top: 9%;
     margin-bottom: 5%;
     color: orangered;
 }
@@ -7,7 +7,7 @@
 .title-production {
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    font-size: 2vw;
+    font-size: 1vw;
 }
 
 .production-before {
@@ -70,5 +70,5 @@
 }
 
 .production-content {
-    background-color: #c7dece;
+    /*background-color: #c7dece;*/
 }
