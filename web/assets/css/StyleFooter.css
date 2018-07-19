@@ -1,54 +1,56 @@
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
 
 .heightFooter {
-    background: #484c57;
+    background: white;
+    border-top: 1px solid orangered;
 }
 
 .mention {
-    padding-top: 1%;
-    color: white;
+    color: black;
 }
 
 .nameDev {
-    color: white;
-    font-size: 18px;
+    color: black;
+    font-size: 13px;
     font-family: 'Telex', sans-serif;
 }
 
 .nameDev:hover {
-    color: white;
+    color: black;
 }
 
 .logoWDFooter {
-    width: 250px;
-    padding-top: 3%;
+    width: 150px;
+    padding-top: 1%;
 }
 
-.backFooterShareIcon {
-    margin-top: 8%;
-}
 
 .logoFooter {
-    width: 60px;
+    width: 40px;
     background-color: white;
     border-radius: 50%;
 }
 
+.textMentions {
+  font-size: 13px;
+}
+
 .addressFooter {
-    padding-top: 5%;
-    color: white;
-    font-size: 18px;
+    padding-top: 1%;
+    color: black;
+    font-size: 13px;
     font-family: 'Telex', sans-serif;
 }
 
 .linkFooter {
-    color: white;
-    font-size: 18px;
+    padding-top: 1%;
+    color: black;
+    font-size: 13px;
     font-family: 'Telex', sans-serif;
 }
 
 .linkFooter:hover {
-    color: white;
-    font-size: 18px;
+    color: black;
+    font-size: 13px;
     font-family: 'Telex', sans-serif;
 }

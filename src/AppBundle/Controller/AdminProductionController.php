@@ -16,6 +16,43 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component
 class AdminProductionController extends Controller
 {
     /**
+     * Lists all production entities.
+     *
+     * @Route("/", name="adminProduction_index")
+     * @Method("GET")
+     */
+    public function indexAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $productions = $em->getRepository('AppBundle:Production')->findAll();
+        $productionPictures = $em->getRepository('AppBundle:ProductionPicture')->findAll();
+        $tabLastTimeAfterProductionPictures = $this->getDoctrine()
+            ->getRepository(ProductionPicture::class)
+            ->findAfterPicturesWhithMaxUpdateAt();
+
+        $newTabs = [];
+        foreach ($tabLastTimeAfterProductionPictures as $tabLastTimeAfterProductionPicture){
+            $lastUpdateAt = new \DateTime($tabLastTimeAfterProductionPicture[1]);
+            $tabLastTimeAfterProductionPicture[1] = $lastUpdateAt;
+            $newTabs[] = $tabLastTimeAfterProductionPicture;
+        }
+
+        $deleteForms = [];
+
+        foreach ($productions as $production) {
+            $deleteForm = $this->createDeleteForm($production)->createView();
+            $deleteForms[$production->getId()] = $deleteForm;
+        }
+
+        return $this->render('admin/production/index.html.twig', array(
+            'productions' => $productions,
+            'newTabs' => $newTabs,
+            'productionPictures' => $productionPictures,
+            'delete_form' => $deleteForms,
+        ));
+    }
+    /**
      * Creates a new production entity.
      *
      * @Route("/new", name="production_new")

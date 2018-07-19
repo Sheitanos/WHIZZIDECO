@@ -1,8 +1,9 @@
 .backgroundAdminIndex {
-    background-image: url("../images/accueilAdmin.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #86b68e;
     height: 980px;
     margin-top: -7%;
+}
+
+.login {
+    margin-top: 10%;
 }

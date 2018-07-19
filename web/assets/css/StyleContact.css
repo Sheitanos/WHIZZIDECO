@@ -1,6 +1,7 @@
-/* .bloc-contact {
-    margin-top: 6%;
-} */
+
+.contact-content {
+    margin-top: 10%;
+}
 
 li {
     text-decoration: none;
@@ -45,4 +46,8 @@ li {
 
 .bloc-form {
     margin-top: 1%;
+}
+
+.buttonSendMessage {
+    margin-bottom: 10%;
 }

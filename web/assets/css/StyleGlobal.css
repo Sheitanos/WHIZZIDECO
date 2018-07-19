@@ -1,21 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 h1, a {
-    font-size: 60px;
-    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
-    font-size: 55px;
-    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
 }
 
 h3 {
-    font-size: 45px;
-    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
     font-size: 18px;
     font-family: 'Telex', sans-serif;
+}
+
+ul,ol
+{
+    list-style:none;
 }
 
 .ancre-top {
@@ -29,6 +36,6 @@ p {
     color:black;
 }
 
-body{
-    padding-top: 9%;
+.positionBody {
+  padding-top: 9%;
 }

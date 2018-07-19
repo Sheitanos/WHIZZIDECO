@@ -1,83 +1,176 @@
 .backgroundIndex {
-  background-image: url("../images/salon_design.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 980px;
-  margin-top: -7%;
+    margin-top: -7%;
+}
+
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+/* carousel fullscreen */
+
+.carousel-fullscreen .carousel-inner .item {
+    height: 100vh;
+    min-height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* carousel fullscreen - vertically centered caption*/
+
+.carousel-fullscreen .carousel-caption {
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+/* overlay for better readibility of the caption  */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-out;
 }
 
 .title {
-  padding-top: 3%;
-  padding-bottom: 3%;
-  text-align: center;
-}
-
-.title-my-history {
-    padding-top: 3%;
-    padding-bottom: 3%;
+    /*padding-top: 9%;*/
+    /*padding-bottom: 3%;*/
     text-align: center;
     color: orangered;
+    text-shadow: 1px 1px 0 white;
+}
+
+#bgHome1 {
+    background-image: url(../images/APS-ENTREE-orange.jpg);
+    background-position: top;
+    box-shadow: 6px 6px 6px grey;
+}
+
+#bgHome2 {
+    background-image: url(../images/ESQUISSE-FINALE.jpg);
+    background-position: top;
+    box-shadow: 6px 6px 6px grey;
+}
+
+#bgHome3 {
+    background-image: url(../images/APS-SAM-orange.jpg);
+    background-position: top;
+    box-shadow: 6px 6px 6px grey;
+}
+
+.fixedbgHome {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 5vh;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
 }
 
 .logoNav2 {
-  margin-top: 8%;
-  width: calc(500px - 5%);
+    margin-top: 8%;
+    width: calc(500px - 5%);
+}
+
+.sous-title-advantage {
+    padding-bottom: 3%;
 }
 
 .advantage-description {
-  padding-bottom: 2%;
+    /*padding-bottom: 1%;*/
+    text-align: center;
 }
 
 .sketchs {
-  margin-top: 10vh;
+    margin-top: 10vh;
 }
 
 .sketchs-content {
-  margin-top: 5vh;
+    margin-top: 5vh;
+}
+
+.videoBlock {
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+
+.descriptionVirtuel {
+    padding-top: 2%;
 }
 
 .whizziVideo {
-  margin-left: 15%;
-  margin-right: 15%;
-  width: 70%;
-  height: auto;
+    width: 90%;
+    height: auto;
+    box-shadow: 6px 6px 6px grey;
 }
 
-.gifts {
-    margin-top: 10vh;
-    background: url("../images/damier-gris.jpg");
+.border-virtual {
+    /*margin-top: 2%;*/
+    border: 1px solid orangered;
+    border-radius: 5px;
+    padding: 1%;
+    box-shadow: 6px 6px 6px grey;
+}
 
+.positionAvantage {
+    padding-bottom: 2%;
 }
 
 .gift-icon {
-  width: 25%;
-  padding: 1%;
-  margin-left: 30%;
+    width: 100px;
+    padding: 1%;
 }
 
 .gifts-content {
-  margin-bottom: 7vh;
+    margin-bottom: 2vh;
 }
 
 .gifts-description {
-  padding-top: 5vh;
+    padding-top: 100px;
 }
 
 .giftcard-image {
-  width: 250px;
+    width: 950px;
+    margin-bottom: 1%;
 }
 
 .advantage-content {
-    margin-bottom: 10vh;
-    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-top: 5px;
     margin-left: 7%;
     margin-right: 7%;
-}
-
-.my-history {
-    background: url("../images/feuilles-tressees.jpg");
-    background-size: cover;
 }
 
 .history-img {
@@ -85,9 +178,11 @@
 }
 
 .history-content {
-    background-color: rgba(242,242,242,0.8);
+    background-color: white;
     border-radius: 15px;
     padding-top: 2%;
     padding-bottom: 2%;
     margin-bottom: 2%;
 }
+
+

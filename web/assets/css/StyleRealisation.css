@@ -1,5 +1,5 @@
 .title-realisation {
-    margin-top: 5%;
+    margin-top: 9%;
     margin-bottom: 5%;
     color: orangered;
 }
@@ -7,16 +7,22 @@
 .title-production {
     text-align: center;
     font-family: 'Dancing Script', cursive;
+    font-size: 1vw;
+}
+
+.title-realisation-carousel{
+    margin-top: 15vh;
+    color: orangered;
 }
 
 .production-before {
-    background: url("../images/bambou.jpg");
+    /*background-color: #86b68e;*/
     background-size: cover;
 }
 
 .production-after {
     /*margin-top: 6%;*/
-    background: url("../images/damier-gris.jpg");
+    /*background-color: #c7dece;*/
 }
 
 .item {
@@ -29,14 +35,14 @@
 
 #myCarousel1{
     width: 70%;
-    margin-left: 10%;
+    margin-left: 14%;
     margin-bottom: 5%;
 
 }
 
 #myCarousel2{
     width: 70%;
-    margin-left: 20%;
+    margin-left: 14%;
     margin-bottom: 5%;
 }
 
@@ -62,7 +68,17 @@
 }
 
 .text-production {
-    background-color: rgba(242,242,242,0.8);
+    background-color: white;
     border-radius: 15px;
     padding: 4%;
+    margin-bottom: 10%;
+}
+
+.production-content {
+    /*background-color: #c7dece;*/
+}
+
+.content-row {
+    display: flex;
+    justify-content: center;
 }
