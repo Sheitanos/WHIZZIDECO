@@ -25,11 +25,18 @@ class AdminPartnersController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $partners = $em->getRepository('AppBundle:Partner')->findAll();
-        $articles = $em->getRepository('AppBundle:Article')->findAll();
+
+        $deleteForms = [];
+
+        foreach ($partners as $partner) {
+            $deleteForm = $this->createDeleteForm($partner)->createView();
+            $deleteForms[$partner->getId()] = $deleteForm;
+        }
+//        $articles = $em->getRepository('AppBundle:Article')->findAll();
 
         return $this->render('admin/partners/index.html.twig', array(
             'partners' => $partners,
-            'articles' => $articles,
+            'delete_form' => $deleteForms,
         ));
     }
 
@@ -50,7 +57,7 @@ class AdminPartnersController extends Controller
             $em->persist($partner);
             $em->flush();
 
-            return $this->redirectToRoute('partners_show', array('id' => $partner->getId()));
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/partners/new.html.twig', array(
@@ -90,7 +97,7 @@ class AdminPartnersController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('partners_edit', array('id' => $partner->getId()));
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/partners/edit.html.twig', array(
@@ -117,7 +124,7 @@ class AdminPartnersController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('partners_index');
+        return $this->redirectToRoute('admin');
     }
 
     /**

@@ -50,7 +50,7 @@ class AdminHomeController extends Controller
                 'Vos modifications ont été bien été prises en compte'
             );
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/home/edit.html.twig', array(

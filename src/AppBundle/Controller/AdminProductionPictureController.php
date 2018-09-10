@@ -56,7 +56,7 @@ class AdminProductionPictureController extends Controller
             $em->persist($productionPicture);
             $em->flush();
 
-            return $this->redirectToRoute('productionPicture_index');
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/productionPicture/new.html.twig', array(
@@ -81,7 +81,7 @@ class AdminProductionPictureController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('productionPicture_index');
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/productionPicture/edit.html.twig', array(
@@ -108,7 +108,7 @@ class AdminProductionPictureController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('productionPicture_index');
+        return $this->redirectToRoute('admin');
     }
 
     /**

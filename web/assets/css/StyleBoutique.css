@@ -30,3 +30,12 @@
 .textBoutique {
   margin-top: 2%;
 }
+
+.list-partners {
+  margin-top: 10%;
+}
+
+.partners-articles {
+  display: flex;
+  justify-content: center;
+}
