@@ -20,9 +20,13 @@ class HomeController extends Controller
         $homes = $em->getRepository('AppBundle:Home')->findOneBy([]);
         $sketchs = $em->getRepository('AppBundle:Sketch')->findAll();
 
+        $numberOfSketches = count($sketchs);
+//        die(dump($numberOfSketches));
+
         return $this->render('home/index.html.twig', array(
             'homes' => $homes,
             'sketchs' => $sketchs,
+            'numberOfSketches' => $numberOfSketches,
         ));
     }
 

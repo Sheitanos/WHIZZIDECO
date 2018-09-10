@@ -6,7 +6,7 @@
         <h1 class="text-center title-boutique">Liste des Articles</h1>
         <div class="row sketchs-content">
             {% for article in articles %}
-                <div class="col-xs-6 col-md-4 productionPicture">
+                <div class="col-md-2 list-articles">
                     <a href="{{ path('article_edit', { 'id': article.id }) }}" class="thumbnail">
                         <img src="{{ asset( 'uploads/article/' ~ article.imageName) }}" alt="image">
                     </a>

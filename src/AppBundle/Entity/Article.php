@@ -27,6 +27,7 @@ class Article
 
     /**
      * @ORM\ManyToOne(targetEntity="Partner", inversedBy="articles")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     private $partner;
 
