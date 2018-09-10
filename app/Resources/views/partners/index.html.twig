@@ -1,53 +1,31 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Bienvenue sur {{ parent() }}{% endblock %}
 {% block body %}
-
     <div id="haut" class="container-fluid">
-        <h1 class="text-center title-boutique">Partenaires</h1>
-        <p class="sousTitleBoutique text-center">Découvrez : <br/>
-            Des créations originales, éco-responsables, made in France.<br/>
-            Des artistes, designers locaux et nationaux.
-        </p>
-
-        {% for partner in partners %}
-            <div class="container colorBox">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-offset-4 col-md-4 text-center">
-                            <img class="img-responsive"
-                                 src="{{ asset( 'uploads/partner/' ~ partner.imageName) }}"/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        {% if partner.url is defined %}
-                        <div class="col-md-12 text-center">
-                            <p class="contactLinkBoutique">Site en ligne:<br>
-                                <a class="contactLinkBoutique"
-                                   href="{{ partner.url }}" target="_blank">
-                                    {{ partner.url }}
-                                </a>
-                            </p>
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <div class="textBoutique">
-                            {{ partner.description|raw }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row ">
-                    {% for article in articles %}
-                        {% if article.partner.id == partner.id %}
-                            <div class="col-md-4">
-                                <img class="logoPartenaire img-responsive"
-                                     src="{{ asset( 'uploads/article/' ~ article.imageName) }}"/>
+        <div class="row blockBoutique">
+            <div class="col-md-12">
+                {% for partner in partners %}
+                    <div class="colorBox col-md-4">
+                        <div class="row">
+                            <div class="col-md-offset-4 col-md-4 text-center">
+                                <img class="img-responsive logoPartenaire1"
+                                     src="{{ asset( 'uploads/partner/' ~ partner.imageName) }}"
+                                />
                             </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+                        </div>
+                        <div class="row partners-articles">
+                            {% for article in articles %}
+                                {% if article.partner.id == partner.id %}
+                                    <div class="col-md-4 ">
+                                        <img class="logoPartenaire2 img-responsive"
+                                             src="{{ asset( 'uploads/article/' ~ article.imageName) }}"
+                                        />
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
+        </div>
     </div>
 {% endblock %}

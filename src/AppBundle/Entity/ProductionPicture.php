@@ -27,6 +27,7 @@ class ProductionPicture
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Production", inversedBy="beforePictures")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     private $beforeProduction;
 
@@ -34,6 +35,7 @@ class ProductionPicture
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Production", inversedBy="afterPictures")
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     private $afterProduction;
 

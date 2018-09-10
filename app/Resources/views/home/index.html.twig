@@ -10,31 +10,31 @@
                      data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+                        {% for i in 0..(numberOfSketches - 1) %}
+                            {% if loop.first %}
+                                <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+                            {% else %}
+                                <li data-target="#carousel-example-generic2" data-slide-to={{ i }}></li>
+                            {% endif %}
+                        {% endfor %}
+                        {#<li data-target="#carousel-example-generic2" data-slide-to="2"></li>#}
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        <div class="item active" style="background-image: url('../assets/images/APS-SAM-orange.jpg');">
-                            <div class="overlay"></div>
-                            <div class="carousel-caption">
-
+                        {% for sketch in sketchs %}
+                            {% if loop.first %}
+                                <div class="item active" style="background-image: url({{ asset( 'uploads/sketch/' ~ sketch.imageName) }});">
+                                    <div class="overlay"></div>
+                                    <div class="carousel-caption"></div>
+                                </div>
+                            {% else %}
+                            <div class="item" style="background-image: url({{ asset( 'uploads/sketch/' ~ sketch.imageName) }});">
+                                <div class="overlay"></div>
+                                <div class="carousel-caption"></div>
                             </div>
-                        </div>
-                        <div class="item" style="background-image: url('../assets/images/ESQUISSE-FINALE.jpg');">
-                            <div class="overlay"></div>
-                            <div class="carousel-caption">
-
-                            </div>
-                        </div>
-                        <div class="item" style="background-image: url('../assets/images/APS-CHEMINEE.jpg');">
-                            <div class="overlay"></div>
-                            <div class="carousel-caption">
-
-                            </div>
-                        </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
 

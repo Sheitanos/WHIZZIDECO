@@ -31,12 +31,14 @@ class ProductionController extends Controller
                                                    ->getRepository(ProductionPicture::class)
                                                    ->findAfterPicturesWhithMaxUpdateAt();
 
+
         $newTabs = [];
         foreach ($tabLastTimeAfterProductionPictures as $tabLastTimeAfterProductionPicture){
             $lastUpdateAt = new \DateTime($tabLastTimeAfterProductionPicture[1]);
             $tabLastTimeAfterProductionPicture[1] = $lastUpdateAt;
             $newTabs[] = $tabLastTimeAfterProductionPicture;
         }
+//        die(dump($productions));
 
         return $this->render('production/index.html.twig', array(
             'productions' => $productions,

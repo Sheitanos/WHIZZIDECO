@@ -4,15 +4,21 @@
 
     <div id="haut" class="container-fluid">
         <h1 class="text-center title-boutique"> Mes Partenaires</h1>
+        <div class="row list-partners">
         {% for partner in partners %}
-            <div class="row">
-                <div class="col-md-offset-4 col-md-4 text-center">
+                <div class="col-md-2">
                     <a href="{{ path('partners_edit', { 'id': partner.id }) }}" class="thumbnail">
                         <img class="img-responsive"
-                             src="{{ asset( 'uploads/partner/' ~ partner.imageName) }}"/>
+                             src="{{ asset( 'uploads/partner/' ~ partner.imageName) }}"
+                        />
                     </a>
+                    <div class="col-md-offset-4 col-md-5">
+                        {{ form_start(delete_form[partner.id]) }}
+                        <input type="submit" class="btn btn-danger"  value="Supprimer"/>
+                        {{ form_end(delete_form[partner.id]) }}
+                    </div>
                 </div>
-            </div>
         {% endfor %}
+        </div>
     </div>
 {% endblock %}

@@ -56,7 +56,7 @@ class AdminArticleController extends Controller
             $em->persist($article);
             $em->flush();
 
-            return $this->redirectToRoute('article_show', array('id' => $article->getId()));
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/article/new.html.twig', array(
@@ -96,7 +96,7 @@ class AdminArticleController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('article_edit', array('id' => $article->getId()));
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/article/edit.html.twig', array(

@@ -64,7 +64,7 @@ class AdminSketchController extends Controller
                     'Votre partenaire a été crée avec succès'
                 );
 
-                return $this->redirectToRoute('sketch_index', array('id' => $sketch->getId()));
+                return $this->redirectToRoute('admin');
             }
         }
 
@@ -109,7 +109,7 @@ class AdminSketchController extends Controller
                 'Vos modifications ont été bien été prises en compte'
             );
 
-            return $this->redirectToRoute('sketch_index', array('id' => $sketch->getId()));
+            return $this->redirectToRoute('admin');
         }
 
         return $this->render('admin/sketch/edit.html.twig', array(
@@ -136,7 +136,7 @@ class AdminSketchController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('sketch_index');
+        return $this->redirectToRoute('admin');
     }
 
     /**
