@@ -1,0 +1,21 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+    <section class="container-fluid">
+        <h1 class="text-center title-realisation">Mes images coups de coeur</h1>
+        <div class="row sketchs-content">
+            {% for loveImage in loveImages %}
+                <div class="col-xs-6 col-md-4 productionPicture">
+                    <a href="{{ path('love_image_edit', { 'id': loveImage.id }) }}" class="thumbnail">
+                        <img src="{{ asset( 'uploads/love/' ~ loveImage.imageName) }}" alt="image">
+                    </a>
+                    <div class="col-md-offset-4 col-md-5">
+                        {{ form_start(delete_form[loveImage.id]) }}
+                        <input type="submit" class="btn btn-danger"  value="Supprimer"/>
+                        {{ form_end(delete_form[loveImage.id]) }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
