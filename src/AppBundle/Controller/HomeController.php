@@ -19,15 +19,20 @@ class HomeController extends Controller
 
         $homes = $em->getRepository('AppBundle:Home')->findOneBy([]);
         $sketchs = $em->getRepository('AppBundle:Sketch')->findAll();
+        $loveImages = $em->getRepository('AppBundle:LoveImage')->findAll();
 
         $numberOfSketches = count($sketchs);
-//        die(dump($numberOfSketches));
+        $numberOfLoveImages = count($loveImages);
+//        die(dump($numberOfLoveImages));
 
-        return $this->render('home/index.html.twig', array(
-            'homes' => $homes,
-            'sketchs' => $sketchs,
-            'numberOfSketches' => $numberOfSketches,
-        ));
+//        return $this->render('home/index.html.twig', array(
+//            'homes' => $homes,
+//            'sketchs' => $sketchs,
+//            'loveImages' => $loveImages,
+//            'numberOfSketches' => $numberOfSketches,
+//            'numberOfLoveImages' => $numberOfLoveImages,
+//        ));
+        return $this->render('home/construction.html.twig');
     }
 
 }
