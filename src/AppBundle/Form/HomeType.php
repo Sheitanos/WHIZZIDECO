@@ -17,12 +17,33 @@ class HomeType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('historyText', CKEditorType::class, array(
+        $builder
+            ->add('historyText', CKEditorType::class, array(
             'label' => "Entrez le texte de votre histoire",
             'config_name' => 'ck_home_config'
-        ))
+            ))
+            ->add('careerText', CKEditorType::class, array(
+                'label' => "Entrez le texte de votre parcours",
+                'config_name' => 'ck_home_config'
+            ))
+            ->add('universText', CKEditorType::class, array(
+                'label' => "Entrez le texte de votre univers créatif",
+                'config_name' => 'ck_home_config'
+            ))
             ->add('imageFile', VichImageType::class, array(
                 'label' => "Votre image",
+                'allow_delete' => false,
+                'image_uri' => false,
+                'download_uri' => false,
+            ))
+            ->add('inspirationImageFile', VichImageType::class, array(
+                'label' => "Votre image d'inspiration",
+                'allow_delete' => false,
+                'image_uri' => false,
+                'download_uri' => false,
+            ))
+            ->add('favoriteMaterialImageFile', VichImageType::class, array(
+                'label' => "Votre image de matières favorites",
                 'allow_delete' => false,
                 'image_uri' => false,
                 'download_uri' => false,

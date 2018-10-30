@@ -90,9 +90,21 @@ vich_uploader:
             upload_destination: '%kernel.root_dir%/../web/uploads/partner'
             namer:              vich_uploader.namer_uniqid
         article_image:
-                    uri_prefix:         /uploads/article
-                    upload_destination: '%kernel.root_dir%/../web/uploads/article'
-                    namer:              vich_uploader.namer_uniqid
+            uri_prefix:         /uploads/article
+            upload_destination: '%kernel.root_dir%/../web/uploads/article'
+            namer:              vich_uploader.namer_uniqid
+        history_inspiration_image:
+            uri_prefix:         /uploads/inspiration
+            upload_destination: '%kernel.root_dir%/../web/uploads/inspiration'
+            namer:              vich_uploader.namer_uniqid
+        history_favorite_material_image:
+            uri_prefix:         /uploads/favorite
+            upload_destination: '%kernel.root_dir%/../web/uploads/favorite'
+            namer:              vich_uploader.namer_uniqid
+        love_image:
+            uri_prefix:         /uploads/love
+            upload_destination: '%kernel.root_dir%/../web/uploads/love'
+            namer:              vich_uploader.namer_uniqid
 
 ivory_ck_editor:
     configs:

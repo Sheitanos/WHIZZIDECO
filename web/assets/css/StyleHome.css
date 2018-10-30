@@ -70,19 +70,19 @@
 }
 
 #bgHome1 {
-    background-image: url(../images/APS-ENTREE-orange.jpg);
+    background-image: url(../images/papier-japonnais.jpg);
     background-position: top;
     box-shadow: 6px 6px 6px grey;
 }
 
 #bgHome2 {
-    background-image: url(../images/ESQUISSE-FINALE.jpg);
+    background-image: url(../images/papier-japonnais.jpg);
     background-position: top;
     box-shadow: 6px 6px 6px grey;
 }
 
 #bgHome3 {
-    background-image: url(../images/APS-SAM-orange.jpg);
+    background-image: url(../images/papier-japonnais.jpg);
     background-position: top;
     box-shadow: 6px 6px 6px grey;
 }
@@ -173,16 +173,45 @@
     margin-right: 7%;
 }
 
+.my-history{
+    margin-left: 10%;
+    margin-right: 10%;
+}
 .history-img {
-    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.history-content {
-    background-color: white;
-    border-radius: 15px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-bottom: 2%;
+.history-img-img{
+    display: block;
+}
+
+.history-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Telex', sans-serif;
+}
+
+.history-details-title{
+    font-weight: bold;
+    text-align: center;
+}
+
+.inspirations{
+    margin-top: 5%;
+}
+
+.favorite-material{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorite-material-img{
+    display: block;
 }
 #text-machine {
     z-index: 1000;
@@ -193,5 +222,66 @@
     margin-top: 13%;
     position: absolute;
 }
+
+.following-page{
+    margin-left: 85%;
+    margin-bottom: 2%;
+}
+
+.following-page > a{
+    color: black;
+    font-size: 18px;
+}
+
+/***********CONSTRUCTION PAGE*************/
+
+.my-html,
+.my-body {
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    background: #eeeef4;
+    font-weight: 100;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    margin: 0 20px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main h1 {
+    font-size: 3em;
+    font-weight: 100;
+    color: #f44;
+    margin: 0;
+}
+main h2 {
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+main h3 {
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-top: 0;
+}
+main a {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #f44;
+    text-decoration: none;
+}
+
+
+/***********FIN CONSTRUCTION PAGE*************/
+
 
 
