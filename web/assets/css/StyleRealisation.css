@@ -12,7 +12,9 @@
 
 .title-realisation-carousel{
     margin-top: 15vh;
-    color: orangered;
+    /*color: orangered;*/
+    font-size: 18px;
+    font-style: italic;
 }
 
 .production-before {
@@ -25,25 +27,29 @@
     /*background-color: #c7dece;*/
 }
 
-.item {
-    background-size: cover;
-}
 
-.item>img {
-    width: 100%;
+/*.item>img {*/
+    /*width: 100%;*/
+/*}*/
+.carousel-content{
+    border-right: 1px solid #E3E3E3;
 }
 
 #myCarousel1{
-    width: 70%;
-    margin-left: 14%;
-    margin-bottom: 5%;
+    width: 60%;
+    margin: auto;
+    /*margin-bottom: 5%;*/
 
 }
 
 #myCarousel2{
-    width: 70%;
-    margin-left: 14%;
-    margin-bottom: 5%;
+    width: 60%;
+    margin: auto;
+    /*margin-bottom: 5%;*/
+}
+
+.production-image-carousel{
+    height: 300px;
 }
 
 .production-title {
@@ -68,10 +74,18 @@
 }
 
 .text-production {
-    background-color: white;
-    border-radius: 15px;
-    padding: 4%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 15px;
+}
+
+.production-text-title{
+    font-weight: bold;
+    color: orangered;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5%;
 }
 
 .production-content {
@@ -85,4 +99,37 @@
 
 .production-list {
     margin-bottom: 3%;
+}
+
+.customer-reviews{
+    margin-bottom: 5%;
+}
+
+.customer-reviews-title{
+    margin-top: 3%;
+    font-weight: bold;
+    color: orangered;
+    text-align: center;
+    font-size: 18px;
+}
+
+.customer-reviews-content{
+    margin-top: 3%;
+}
+
+.customer-reviews-text{
+    font-style: italic;
+    font-size: 18px;
+}
+
+.customer-reviews-stars{
+    text-align: center;
+}
+
+.fa-star{
+    font-size: 30px;
+}
+
+.checked{
+    color: #ffe462;
 }

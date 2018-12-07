@@ -5,9 +5,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="container-fluid production-before col-md-6">
-            <h1 class="text-center title-realisation-carousel">Avant</h1>
+            <p class="text-center title-realisation-carousel">Avant</p>
                 <div class="pictures">
-                    <div class="container-fluid">
+                    <div class="container-fluid carousel-content">
                         <div class="row">
                             <div id="myCarousel1" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
@@ -20,7 +20,7 @@
                                     {% endfor %}
                                 </ol>
 
-                                <div class="carousel-inner">
+                                <div class="carousel-inner production-image-carousel">
                                     {% for tabProductionBeforePictureById in tabProductionBeforePicturesById %}
                                         {% if tabProductionBeforePictureById[0].beforeProduction.id == production.id %}
                                             {% if loop.first %}
@@ -53,13 +53,14 @@
                     </div>
                 </div>
                 <div class="production-text">
+                    <p class="production-text-title">Demande client</p>
                     <div class="text-production">
                         {{ production.textBefore|raw }}
                     </div>
                 </div>
         </div>
         <div class="container-fluid production-after col-md-6">
-            <h1 class="text-center title-realisation-carousel">Après</h1>
+            <p class="text-center title-realisation-carousel">Après</p>
                 <div class="pictures">
                     <div class="container-fluid">
                         <div class="row">
@@ -74,7 +75,7 @@
                                     {% endfor %}
                                 </ol>
 
-                                <div class="carousel-inner">
+                                <div class="carousel-inner production-image-carousel">
                                     {% for tabProductionAfterPictureById in tabProductionAfterPicturesById %}
                                         {% if tabProductionAfterPictureById[0].afterProduction.id == production.id %}
                                             {% if loop.first %}
@@ -107,10 +108,29 @@
                     </div>
                 </div>
                 <div class="production-text">
+                    <p class="production-text-title">Mission réalisées</p>
                     <div class="text-production">
                         {{ production.textAfter|raw }}
                     </div>
                 </div>
+        </div>
+    </div>
+    <div class="customer-reviews">
+        <p class="customer-reviews-title">Avis client</p>
+        <div class="container customer-reviews-content">
+            <div class="row">
+                <div class="customer-reviews-text col-md-8">
+                    "Nous sommes vraiment ravis de la prestations et madame Brissaire à vraiment été à l'écoute de
+                    nos envies et de nos besoin.Nous recommandons vivement."
+                </div>
+                <div class="customer-reviews-stars col-md-4">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

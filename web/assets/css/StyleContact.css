@@ -51,3 +51,8 @@ li {
 .buttonSendMessage {
     margin-bottom: 10%;
 }
+
+.contact-img{
+    width: 200px;
+    margin-bottom: 30px;
+}
