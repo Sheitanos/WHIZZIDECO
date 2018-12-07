@@ -23,16 +23,15 @@ class HomeController extends Controller
 
         $numberOfSketches = count($sketchs);
         $numberOfLoveImages = count($loveImages);
-//        die(dump($numberOfLoveImages));
 
-//        return $this->render('home/index.html.twig', array(
-//            'homes' => $homes,
-//            'sketchs' => $sketchs,
-//            'loveImages' => $loveImages,
-//            'numberOfSketches' => $numberOfSketches,
-//            'numberOfLoveImages' => $numberOfLoveImages,
-//        ));
-        return $this->render('home/construction.html.twig');
+        return $this->render('home/index.html.twig', array(
+            'homes' => $homes,
+            'sketchs' => $sketchs,
+            'loveImages' => $loveImages,
+            'numberOfSketches' => $numberOfSketches,
+            'numberOfLoveImages' => $numberOfLoveImages,
+        ));
+//        return $this->render('home/construction.html.twig');
     }
 
 }
