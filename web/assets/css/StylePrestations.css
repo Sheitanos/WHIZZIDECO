@@ -1,5 +1,9 @@
 /*--index presta--*/
 
+.first-section{
+  padding-top: 100px;
+}
+
 .choiceImg {
   background-color: #F2F2F2;
   border: 1px solid black;
@@ -103,6 +107,7 @@
 
 .losangePics {
   height: 100px;
+  display: inline-block;
 }
 
 .PositionLosangPics {
@@ -131,7 +136,7 @@
 .fixedbg {
   position: relative;
   width: 100%;
-  height: calc(50px + 30vh);
+  height: 75px;
   z-index: 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -148,17 +153,38 @@
 }
 
 #bg1 {
-  background-image: url(../images/planche-pics.png);
-  background-position: top;
+  background-image: linear-gradient(to right, orangered, white);
 }
 
 #bg2 {
   padding-top: -2%;
-  background-image: url(../images/picsW.jpg);
-  background-position: top;
+  background-image: linear-gradient(to right, orangered, white);
 }
 
 #bg3 {
-  background-image: url(../images/APS-SAM-orange.jpg);
-  background-position: top;
+  background-image: linear-gradient(to right, orangered, white);
+}
+
+#bg4 {
+  background-image: linear-gradient(to right, orangered, white);
+}
+
+#bg5 {
+  background-image: linear-gradient(to right, orangered, white);
+}
+
+.prest-img-content{
+  /*display: flex;*/
+}
+
+.prest-img{
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.gift-img{
+  display: block;
+  width: 60%;
+  margin: auto;
 }
