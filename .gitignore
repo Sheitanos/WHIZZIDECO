@@ -15,7 +15,6 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
-/web/uploads/
 composer.phar/*
 composer.phar
 .idea/
