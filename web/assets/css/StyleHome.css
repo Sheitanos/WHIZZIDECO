@@ -62,9 +62,13 @@
 }
 
 .title {
-    /*padding-top: 9%;*/
-    /*padding-bottom: 3%;*/
     text-align: center;
+    color: orangered;
+    text-shadow: 1px 1px 0 white;
+}
+
+.history-title{
+    /*text-align: center;*/
     color: orangered;
     text-shadow: 1px 1px 0 white;
 }
@@ -189,7 +193,7 @@
 .history-img-img{
     display: block;
     width: 70%;
-    margin-top: 50px;
+    margin-top: 27%;
 }
 
 .history-text {
@@ -210,7 +214,7 @@
 }
 
 #carousel-love-image{
-    width: 80%;
+    width: 72%;
     margin: auto;
 }
 
@@ -220,12 +224,12 @@
 
 
 .my-love-image-carousel{
-    height: 300px;
+    /*height: 300px;*/
 }
 
 .inspiration-img{
-    width: 80%;
-    height: 300px;
+    width: 72%;
+    /*height: 300px;*/
     display: block;
     margin: auto;
 }
@@ -238,15 +242,28 @@
 
 .favorite-material-img{
     display: block;
-    height: 500px;
+    /*height: 500px;*/
 }
 #text-machine {
     z-index: 1000;
     margin-left: 10%;
     margin-right: 10%;
     font-size: 37px;
+    font-style: italic;
     color: orangered;
-    margin-top: 13%;
+    margin-top: 30%;
+    position: absolute;
+}
+
+
+#text-machine-author {
+    z-index: 1000;
+    margin-left: 74%;
+    margin-right: 10%;
+    /*width: 100px;*/
+    font-size: 20px;
+    color: orangered;
+    margin-top: 34%;
     position: absolute;
 }
 
