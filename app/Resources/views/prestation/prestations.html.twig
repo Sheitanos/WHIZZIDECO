@@ -3,287 +3,554 @@
 {% block title %}Bienvenue sur {{ parent() }}{% endblock %}
 
 {% block body %}
-
-    {#<section>#}
-        {#<div class="container-fluid backgroundParticulier">#}
-
-            {#<h1 class="title-prestation padding-title text-center">Particulier</h1>#}
-            {#<p class="text-center sous-title-prestation1"><strong>Décoratrice d'intérieur et extérieur</strong><br/>#}
-                {#à votre service pour tous vos projets#}
-            {#</p>#}
-            {#<p class="text-center sous-title-prestation2">Plusieurs missions vous sont proposées :</p>#}
-
-            {#<div class="row bottomIndexPresta">#}
-                {#<div class="col-md-4 col-xs-12">#}
-                    {#<img src="{{ asset ('assets/images/vert.png') }}" alt="losange1-pics"#}
-                         {#class="losangePics img-responsive center-block"/>#}
-                    {#<p class="text-center">1 S'inspirer</p>#}
-                {#</div>#}
-                {#<div class="col-md-4 col-xs-12">#}
-                    {#<img src="{{ asset ('assets/images/2losanges.png') }}" alt="losange2-pics"#}
-                         {#class="losangePics img-responsive center-block"/>#}
-                    {#<p class="text-center">2 Accompagner</p>#}
-                {#</div>#}
-                {#<div class="col-md-4 col-xs-12">#}
-                    {#<img src="{{ asset ('assets/images/3losanges.png') }}" alt="losange3-pics"#}
-                         {#class="heightLosangePics img-responsive center-block"/>#}
-                    {#<p class="positionOptionPresta text-center">3 Choisir</p>#}
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
-    {#</section>#}
-
-    <section class="container-fluid first-section">
-        <h1 class="title">
-            <span>
-                 <img src="{{ asset ('assets/images/vert.png') }}" alt="losange1-pics"
-                      class="losangePics img-responsive"
-                 />
-            </span>Carte Cadeau
-        </h1>
-        <div class="row gifts-content">
-            <div class="col-sm-offset-1 col-sm-6">
-                <p class="gifts-description">
-                    <strong>En quoi consiste le coffret Cadeau ?</strong><br/>
-                    une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet
-                    un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs,
-                    éclairages, mobiliers...<br/>
-                    une planche d'ambiance, de style et ou concept décoratif, une esquisse.<br/>
-                </p>
-                <p>
-                    <strong class="title-cadeau2">Comment ça marche ?</strong><br/>
-                    Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
-                    Après réception du règlement, vous recevez par courrier ou par email la carte coffret cadeau
-                    personnalisée au nom du destinataire.<br/>
-                    Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "<strong>Conseils déco</strong>"
-                    pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
-                </p>
-            </div>
-            <div class="gifts-img  col-sm-5">
-                <img class="giftcard-image gift-img img-responsive" src="{{ asset('assets/images/kdo.jpg') }}"
-                     alt="image cadeau">
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row advantage-content">
-                <div class="gifts-advantage col-md-4 col-sm-6">
-                    <div class="gifts-icon">
-                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}"
-                             alt="icône">
+    <div class="page-content">
+        <section class="container presta-section">
+            <div class="row">
+                <div class="section-gift-background-content col-md-7">
+                    <img src="{{ asset ('assets/images/planche-cuisine.jpg') }}" alt="planche-cuisine-whizzideco" class="planche-cuisine-img">
+                    <img src="{{ asset ('assets/images/planche-salon.jpg') }}" alt="planche-salon-whizzideco" class="planche-salon-img">
+                    <div class="section-text-left-content">
+                        <div class="section-head-content">
+                            <img src="{{ asset ('assets/images/logo-maison-test.png') }}" alt="logo-maison-whizzideco" class="logo-house-img">
+                            <p class="my-section-title">Bon Cadeau pour Coaching Déco</p>
+                        </div>
+                        <p class="section-def">
+                            Offrez un coup de pouce,<br>
+                            Offrez un cadeau original et ultra-personnalisé,<br>
+                            Bénéficiez des conseils d'un professionnel de l'habitat<br>
+                        </p>
+                        <p class="presta-text">
+                            Il s'agit là de vous rencontrer sur les lieux du projet pour recueillir vos envies, vos idées et de
+                            vous proposer ce qu'il est possible de faire en vous formant à quelques base et grands principes de la décoration.
+                            nous parlerons d'agencement, de matériaux , de couleurs , de matières, d'éclairage et de mobilier.
+                            L'objectif est de vous amener dans les meilleurs conditions à la réalisation d'un projet décoratif.
+                        </p>
+                        <p class="presta-text">
+                            Comment ça marche?<br>
+                            Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée. Après réception de
+                            l'acceptation du devis et de votre règlement, vous recevez par courrier et par email le Bon Cadeau personnalisée au nom du destinataire.
+                            Le moment venu, le destinataire prend RDV pour réaliser son "Coaching Déco"
+                        </p>
+                        <p class="presta-text">
+                            Cette prestation est éligible au crédit d'impôt -50%.
+                        </p>
                     </div>
-
-                    <p class="advantage-description">
-                        Cadeau Original,<br/>
-                        Personnalisé,<br/>Unique.
-                    </p>
+                </div>
+                <div class="section-illu col-md-5">
+                    <img src="{{ asset ('assets/images/esquisse.jpg') }}" alt="esquisse-whizzideco" class="esquisse-img img-responsive">
                 </div>
 
-                <div class="gifts-advantage col-md-4 col-sm-6">
-                    <div class="gifts-icon">
-                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}"
-                             alt="icône">
+            </div>
+        </section>
+        <div class="container-fluid points-border">
+            <div class="row">
+                <div class="first-range col-md-offset-2 col-md-4">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-range col-md-4">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container presta-section">
+            <div class="row">
+                <div class="section-illu col-md-5">
+                    <div class="braintorming-img-content">
+                        <img src="{{ asset ('assets/images/brainstorming.jpg') }}" alt="brainstorming-whizzideco" class="brainstorming-img img-responsive">
                     </div>
 
-                    <p class="advantage-description">
-                        Offrez un coup de pouce<br/> à vos proche.
-                    </p>
+                </div>
+                <div class="section-brainstorming-background-content col-md-7">
+                    <img src="{{ asset ('assets/images/commode_decor.jpg') }}" alt="commode-whizzideco" class="commode-img">
+                    <div class="section-text-right-content">
+                        <div class="section-head-content">
+                            <img src="{{ asset ('assets/images/logo-maison-test.png') }}" alt="logo-maison-whizzideco" class="logo-house-img">
+                            <p class="my-section-title-step">Etape 1</p>
+                        </div>
+                        <p class="section-subtitle">
+                            Consultation conseils <span class="section-subtitle-litle"> à domicile</span>
+                        </p>
+                        <p class="presta-text">
+                            Autrement appelée « Visite Conseil ou Coaching Déco», il s’agit là de vous guider et de vous
+                            orienter sur le comment, du pourquoi, de ce qu’il est possible de faire en vous formant à
+                            quelques bases et grands principes de la décoration pour vous amener dans les meilleurs
+                            conditions à la réalisation d’un projet décoratif.
+                            Définir votre projet, identifier les besoins, les attentes, les contraintes techniques,
+                            architecturale, budgétaire et organisationnelle sont autant de points que nous aborderons
+                            au cours d’un entretien d’1 heure minimum sur les lieux et me permettront de vous apporter
+                            les meilleurs solutions, idées et astuces.
+                        </p>
+                        <p class="presta-text">
+                            Cette prestation s'entend pour 1h d'échange minimum au prix de 120.00€ TTC *
+                            (déplacement dans un rayon de 30 km inclus)
+                            Elle peut, à votre convenance, être prolongée.
+                            Dans ce cas, la 1/2h supplémentaire est facturée 45€ TTC
+                        </p>
+                        <p class="presta-text">
+                            *éligible au crédit d’impôt à hauteur de - 50%.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container-fluid points-border">
+            <div class="row">
+                <div class="first-range col-md-offset-2 col-md-4">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-range col-md-4">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container presta-section">
+            <div class="row">
+                <div class="section-intention-project-background-content col-md-7">
+                    <img src="{{ asset ('assets/images/cartouche_planche_.jpg') }}" alt="cartouche-planche-whizzideco" class="cartouche-planche-1-img">
+                    <img src="{{ asset ('assets/images/planche-implantation.jpg') }}" alt="cartouche_planche-whizzideco" class="cartouche-planche-2-img">
+                    <img src="{{ asset ('assets/images/cartouche_planche_2.jpg') }}" alt="cartouche-planche-whizzideco" class="cartouche-planche-3-img">
+                    <div class="section-text-left-content">
+                        <div class="section-head-content">
+                            <img src="{{ asset ('assets/images/logo-maison-test.png') }}" alt="logo-maison-whizzideco" class="logo-house-img">
+                            <p class="my-section-title-step">Etape 2</p>
+                        </div>
+                        <p class="section-subtitle">
+                            Projet d'intention
+                        </p>
+                        <p class="presta-text">
+                            C’est le moment de poser toutes les idées sur le papier, de composer, créer, aménager selon
+                            toutes les contraintes techniques, architecturales, esthétiques et budgétaire pour vous
+                            proposer en image virtuel 3D le meilleur agencement et concept décoratif.
+                        </p>
+                        <p class="presta-text">
+                            Le projet d’intention vous permet de visualiser au travers des plans, des croquis/esquisses,
+                            planche matériaux/mobiliers/couleur.... votre nouvel environnement et ainsi de vérifier la
+                            circulation dans l’espace, l’organisation des fonctions de chaque pièce, d’optimiser les
+                            volumes et assurer la cohérence des matières et des couleurs.
+                        </p>
+                        <p class="presta-text">
+                            A l’issue du RDV de présentation de cette étape, vous recevez votre dossier «projet d’intention».
+
+                        </p>
+                        <p class="presta-text">
+                            Tarif sur demande.
+                        </p>
+                    </div>
+                </div>
+                <div class="section-illu col-md-5">
+                    <img src="{{ asset ('assets/images/esquisse.jpg') }}" alt="esquisse-whizzideco" class="esquisse-img img-responsive">
                 </div>
 
-                <div class="gifts-advantage col-md-4 col-sm-6">
-                    <div class="gifts-icon">
-                        <img class="gift-icon img-responsive center-block" src="{{ asset ('assets/images/gift.png') }}"
-                             alt="icône">
+            </div>
+        </section>
+
+        <div class="container-fluid points-border">
+            <div class="row">
+                <div class="first-range col-md-offset-2 col-md-4">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-range col-md-4">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container presta-section">
+            <div class="row">
+                <div class="section-illu col-md-5">
+                    <div class="braintorming-img-content">
+                        <img src="{{ asset ('assets/images/brainstorming.jpg') }}" alt="brainstorming-whizzideco" class="brainstorming-img img-responsive">
                     </div>
 
-                    <p class="advantage-description">
-                        Accéder à un moment privilégié<br/> avec un professionnel<br/> de l'habitat.
-                    </p>
+                </div>
+                <div class="section-budget-background-content col-md-7">
+                    <img src="{{ asset ('assets/images/money.jpg') }}" alt="whizzideco" class="money-img">
+                    <img src="{{ asset ('assets/images/paper_note.jpg') }}" alt="whizzideco" class="paper-note-img">
+                    <div class="section-text-right-content">
+                        <div class="section-head-content">
+                            <img src="{{ asset ('assets/images/logo-maison-test.png') }}" alt="logo-maison-whizzideco" class="logo-house-img">
+                            <p class="my-section-title-step">Etape 3</p>
+                        </div>
+                        <p class="section-subtitle">
+                            Etude du budget
+                        </p>
+                        <p class="presta-text">
+                            Il est temps désormais de chiffrer notre «projet d’intentions» et d’ajuster nos envies aux
+                            contraintes budgétaires.
+                            Pour cela, une visite «Entreprise/Artisans» est organisée où tous les aspects techniques
+                            sont recensés.
+                        </p>
+                        <p class="presta-text">
+                            La liste des travaux est établies ainsi que des matériaux et/ou mobilier à
+                            approvisionner.
+                        </p>
+                        <p class="presta-text">
+                            La conformité des entreprises et des devis sont contrôlés et l’étude de budget vous est
+                            ensuite présenté au cours d’un RDV.
+                        </p>
+                        <p class="presta-text">
+                            Tarif sur demande.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container-fluid points-border">
+            <div class="row">
+                <div class="first-range col-md-offset-2 col-md-4">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first-range col-md-4">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="orangered-point"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <div id="bg1" class="fixedbg">
+
+        <section class="container presta-section">
+            <div class="row">
+                <div class="section-work-background-content col-md-7">
+                    <img src="{{ asset ('assets/images/comble.jpg') }}" alt="whizzideco" class="work-before-img">
+                    <img src="{{ asset ('assets/images/comble-peint.jpg') }}" alt="whizzideco" class="work-after-img">
+                    <div class="section-text-left-content">
+                        <div class="section-head-content">
+                            <img src="{{ asset ('assets/images/logo-maison-test.png') }}" alt="logo-maison-whizzideco" class="logo-house-img">
+                            <p class="my-section-title-step">Etape 4</p>
+                        </div>
+                        <p class="section-subtitle">
+                            Coordination de travaux
+                        </p>
+                        <p class="presta-text">
+                            Tous les aspects de votre projet ont été passé en revue. Le lancement du projet est imminent.
+                        </p>
+                        <p class="presta-text">
+                            Cette étape vous est proposée lorsque le chantier :<br>
+                            - dure plus de 2 semaines,<br>
+                            - nécessite l’intervention de plusieurs entreprises,<br>
+                            - le passage de commande de multiples matériaux/mobiliers spécifiques.
+                        </p>
+                        <p class="presta-text">
+                            Je deviens donc votre unique interlocuteur. Je me charge de commander, d’organiser
+                            l’approvisionnement du chantier, et de planifier l’intervention des entreprises.<br>
+                            Je vous apporte également mon assistance lors de la réception des travaux et un suivi dans
+                            le cas de réserves éventuelles.
+                        </p>
+                        <p class="presta-text">
+                            Tarif sur demande.
+                        </p>
+                    </div>
+                </div>
+                <div class="section-illu col-md-5">
+                    <img src="{{ asset ('assets/images/esquisse.jpg') }}" alt="esquisse-whizzideco" class="esquisse-img img-responsive">
+                </div>
+
+            </div>
+        </section>
+
+
+        <p class="following-page">
+            <a href="{{ path('production_index') }}">Voir les réalisations <span class="glyphicon glyphicon-arrow-right"></span> </a>
+        </p>
+
     </div>
-
-    <section class="container-fluid">
-        <h1 class="title">
-            <span>
-                 <img src="{{ asset ('assets/images/2losanges.png') }}" alt="losange1-pics"
-                      class="losangePics img-responsive"
-                 />
-            </span>Coaching déco
-        </h1>
-        <div class="row gifts-content">
-            <div class="col-sm-offset-1 col-sm-6">
-                <p class="gifts-description">
-                    <strong>En quoi consiste le Diagnostique Conseils ?</strong><br/>
-                    une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet
-                    un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs,
-                    éclairages, mobiliers...<br/>
-                    une planche d'ambiance, de style et ou concept décoratif, une esquisse.<br/>
-                </p>
-                <p>
-                    <strong class="title-cadeau2">Comment ça marche ?</strong><br/>
-                    Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
-                    Après réception du règlement, vous recevez par courrier ou par email la carte coffret cadeau
-                    personnalisée au nom du destinataire.<br/>
-                    Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "<strong>Conseils déco</strong>"
-                    pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
-                </p>
-            </div>
-            <div class="prest-img-content col-sm-5">
-                <img class="giftcard-image prest-img img-responsive" src="{{ asset('assets/images/diagnostique.jpeg') }}" alt="image cadeau">
-            </div>
-        </div>
-    </section>
-
-    <div id="bg2" class="fixedbg">
-    </div>
-
-
-    <section class="container-fluid">
-        <h1 class="title">
-            <span>
-                 <img src="{{ asset ('assets/images/3losanges.png') }}" alt="losange1-pics"
-                      class="losangePics img-responsive"
-                 />
-            </span>Penser son projet
-        </h1>
-        <div class="row gifts-content">
-            <div class="col-sm-offset-1 col-sm-6">
-                <p class="gifts-description">
-                    <strong>En quoi consiste l'étude 3D ?</strong><br/>
-                    une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet
-                    un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs,
-                    éclairages, mobiliers...<br/>
-                    une planche d'ambiance, de style et ou concept décoratif, une esquisse.<br/>
-                </p>
-                <p>
-                    <strong class="title-cadeau2">Comment ça marche ?</strong><br/>
-                    Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
-                    Après réception du règlement, vous recevez par courrier ou par email la carte coffret cadeau
-                    personnalisée au nom du destinataire.<br/>
-                    Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "<strong>Conseils déco</strong>"
-                    pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
-                </p>
-            </div>
-            <div class="gifts-img  col-sm-5">
-                <img class="giftcard-image prest-img img-responsive" src="{{ asset('assets/images/etude.jpeg') }}"
-                     alt="image cadeau">
-            </div>
-        </div>
-    </section>
-    <div id="bg3" class="fixedbg">
-    </div>
-
-    <section class="container-fluid">
-        <h1 class="title">
-            <span>
-                 <img src="{{ asset ('assets/images/3losanges.png') }}" alt="losange1-pics"
-                      class="losangePics img-responsive"
-                 />
-            </span>Estimer son budget
-        </h1>
-        <div class="row gifts-content">
-            <div class="col-sm-offset-1 col-sm-6">
-                <p class="gifts-description">
-                    <strong>En quoi consiste le chiffrage ?</strong><br/>
-                    une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet
-                    un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs,
-                    éclairages, mobiliers...<br/>
-                    une planche d'ambiance, de style et ou concept décoratif, une esquisse.<br/>
-                </p>
-                <p>
-                    <strong class="title-cadeau2">Comment ça marche ?</strong><br/>
-                    Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
-                    Après réception du règlement, vous recevez par courrier ou par email la carte coffret cadeau
-                    personnalisée au nom du destinataire.<br/>
-                    Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "<strong>Conseils déco</strong>"
-                    pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
-                </p>
-            </div>
-            <div class="gifts-img  col-sm-5">
-                <img class="giftcard-image prest-img img-responsive" src="{{ asset('assets/images/chiffrage.png') }}"
-                     alt="image cadeau">
-            </div>
-        </div>
-    </section>
-
-    <div id="bg4" class="fixedbg">
-    </div>
-
-    <section class="container-fluid">
-        <h1 class="title">
-            <span>
-                 <img src="{{ asset ('assets/images/3losanges.png') }}" alt="losange1-pics"
-                      class="losangePics img-responsive"
-                 />
-            </span>Coordonner ses travaux
-        </h1>
-        <div class="row gifts-content">
-            <div class="col-sm-offset-1 col-sm-6">
-                <p class="gifts-description">
-                    <strong>En quoi consiste l'assistance travaux ?</strong><br/>
-                    une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet
-                    un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs,
-                    éclairages, mobiliers...<br/>
-                    une planche d'ambiance, de style et ou concept décoratif, une esquisse.<br/>
-                </p>
-                <p>
-                    <strong class="title-cadeau2">Comment ça marche ?</strong><br/>
-                    Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
-                    Après réception du règlement, vous recevez par courrier ou par email la carte coffret cadeau
-                    personnalisée au nom du destinataire.<br/>
-                    Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "<strong>Conseils déco</strong>"
-                    pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
-                </p>
-            </div>
-            <div class="gifts-img  col-sm-5">
-                <img class="giftcard-image prest-img img-responsive" src="{{ asset('assets/images/assistance.jpg') }}"
-                     alt="image cadeau">
-            </div>
-        </div>
-    </section>
-    <div id="bg5" class="fixedbg">
-    </div>
-
-    <section class="container-fluid">
-        <h1 class="title">
-            <span>
-                 <img src="{{ asset ('assets/images/3losanges.png') }}" alt="losange1-pics"
-                      class="losangePics img-responsive"
-                 />
-            </span>Home staging
-        </h1>
-        <div class="row gifts-content">
-            <div class="col-sm-offset-1 col-sm-6">
-                <p class="gifts-description">
-                    <strong>En quoi consiste l'assistance travaux ?</strong><br/>
-                    une visite conseils d'1h30 au cours de laquelle je découvre le lieu, vos envies et votre projet
-                    un compte rendu de nos échanges Conseils , idées, solutions sur l’agencement , les matériaux, couleurs,
-                    éclairages, mobiliers...<br/>
-                    une planche d'ambiance, de style et ou concept décoratif, une esquisse.<br/>
-                </p>
-                <p>
-                    <strong class="title-cadeau2">Comment ça marche ?</strong><br/>
-                    Par email ou par téléphone, nous définissons ensemble le nombre de pièce concernée.<br/>
-                    Après réception du règlement, vous recevez par courrier ou par email la carte coffret cadeau
-                    personnalisée au nom du destinataire.<br/>
-                    Le moment venu, le destinataire du coffret cadeau prend son rendez-vous "<strong>Conseils déco</strong>"
-                    pour bénéficier des conseils de qualité d'un professionnel de l'habitat.
-                </p>
-            </div>
-            <div class="gifts-img  col-sm-5">
-                <img class="giftcard-image prest-img img-responsive" src="{{ asset('assets/images/assistance.jpg') }}"
-                     alt="image cadeau">
-            </div>
-        </div>
-    </section>
-
-    <p class="following-page">
-        <a href="{{ path('production_index') }}">Voir les réalisations <span class="glyphicon glyphicon-arrow-right"></span> </a>
-    </p>
-
-
 {% endblock %}
 

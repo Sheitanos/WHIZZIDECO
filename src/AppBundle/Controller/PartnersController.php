@@ -27,9 +27,15 @@ class PartnersController extends Controller
         $partners = $em->getRepository('AppBundle:Partner')->findAll();
         $articles = $em->getRepository('AppBundle:Article')->findAll();
 
+        $nbPartners = 0;
+        foreach ($partners as $partner){
+            $nbPartners += 1;
+        }
+
         return $this->render('partners/index.html.twig', array(
             'partners' => $partners,
             'articles' => $articles,
+            'nbPartners' => $nbPartners,
         ));
     }
 }
