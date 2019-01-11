@@ -1,190 +1,231 @@
 /*--index presta--*/
 
-.first-section{
-  padding-top: 100px;
+.page-content{
+  margin-top: 7%;
 }
 
-.choiceImg {
-  background-color: #F2F2F2;
-  border: 1px solid black;
-  width: 251px;
-  height: 190px;
-  margin-top: 1%;
-  box-shadow: 6px 6px 6px grey;
-}
-
-.choiceImg:hover {
-  border: 2px solid orangered;
-}
-
-.backgroundPrestation{
-  background-image: url("../images/above-art.jpg");
-  padding-bottom: 300px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.prestation-content {
-  margin-bottom: 6%;
-}
-
-.link-choise {
-  color: black;
-  padding-bottom: 6%;
-  margin-top: 100%;
-}
-
-.linkChoiseImg {
-  color: black;
-}
-
-.linkChoiseImg:hover {
-  text-decoration: none;
-  color: #e85b0d;
-}
-
-/*--partiulier and professionel--*/
-
-.colorBlock {
-  background-color: white;
-  border-radius: 5px;
-  border: 2px solid #e85b0d;
-  padding: 1%;
-  box-shadow: 6px 6px 6px grey;
-}
-
-.title_position_presta {
-  padding-top: 2%;
-  padding-bottom: 2%;
-}
-
-.padding-title {
-  padding-top: 1%;
-  padding-bottom: 2%;
-}
-
-.title-prestation {
-  padding-top: 15%;
-  padding-bottom: 5%;
-}
-
-.backgroundParticulier {
-  background-image: url("../images/above-art.jpg");
-  background-position: center left;
-}
-
-.sous-title-prestation1 {
-  padding-bottom: 3%;
-}
-
-.sous-title-prestation2 {
-  padding-top: 2%;
-  padding-bottom: 2%;
-}
-
-.sous_description_presta_particulier {
-  padding-top: 2%;
-}
-
-.positionOptionPresta {
-  padding-right: 10%;
-}
-
-.bottomIndexPresta {
-  padding-bottom: 3%;
-}
-
-.container {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* section */
-
-.losangePics {
-  height: 100px;
-  display: inline-block;
-}
-
-.PositionLosangPics {
-  margin-top: 6%;
-  height: 70px;
-  margin-left: 9%;
-}
-
-.heightLosangePics {
-  height: 70px;
-  margin-top: 3%;
+.presta-section{
+  width: 95%;
   margin-bottom: 3%;
 }
 
-.section {
-  padding: 50px 0;
-  text-align: justify;
-  /* background-color: #86b68e; */
-}
-
-.section *:not(:first-child) {
-  margin-top: 30px;
-}
-
-/*paralax*/
-.fixedbg {
-  position: relative;
-  width: 100%;
-  height: 75px;
-  z-index: 0;
-  background-size: cover;
+.section-gift-background-content{
+  background-image: url("../images/bois.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  text-align: center;
+  background-size: cover;
+  padding-left: 0;
+  padding-top: 3%;
+  height: 78vh;
 }
 
-.fixedbg h2 {
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-  padding: 15px;
-  text-shadow: 1px 1px 0 black;
+.section-text-left-content{
+  background-color: rgba(255,255,255,0.7);
+  position: absolute;
+  width: 30vw;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 4%;
+  z-index: 2;
 }
 
-#bg1 {
-  background-image: linear-gradient(to right, orangered, white);
+.section-text-right-content{
+  background-color: rgba(255,255,255,0.7);
+  position: absolute;
+  width: 33vw;
+  padding-left: 3%;
+  margin-left: 41.5%;
+  /*margin-right: 0;*/
+  padding-right: 3%;
+  padding-top: 4%;
+  z-index: 2;
+}
+.logo-house-img{
+  position: absolute;
+  width: 80px;
+  margin-top: -6%;
+  /*top: -15px;*/
 }
 
-#bg2 {
-  padding-top: -2%;
-  background-image: linear-gradient(to right, orangered, white);
+.my-section-title{
+  font-size: 20px;
+  margin-left: 10%;
+  background-image: linear-gradient(to left, #00a500, rgba(255,0,0,0));
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  width: 75%;
 }
 
-#bg3 {
-  background-image: linear-gradient(to right, orangered, white);
+.my-section-title-step{
+  font-size: 20px;
+  margin-left: 10%;
+  background-image: linear-gradient(to left, #00a500, rgba(255,0,0,0));
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  width: 30%;
 }
 
-#bg4 {
-  background-image: linear-gradient(to right, orangered, white);
+
+.section-def{
+  font-size: 15px;
+  margin-left: 11%;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 
-#bg5 {
-  background-image: linear-gradient(to right, orangered, white);
+.presta-text{
+  font-size: 13px;
+  padding-bottom: 4%;
 }
 
-.prest-img-content{
-  /*display: flex;*/
+.planche-cuisine-img{
+  position: absolute;
+  width: 450px;
+  margin-left: 42%;
+  margin-top: -4%;
+  z-index: 1;
 }
 
-.prest-img{
-  display: block;
-  width: 50%;
-  margin: auto;
+.planche-salon-img{
+  position: absolute;
+  width: 450px;
+  margin-left: 47%;
+  margin-top: 27%;
+  z-index: 2;
 }
 
-.gift-img{
-  display: block;
-  width: 60%;
-  margin: auto;
+.section-illu{
+  padding: 0;
+}
+
+.esquisse-img{
+  margin-top: 15%;
+}
+
+.section-brainstorming-background-content{
+  background-image: url("../images/texture-blanc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 0;
+  padding-top: 3%;
+  height: 74vh;
+}
+
+.section-subtitle{
+  font-size: 20px;
+}
+
+.section-subtitle-litle{
+  font-size: 16px;
+}
+
+.commode-img{
+  position: absolute;
+  width: 750px;
+  margin-top: -2%;
+  z-index: 1;
+}
+
+.braintorming-img-content{
+  width: 95%;
+}
+
+.brainstorming-img{
+  margin-top: 15%;
+}
+
+.section-intention-project-background-content{
+  background-image: url("../images/texture-blanc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 0;
+  padding-top: 3%;
+  height: 78vh;
+}
+
+.cartouche-planche-1-img{
+  position: absolute;
+  width: 375px;
+  margin-left: 44%;
+  margin-top: -5%;
+  z-index: 1;
+}
+
+.cartouche-planche-2-img{
+  position: absolute;
+  width: 375px;
+  margin-left: 39%;
+  margin-top: 33%;
+  z-index: 1;
+}
+
+.cartouche-planche-3-img{
+  position: absolute;
+  width: 375px;
+  margin-left: 57%;
+  margin-top: 15%;
+  z-index: 2;
+}
+
+.section-budget-background-content{
+  background-image: url("../images/texture-blanc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 0;
+  padding-top: 3%;
+  height: 70vh;
+}
+
+.money-img{
+  position: absolute;
+  width: 470px;
+  margin-top: -2%;
+  z-index: 1;
+}
+
+.paper-note-img{
+  position: absolute;
+  width: 370px;
+  margin-top: 25%;
+  margin-left: 18%;
+  z-index: 2;
+}
+
+.section-work-background-content{
+  background-image: url("../images/texture-blanc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 0;
+  padding-top: 3%;
+  height: 78vh;
+}
+
+.work-before-img{
+  position: absolute;
+  width: 450px;
+  margin-left: 32%;
+  margin-top: -3%;
+  z-index: 1;
+}
+
+.work-after-img{
+  position: absolute;
+  width: 550px;
+  margin-left: 36%;
+  margin-top: 23%;
+  z-index: 2;
+}
+
+.points-border{
+  margin-bottom: 3%;
+}
+
+.orangered-point{
+  width: 13px;
+  height: 13px;
+  border-radius: 13px;
+  background-color: orangered;
+  margin-left: auto;
+  margin-right: auto;
+  /*margin-top: 15px;*/
+  /*text-align: center;*/
 }

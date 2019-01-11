@@ -18,6 +18,9 @@
                 {% endfor %}
             {% endfor %}
         </div>
+        {% if nbProductions < 7  %}
+            <div class="shadow-content-production"></div>
+        {% endif %}
     </section>
 
 {% endblock %}

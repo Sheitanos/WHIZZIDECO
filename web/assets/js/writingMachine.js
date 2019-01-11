@@ -1,4 +1,4 @@
-var chaine = "\"Lorsqu'on ne peut pas changer le monde, on peut changer de décor.\"";
+var chaine = "\"Lorsqu'on ne peut pas changer le monde, on change de décor.\"";
 var nb_car = chaine.length;
 var tableau = chaine.split("");
 texte = new Array;

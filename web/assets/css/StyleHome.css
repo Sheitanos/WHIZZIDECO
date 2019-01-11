@@ -35,7 +35,7 @@
 /* carousel fullscreen */
 
 .carousel-fullscreen .carousel-inner .item {
-    height: 100vh;
+    height: 95.5vh;
     min-height: 600px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -62,15 +62,23 @@
 }
 
 .title {
-    text-align: center;
-    color: orangered;
-    text-shadow: 1px 1px 0 white;
+    font-size: 30px;
+    background-image: linear-gradient(to left, #00a500, rgba(255,0,0,0));
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    /*text-align: center;*/
 }
 
 .history-title{
-    /*text-align: center;*/
-    color: orangered;
-    text-shadow: 1px 1px 0 white;
+    font-size: 30px;
+    /*margin-left: 10%;*/
+    background-image: linear-gradient(to left, #00a500, rgba(255,0,0,0));
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    width: 75%;
 }
 
 #bgHome1 {
@@ -181,8 +189,7 @@
 }
 
 .my-history{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 2% 10% 3% 10%;
 }
 .history-img {
     display: flex;
@@ -192,7 +199,7 @@
 
 .history-img-img{
     display: block;
-    width: 70%;
+    width: 87%;
     margin-top: 27%;
 }
 
@@ -246,7 +253,7 @@
 }
 #text-machine {
     z-index: 1000;
-    margin-left: 10%;
+    margin-left: 12%;
     margin-right: 10%;
     font-size: 37px;
     font-style: italic;
@@ -258,8 +265,8 @@
 
 #text-machine-author {
     z-index: 1000;
-    margin-left: 74%;
-    margin-right: 10%;
+    margin-left: 70%;
+    /*margin-right: 10%;*/
     /*width: 100px;*/
     font-size: 20px;
     color: orangered;
