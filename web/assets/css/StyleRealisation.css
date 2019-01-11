@@ -126,10 +126,14 @@
     text-align: center;
 }
 
-.fa-star{
+.glyphicon-star{
     font-size: 30px;
 }
 
 .checked{
     color: #ffe462;
+}
+
+.shadow-content-production{
+    height: 25vh;
 }

@@ -39,3 +39,7 @@
   display: flex;
   justify-content: center;
 }
+
+.shadow-content{
+  height: 29vh;
+}

@@ -38,12 +38,13 @@ class ProductionController extends Controller
             $tabLastTimeAfterProductionPicture[1] = $lastUpdateAt;
             $newTabs[] = $tabLastTimeAfterProductionPicture;
         }
-//        die(dump($productions));
+      $nbProductions = count($newTabs);
 
         return $this->render('production/index.html.twig', array(
             'productions' => $productions,
             'newTabs' => $newTabs,
             'productionPictures' => $productionPictures,
+            'nbProductions' => $nbProductions,
         ));
     }
 

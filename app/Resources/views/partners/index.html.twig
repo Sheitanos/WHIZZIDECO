@@ -27,5 +27,8 @@
                 {% endfor %}
             </div>
         </div>
+        {% if nbPartners < 4  %}
+            <div class="shadow-content"></div>
+        {% endif %}
     </div>
 {% endblock %}
