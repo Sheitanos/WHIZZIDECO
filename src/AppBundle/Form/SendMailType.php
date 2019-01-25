@@ -24,14 +24,19 @@ class SendMailType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class, [
+            ->add('lastname', TextType::class, [
                 'label' => "Votre nom"])
+            ->add('firstname', TextType::class, [
+                'label' => "Votre Prénom"])
             ->add('email', EmailType::class, [
                 'label' => "Votre email"
             ])
+            ->add('phoneNumber', TextType::class, [
+                'label' => "Votre n° de téléphone"
+            ])
             ->add('message', TextareaType::class, [
                 'label' => "Votre message",
-                'attr' => array('rows' => 10),
+                'attr' => array('rows' => 9),
             ]);
     }
 

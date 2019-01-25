@@ -33,8 +33,10 @@ class ContactController extends controller
                     $this->renderView(
                         'contact/message.html.twig',
                         array(
-                            'name' => $data['name'],
+                            'lastname' => $data['lastname'],
+                            'firstname' => $data['firstname'],
                             'email' => $data['email'],
+                            'phoneNumber' => $data['phoneNumber'],
                             'message' => $data['message'],
                         )),
                     'text/html'
