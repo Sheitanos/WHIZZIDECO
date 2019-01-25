@@ -23,8 +23,9 @@
                         <p class="contact-text"><a class="contactLink" href="whizzideco@gmail.com"><span
                                         class="glyphicon glyphicon-envelope"></span>whizzideco@gmail.com</a>
                         </p>
-                        <p class="contact-text"><a class="contactLink" href="www.whizzideco.com"><span
-                                        class="glyphicon glyphicon-envelope"></span>www.whizzideco.com</a></p>
+                        <p class="contact-text">
+                            Lundi sur RDV - du Mardi au Vendredi de 10h00 à 12h00 et de 14h00 à 18h00 - Le samedi 10h - 12h
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-offset-1 col-md-1">
@@ -38,12 +39,22 @@
                         {{ form_start(form) }}
                         <div class="col-md-6">
                             <div class="form-group">
-                                {{ form_widget(form.name, {'attr': {'class': 'form-control', 'placeholder': 'Nom'}}) }}
+                                {{ form_widget(form.lastname, {'attr': {'class': 'form-control', 'placeholder': 'Nom'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_widget(form.firstname, {'attr': {'class': 'form-control', 'placeholder': 'Prénom'}}) }}
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_widget(form.phoneNumber, {'attr': {'class': 'form-control', 'placeholder': 'N° de tel'}}) }}
                             </div>
                         </div>
                         <div class="col-md-12">
