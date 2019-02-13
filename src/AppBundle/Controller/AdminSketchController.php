@@ -64,7 +64,7 @@ class AdminSketchController extends Controller
                     'Votre partenaire a été crée avec succès'
                 );
 
-                return $this->redirectToRoute('admin');
+                return $this->redirectToRoute('sketch_index');
             }
         }
 
@@ -74,21 +74,21 @@ class AdminSketchController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a sketch entity.
-     *
-     * @Route("/{id}", name="sketch_show")
-     * @Method("GET")
-     */
-    public function showAction(Sketch $sketch)
-    {
-        $deleteForm = $this->createDeleteForm($sketch);
-
-        return $this->render('admin/sketch/show.html.twig', array(
-            'sketch' => $sketch,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
+//    /**
+//     * Finds and displays a sketch entity.
+//     *
+//     * @Route("/{id}", name="sketch_show")
+//     * @Method("GET")
+//     */
+//    public function showAction(Sketch $sketch)
+//    {
+//        $deleteForm = $this->createDeleteForm($sketch);
+//
+//        return $this->render('admin/sketch/show.html.twig', array(
+//            'sketch' => $sketch,
+//            'delete_form' => $deleteForm->createView(),
+//        ));
+//    }
 
     /**
      * Displays a form to edit an existing sketch entity.
@@ -109,7 +109,7 @@ class AdminSketchController extends Controller
                 'Vos modifications ont été bien été prises en compte'
             );
 
-            return $this->redirectToRoute('admin');
+            return $this->redirectToRoute('sketch_index');
         }
 
         return $this->render('admin/sketch/edit.html.twig', array(
@@ -136,7 +136,7 @@ class AdminSketchController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('admin');
+        return $this->redirectToRoute('sketch_index');
     }
 
     /**

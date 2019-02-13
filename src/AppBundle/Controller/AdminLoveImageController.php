@@ -64,7 +64,7 @@ class AdminLoveImageController extends Controller
                     'Votre image a été crée avec succès'
                 );
 
-                return $this->redirectToRoute('admin');
+                return $this->redirectToRoute('love_image_index');
             }
         }
 
@@ -74,21 +74,21 @@ class AdminLoveImageController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a loveImage entity.
-     *
-     * @Route("/{id}", name="love_image_show")
-     * @Method("GET")
-     */
-    public function showAction(LoveImage $loveImage)
-    {
-        $deleteForm = $this->createDeleteForm($loveImage);
-
-        return $this->render('admin/loveImage/show.html.twig', array(
-            'loveImage' => $loveImage,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
+//    /**
+//     * Finds and displays a loveImage entity.
+//     *
+//     * @Route("/{id}", name="love_image_show")
+//     * @Method("GET")
+//     */
+//    public function showAction(LoveImage $loveImage)
+//    {
+//        $deleteForm = $this->createDeleteForm($loveImage);
+//
+//        return $this->render('admin/loveImage/show.html.twig', array(
+//            'loveImage' => $loveImage,
+//            'delete_form' => $deleteForm->createView(),
+//        ));
+//    }
 
     /**
      * Displays a form to edit an existing loveImage entity.
@@ -109,7 +109,7 @@ class AdminLoveImageController extends Controller
                 'Vos modifications ont été bien été prises en compte'
             );
 
-            return $this->redirectToRoute('admin');
+            return $this->redirectToRoute('love_image_index');
         }
 
         return $this->render('admin/loveImage/edit.html.twig', array(
@@ -136,7 +136,7 @@ class AdminLoveImageController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('admin');
+        return $this->redirectToRoute('love_image_index');
     }
 
     /**

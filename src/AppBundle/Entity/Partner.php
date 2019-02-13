@@ -37,19 +37,19 @@ class Partner
      */
     private $name;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="url", type="string", length=255)
-     */
-    private $url;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="text", nullable=true)
-     */
-    private $description;
+//    /**
+//     * @var string
+//     *
+//     * @ORM\Column(name="url", type="string", length=255)
+//     */
+//    private $url;
+//
+//    /**
+//     * @var string
+//     *
+//     * @ORM\Column(name="description", type="text", nullable=true)
+//     */
+//    private $description;
 
     /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
@@ -116,53 +116,53 @@ class Partner
         return $this;
     }
 
-    /**
-     * Set url.
-     *
-     * @param string $url
-     *
-     * @return Partner
-     */
-    public function setUrl($url)
-    {
-        $this->url = $url;
-
-        return $this;
-    }
-
-    /**
-     * Get url.
-     *
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->url;
-    }
-
-    /**
-     * Set description.
-     *
-     * @param string $description
-     *
-     * @return Partner
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description.
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
+//    /**
+//     * Set url.
+//     *
+//     * @param string $url
+//     *
+//     * @return Partner
+//     */
+//    public function setUrl($url)
+//    {
+//        $this->url = $url;
+//
+//        return $this;
+//    }
+//
+//    /**
+//     * Get url.
+//     *
+//     * @return string
+//     */
+//    public function getUrl()
+//    {
+//        return $this->url;
+//    }
+//
+//    /**
+//     * Set description.
+//     *
+//     * @param string $description
+//     *
+//     * @return Partner
+//     */
+//    public function setDescription($description)
+//    {
+//        $this->description = $description;
+//
+//        return $this;
+//    }
+//
+//    /**
+//     * Get description.
+//     *
+//     * @return string
+//     */
+//    public function getDescription()
+//    {
+//        return $this->description;
+//    }
 
 
     /*

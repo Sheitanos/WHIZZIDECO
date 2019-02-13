@@ -69,7 +69,7 @@ class AdminProductionController extends Controller
             $em->persist($production);
             $em->flush();
 
-            return $this->redirectToRoute('admin');
+            return $this->redirectToRoute('adminProduction_index');
         }
 
         return $this->render('admin/production/new.html.twig', array(
@@ -93,7 +93,7 @@ class AdminProductionController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin');
+            return $this->redirectToRoute('adminProduction_index');
         }
 
         return $this->render('admin/production/edit.html.twig', array(
@@ -120,7 +120,7 @@ class AdminProductionController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('admin');
+        return $this->redirectToRoute('adminProduction_index');
     }
 
     /**

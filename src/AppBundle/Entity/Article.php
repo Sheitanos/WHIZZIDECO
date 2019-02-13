@@ -31,19 +31,19 @@ class Article
      */
     private $partner;
 
-    /**
-     * @var float
-     *
-     * @ORM\Column(name="price", type="float")
-     */
-    private $price;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255)
-     */
-    private $name;
+//    /**
+//     * @var float
+//     *
+//     * @ORM\Column(name="price", type="float")
+//     */
+//    private $price;
+//
+//    /**
+//     * @var string
+//     *
+//     * @ORM\Column(name="name", type="string", length=255)
+//     */
+//    private $name;
 
     /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
@@ -88,54 +88,6 @@ class Article
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set price.
-     *
-     * @param float $price
-     *
-     * @return Article
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * Get price.
-     *
-     * @return float
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * Set name.
-     *
-     * @param string $name
-     *
-     * @return Article
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name.
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
     }
 
 

@@ -17,13 +17,7 @@ class ArticleType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('price', TextType::class, array(
-                    'label' => "Prix"
-                ))
-                ->add('name', TextType::class, array(
-                    'label' => "Nom de l'article"
-                ))
-                ->add('imageFile', VichImageType::class, array(
+        $builder->add('imageFile', VichImageType::class, array(
                     'label' => "Image de l'article",
                     'allow_delete' => false,
                     'image_uri' => false,
