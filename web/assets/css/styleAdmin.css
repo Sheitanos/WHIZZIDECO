@@ -1,9 +1,19 @@
 .backgroundAdminIndex {
-    background-color: #86b68e;
+    background-color: #616161;
     height: 980px;
     margin-top: -7%;
 }
 
 .login {
     margin-top: 10%;
+}
+
+.admin-title{
+    margin-top: 35%;
+    font-size: 80px;
+    width: 80%;
+    color: #e64a00;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }

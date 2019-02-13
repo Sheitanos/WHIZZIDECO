@@ -20,13 +20,6 @@ class PartnersType extends AbstractType
         $builder->add('name', TextType::class, array(
                     'label' => "Nom du Partenaire"
                 ))
-                 ->add('url', TextType::class, array(
-                    'label' => "adresse du site web"
-                ))
-                ->add('description', CKEditorType::class, array(
-                    'label' => "Description",
-                    'config_name' => 'ck_home_config'
-                ))
                 ->add('imageFile', VichImageType::class, array(
                     'label' => "Votre image",
                     'allow_delete' => false,

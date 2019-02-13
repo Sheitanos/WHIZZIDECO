@@ -31,6 +31,13 @@ class Production
     /**
      * @var string
      *
+     * @ORM\Column(name="address", type="string", length=255)
+     */
+    private $address;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="text_before", type="text")
      */
     private $textBefore;
@@ -91,6 +98,24 @@ class Production
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param string $address
+     * @return Production
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+        return $this;
     }
 
     /**
