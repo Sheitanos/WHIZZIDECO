@@ -57,7 +57,7 @@ class AdminPartnersController extends Controller
             $em->persist($partner);
             $em->flush();
 
-            return $this->redirectToRoute('admin');
+            return $this->redirectToRoute('adminPartners_index');
         }
 
         return $this->render('admin/partners/new.html.twig', array(
@@ -66,21 +66,21 @@ class AdminPartnersController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a partner entity.
-     *
-     * @Route("/{id}", name="partners_show")
-     * @Method("GET")
-     */
-    public function showAction(Partner $partner)
-    {
-        $deleteForm = $this->createDeleteForm($partner);
-
-        return $this->render('admin/partners/show.html.twig', array(
-            'partner' => $partner,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
+//    /**
+//     * Finds and displays a partner entity.
+//     *
+//     * @Route("/{id}", name="partners_show")
+//     * @Method("GET")
+//     */
+//    public function showAction(Partner $partner)
+//    {
+//        $deleteForm = $this->createDeleteForm($partner);
+//
+//        return $this->render('admin/partners/show.html.twig', array(
+//            'partner' => $partner,
+//            'delete_form' => $deleteForm->createView(),
+//        ));
+//    }
 
     /**
      * Displays a form to edit an existing partner entity.
@@ -97,7 +97,7 @@ class AdminPartnersController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin');
+            return $this->redirectToRoute('adminPartners_index');
         }
 
         return $this->render('admin/partners/edit.html.twig', array(
@@ -124,7 +124,7 @@ class AdminPartnersController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('admin');
+        return $this->redirectToRoute('adminPartners_index');
     }
 
     /**

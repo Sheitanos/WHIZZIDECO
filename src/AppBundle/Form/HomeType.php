@@ -31,22 +31,25 @@ class HomeType extends AbstractType
                 'config_name' => 'ck_home_config'
             ))
             ->add('imageFile', VichImageType::class, array(
-                'label' => "Votre image",
+                'label' => "Modifier votre image de profile",
                 'allow_delete' => false,
                 'image_uri' => false,
                 'download_uri' => false,
+                'required' =>false
             ))
             ->add('inspirationImageFile', VichImageType::class, array(
-                'label' => "Votre image d'inspiration",
+                'label' => "Modifier votre image d'inspiration",
                 'allow_delete' => false,
                 'image_uri' => false,
                 'download_uri' => false,
+                'required' =>false
             ))
             ->add('favoriteMaterialImageFile', VichImageType::class, array(
-                'label' => "Votre image de matières favorites",
+                'label' => "Modifier votre image de matières favorites",
                 'allow_delete' => false,
                 'image_uri' => false,
                 'download_uri' => false,
+                'required' =>false
             ));
     }
     

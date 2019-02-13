@@ -20,6 +20,9 @@ class ProductionType extends AbstractType
             ->add('title', TextType::class, array(
                 'label' => "Titre",
             ))
+            ->add('address', TextType::class, array(
+                'label' => "Adresse",
+            ))
             ->add('textBefore', CKEditorType::class, array(
                 'label' => "Texte (avant)",
                 'config_name' => 'ck_home_config'
