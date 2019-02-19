@@ -24,11 +24,11 @@ class ProductionType extends AbstractType
                 'label' => "Adresse",
             ))
             ->add('textBefore', CKEditorType::class, array(
-                'label' => "Texte (avant)",
+                'label' => "Demande client",
                 'config_name' => 'ck_home_config'
             ))
             ->add('textAfter', CKEditorType::class, array(
-                'label' => "Texte (après)",
+                'label' => "Missions réalisées",
                 'config_name' => 'ck_home_config'
             ));
     }

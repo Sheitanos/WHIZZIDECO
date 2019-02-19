@@ -26,15 +26,19 @@
                                             {% if loop.first %}
                                                 <div class="item active">
                                                     <a href="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" target="_blank">
-                                                        <img src="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" alt="Photo"/>
+                                                        <img src="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" alt="Photo" class="img-realisation"/>
                                                     </a>
                                                 </div>
+                                                <div class="overlay"></div>
+                                                <div class="carousel-caption"></div>
                                             {% else %}
                                                 <div class="item">
                                                     <a href="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" target="_blank">
-                                                        <img src="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" alt="Photo"/>
+                                                        <img src="{{ asset( 'uploads/production/' ~ tabProductionBeforePictureById[0].imageName) }}" alt="Photo" class="img-realisation"/>
                                                     </a>
                                                 </div>
+                                                <div class="overlay"></div>
+                                                <div class="carousel-caption"></div>
                                             {% endif %}
                                         {% endif %}
                                     {% endfor %}
@@ -81,15 +85,19 @@
                                             {% if loop.first %}
                                                 <div class="item active">
                                                     <a href="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" target="_blank">
-                                                        <img src="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" alt="Photo">
+                                                        <img src="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" alt="Photo" class="img-realisation">
                                                     </a>
                                                 </div>
+                                                <div class="overlay"></div>
+                                                <div class="carousel-caption"></div>
                                             {% else %}
                                                 <div class="item">
                                                     <a href="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" target="_blank">
-                                                        <img src="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" alt="Photo">
+                                                        <img src="{{ asset( 'uploads/production/' ~ tabProductionAfterPictureById[0].imageName) }}" alt="Photo" class="img-realisation">
                                                     </a>
                                                 </div>
+                                                <div class="overlay"></div>
+                                                <div class="carousel-caption"></div>
                                             {% endif %}
                                         {% endif %}
                                     {% endfor %}

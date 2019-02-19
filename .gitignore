@@ -18,4 +18,5 @@
 composer.phar/*
 composer.phar
 .idea/
+/web/uploads/
 
