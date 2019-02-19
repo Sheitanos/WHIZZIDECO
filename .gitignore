@@ -18,12 +18,20 @@
 composer.phar/*
 composer.phar
 .idea/
+!/web/uploads/article
 /web/uploads/article/*
+!/web/uploads/favorite
 /web/uploads/favorite/*
+!/web/uploads/history
 /web/uploads/history/*
+!/web/uploads/inspiration
 /web/uploads/inspiration/*
+!/web/uploads/love
 /web/uploads/love/*
+!/web/uploads/partner
 /web/uploads/partner/*
+!/web/uploads/production
 /web/uploads/production/*
+!/web/uploads/sketch
 /web/uploads/sketch/*
 
