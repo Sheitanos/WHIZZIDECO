@@ -28,14 +28,14 @@ class ProductionPictureType extends AbstractType
                 'choice_label' => 'title',
                 'empty_data'  => null,
                 'required' => false,
-                'label' => 'Attribuer à une Réalisation (avant)',
+                'label' => 'Attribuer à une Réalisation (demande client)',
             ))
             ->add('afterProduction', EntityType::class, array(
                 'class' => Production::class,
                 'choice_label' => 'title',
                 'empty_data'  => null,
                 'required' => false,
-                'label' => 'Attribuer à une Réalisation (après)',
+                'label' => 'Attribuer à une Réalisation (missions réalisées)',
             ));
     }/**
      * {@inheritdoc}
