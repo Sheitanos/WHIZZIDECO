@@ -18,5 +18,12 @@
 composer.phar/*
 composer.phar
 .idea/
-/web/uploads/
+/web/uploads/article/*
+/web/uploads/favorite/*
+/web/uploads/history/*
+/web/uploads/inspiration/*
+/web/uploads/love/*
+/web/uploads/partner/*
+/web/uploads/production/*
+/web/uploads/sketch/*
 
