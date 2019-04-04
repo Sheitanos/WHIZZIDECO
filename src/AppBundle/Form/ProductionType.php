@@ -30,6 +30,15 @@ class ProductionType extends AbstractType
             ->add('textAfter', CKEditorType::class, array(
                 'label' => "Missions réalisées",
                 'config_name' => 'ck_home_config'
+            ))
+            ->add('customerReview', CKEditorType::class, array(
+                'label' => "Avis client",
+                'config_name' => 'ck_home_config',
+                'required' =>false
+            ))
+            ->add('rate', TextType::class, array(
+                'label' => "Note (de 0 à 5)",
+                'required' =>false
             ));
     }
 

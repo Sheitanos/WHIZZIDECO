@@ -120,16 +120,23 @@
 }
 
 .customer-reviews-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 3%;
+    margin-left:15%;
+    margin-right: 15%;
 }
 
 .customer-reviews-text{
     font-style: italic;
     font-size: 18px;
+    width: 70%;
 }
 
 .customer-reviews-stars{
     text-align: center;
+    width: 30%;
 }
 
 .glyphicon-star{

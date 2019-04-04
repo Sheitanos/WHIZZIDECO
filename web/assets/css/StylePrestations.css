@@ -101,6 +101,19 @@
   margin-top: 15%;
 }
 
+.youtubeVideoContent{
+  width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15% ;
+}
+
+.youtubeVideo{
+
+  width: 660px;
+  height: 415px;
+}
+
 .section-brainstorming-background-content{
   background-image: url("../images/texture-blanc.jpg");
   background-repeat: no-repeat;

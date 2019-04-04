@@ -5,27 +5,29 @@
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 1%;
+    padding-top: 1%;
 }
 
 .mention {
     display: flex;
     justify-content: center;
+    align-items: center;
 
 }
 
-.logoWDFooter {
-    display: block;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-top: 1%;
+.logoFooterContent{
     width: 10%;
+    margin-right: 10%;
+}
 
+.logoWDFooter {
+    width: 80%;
 }
 
 .textMentions {
     padding-left: 2%;
     padding-right: 2%;
-    margin-top: 2%;
+    /*margin-top: 2%;*/
     font-size: 13px;
 }
 
