@@ -2,10 +2,8 @@
 
 namespace AppBundle\Form;
 
-use Ivory\CKEditorBundle\Form\Type\CKEditorType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichImageType;
@@ -20,15 +18,15 @@ class HomeType extends AbstractType
         $builder
             ->add('historyText', CKEditorType::class, array(
             'label' => "Entrez le texte de votre histoire",
-            'config_name' => 'ck_home_config'
+            'config_name' => 'my_config_1'
             ))
             ->add('careerText', CKEditorType::class, array(
                 'label' => "Entrez le texte de votre parcours",
-                'config_name' => 'ck_home_config'
+                'config_name' => 'my_config_1'
             ))
             ->add('universText', CKEditorType::class, array(
                 'label' => "Entrez le texte de votre univers créatif",
-                'config_name' => 'ck_home_config'
+                'config_name' => 'my_config_1'
             ))
             ->add('imageFile', VichImageType::class, array(
                 'label' => "Modifier votre image de profile",

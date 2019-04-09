@@ -2,7 +2,7 @@
 
 namespace AppBundle\Form;
 
-use Ivory\CKEditorBundle\Form\Type\CKEditorType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -27,7 +27,7 @@ class ContactType extends AbstractType
             ))
             ->add('schedule', CKEditorType::class, array(
                 'label' => "Entrez vos horaire d'ouverture",
-                'config_name' => 'ck_home_config'
+                'config_name' => 'my_config_1'
             ));
 
     }

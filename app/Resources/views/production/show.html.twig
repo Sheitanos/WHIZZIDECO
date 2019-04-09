@@ -116,29 +116,33 @@
                     </div>
                 </div>
                 <div class="production-text">
-                    <p class="production-text-title">Mission réalisées</p>
+                    <p class="production-text-title">Missions réalisées</p>
                     <div class="text-production">
                         {{ production.textAfter|raw }}
                     </div>
                 </div>
         </div>
     </div>
-    <div class="customer-reviews">
-        <p class="customer-reviews-title">Avis client</p>
-        <div class="customer-reviews-content">
-                <div class="customer-reviews-text">
-                    {{ production.customerReview|raw }}
-                </div>
-                <div class="customer-reviews-stars">
-                    {% for i in 1..5 %}
-                        {% if production.rate >= i %}
-                            <span class="glyphicon glyphicon-star checked"></span>
-                        {% else %}
-                            <span class="glyphicon glyphicon-star"></span>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+    {% if production.customerReview is not null %}
+        <div class="customer-reviews">
+            <p class="customer-reviews-title">Avis client</p>
+            <div class="customer-reviews-content">
+                    <div class="customer-reviews-text">
+                        {{ production.customerReview|raw }}
+                    </div>
+                    <div class="customer-reviews-stars">
+                        {% for i in 1..5 %}
+                            {% if production.rate >= i %}
+                                <span class="glyphicon glyphicon-star checked"></span>
+                            {% else %}
+                                <span class="glyphicon glyphicon-star"></span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+            </div>
         </div>
-    </div>
+    {% else %}
+        <div class="shadow-content-show-production"></div>
+    {% endif %}
 </div>
 {% endblock %}

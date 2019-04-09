@@ -2,12 +2,12 @@
 
 namespace AppBundle\Form;
 
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Vich\UploaderBundle\Form\Type\VichImageType;
 
-class LoveImageType extends AbstractType
+class PrestationType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -15,11 +15,9 @@ class LoveImageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('imageFile', VichImageType::class, array(
-                'label' => "Votre image",
-                'allow_delete' => false,
-                'image_uri' => false,
-                'download_uri' => false,
+            ->add('youtubeLink', CKEditorType::class, array(
+                'label' => "Entrez les données de votre video Youtube",
+                'config_name' => 'my_config_2'
             ));
     }
 
@@ -29,7 +27,7 @@ class LoveImageType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\LoveImage'
+            'data_class' => 'AppBundle\Entity\Prestation'
         ));
     }
 
@@ -38,7 +36,7 @@ class LoveImageType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'appbundle_loveimage';
+        return 'appbundle_prestation';
     }
 
 

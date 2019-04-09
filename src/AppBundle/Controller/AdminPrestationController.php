@@ -9,7 +9,7 @@
 namespace AppBundle\Controller;
 
 
-use AppBundle\Entity\Home;
+use AppBundle\Entity\Prestation;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -18,32 +18,32 @@ use Symfony\Component\HttpFoundation\Request;
 
 
 /**
- * Adminhome controller.
+ * AdminPrestation controller.
  *
- * @Route("admin/home")
+ * @Route("admin/prestation")
  */
-class AdminHomeController extends Controller
+class AdminPrestationController extends Controller
 {
     /**
-     * Displays a form to edit an existing home entity.
+     * Displays a form to edit an existing prestation entity.
      *
-     * @Route("/{id}/edit", name="home_edit")
+     * @Route("/{id}/edit", name="prestation_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $home = $em->getRepository('AppBundle:Home')->findOneBy([]);
-        if (!$home) {
-            $home = new Home();
+        $prestation = $em->getRepository('AppBundle:Prestation')->findOneBy([]);
+        if (!$prestation) {
+            $prestation = new Prestation();
         }
-        $editForm = $this->createForm('AppBundle\Form\HomeType', $home);
+        $editForm = $this->createForm('AppBundle\Form\PrestationType', $prestation);
         $editForm->handleRequest($request);
 
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $em->persist($home);
+            $em->persist($prestation);
             $em->flush();
             $this->addFlash(
                 'notice',
@@ -52,8 +52,7 @@ class AdminHomeController extends Controller
 
             return $this->redirectToRoute('admin');
         }
-        return $this->render('admin/home/edit.html.twig', array(
-            'home' => $home,
+        return $this->render('admin/prestation/edit.html.twig', array(
             'edit_form' => $editForm->createView(),
         ));
     }

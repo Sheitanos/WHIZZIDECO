@@ -1,0 +1,19 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+
+    <section class="container-fluid">
+        <h1 class="text-center title-realisation">Choisissez le dossier concerné</h1>
+        <div class="row sketchs-content folders-content">
+            {% for key,production in productions %}
+                <div class="col-md-3">
+                    <a href="{{ path('productionPictures_folders_choices', { 'productionId': key }) }}">
+                        <p class="title-folder">{{ production }}</p>
+                        <p class="title-folder"><span class="glyphicon glyphicon-folder-open"></span></p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

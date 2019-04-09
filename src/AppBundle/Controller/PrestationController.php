@@ -12,8 +12,13 @@ class PrestationController extends controller {
      */
     public function indexAction()
     {
+        $em = $this->getDoctrine()->getManager();
 
-        return $this->render('prestation/prestations.html.twig');
+        $prestations = $em->getRepository('AppBundle:Prestation')->findOneBy([]);
+
+        return $this->render('prestation/prestations.html.twig', array(
+            'prestations' => $prestations,
+        ));
     }
 
 }

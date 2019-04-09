@@ -3,15 +3,21 @@
 {% block body %}
 
     <section class="container-fluid production-content">
-        <h1 class="title-realisation text-center">Mes différentes réalisations</h1>
+        {#<h1 class="title-realisation text-center">Les réalisations de l'agence</h1>#}
+        <div class="production-head-content">
+            <div class="logo-house-production-img-content">
+                <img src="{{ asset ('assets/images/logo-maison-test.png') }}" alt="logo-maison-whizzideco" class="logo-house-production-img img-responsive">
+            </div>
+            <p class="realisation-title-step">Les réalisations de l'agence</p>
+        </div>
         <div class="row content-row">
             {% for productionPicture in productionPictures %}
                 {% for newTab in newTabs %}
                     {% if productionPicture.updatedAt == newTab[1] %}
-                    <div class="col-xs-6 col-md-2 ">
+                    <div class="col-xs-6 col-md-2 realisation-content">
                         <p class="title-production">{{ productionPicture.afterProduction.title }}. {{ productionPicture.afterProduction.address }}</p>
-                        <a href="{{ path('production_show', { 'id': productionPicture.afterProduction.id }) }}" class="thumbnail">
-                            <img src="{{ asset( 'uploads/production/' ~ productionPicture.imageName) }}" alt="image">
+                        <a href="{{ path('production_show', { 'id': productionPicture.afterProduction.id }) }}" class="">
+                            <img src="{{ asset( 'uploads/production/' ~ productionPicture.imageName) }}" alt="image" class="img-production-list">
                         </a>
                     </div>
                     {% endif %}

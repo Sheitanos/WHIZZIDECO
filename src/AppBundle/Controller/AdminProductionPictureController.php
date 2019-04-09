@@ -5,7 +5,8 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\ProductionPicture;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * ProductionPicture controller.
@@ -26,15 +27,92 @@ class AdminProductionPictureController extends Controller
 
         $productionPictures = $em->getRepository('AppBundle:ProductionPicture')->findAll();
 
+        $productions  =[];
+
+        foreach ($productionPictures as $productionPicture) {
+
+            if($productionPicture->getBeforeProduction() != null){
+                $productions[$productionPicture->getBeforeProduction()->getId()] = $productionPicture->getBeforeProduction()->getTitle();
+            }
+            if ($productionPicture->getAfterProduction() != null){
+                $productions[$productionPicture->getAfterProduction()->getId()] = $productionPicture->getAfterProduction()->getTitle();
+            }
+        }
+
+        return $this->render('admin/productionPicture/chooseProd.html.twig', array(
+            'productions' => $productions,
+        ));
+    }
+
+    /**
+     * productionPictures folders choices.
+     *
+     * @Route("/{productionId}/productionPicturesFoldersChoices", name="productionPictures_folders_choices")
+     * @Method("GET")
+     */
+    public function productionPicturesFoldersChoices($productionId)
+    {
+        return $this->render('admin/productionPicture/choices.html.twig', array(
+            'productionId' => $productionId,
+        ));
+    }
+
+    /**
+     * productionPictures choosen folder before.
+     *
+     * @Route("/{productionId}/productionPicturesChoosenFolderBefore", name="productionPictures_choosen_folder_before")
+     * @Method("GET")
+     */
+    public function productionPicturesChoosenFolderBefore($productionId)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $productionPictures = $em->getRepository('AppBundle:ProductionPicture')->findAll();
+
         $deleteForms = [];
+        $productionsPicturesBefore = [];
 
         foreach ($productionPictures as $productionPicture) {
             $deleteForm = $this->createDeleteForm($productionPicture)->createView();
             $deleteForms[$productionPicture->getId()] = $deleteForm;
+
+            if($productionPicture->getBeforeProduction() != null && $productionPicture->getBeforeProduction()->getId() == $productionId){
+                $productionsPicturesBefore[] = $productionPicture;
+            }
         }
 
-        return $this->render('admin/productionPicture/index.html.twig', array(
-            'productionPictures' => $productionPictures,
+        return $this->render('admin/productionPicture/indexBefore.html.twig', array(
+            'productionsPicturesBefore' => $productionsPicturesBefore,
+            'delete_form' => $deleteForms,
+        ));
+    }
+
+    /**
+     * productionPictures choosen folder after.
+     *
+     * @Route("/{productionId}/productionPicturesChoosenFolderAfter", name="productionPictures_choosen_folder_after")
+     * @Method("GET")
+     */
+    public function productionPicturesChoosenFolderAfter($productionId)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $productionPictures = $em->getRepository('AppBundle:ProductionPicture')->findAll();
+
+        $deleteForms = [];
+        $productionsPicturesAfter = [];
+
+        foreach ($productionPictures as $productionPicture) {
+            $deleteForm = $this->createDeleteForm($productionPicture)->createView();
+            $deleteForms[$productionPicture->getId()] = $deleteForm;
+
+            if ($productionPicture->getAfterProduction() != null && $productionPicture->getAfterProduction()->getId() == $productionId){
+                $productionsPicturesAfter[] = $productionPicture;
+            }
+        }
+
+        return $this->render('admin/productionPicture/indexAfter.html.twig', array(
+            'productionsPicturesAfter' => $productionsPicturesAfter,
             'delete_form' => $deleteForms,
         ));
     }

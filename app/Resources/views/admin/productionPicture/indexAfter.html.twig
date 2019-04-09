@@ -5,15 +5,16 @@
     <section class="container-fluid">
         <h1 class="text-center title-realisation">Mes images de projet</h1>
         <div class="row sketchs-content">
-            {% for productionPicture in productionPictures %}
-                <div class="col-xs-6 col-md-4 productionPicture">
+            {% for productionPicture in productionsPicturesAfter %}
+                <div class="col-xs-6 col-md-2 productionPicture">
+                    {#<p>{{ dump(productionPicture.beforeProduction) }}</p>#}
                     <a href="{{ path('productionPicture_edit', { 'id': productionPicture.id }) }}" class="thumbnail">
                         <img src="{{ asset( 'uploads/production/' ~ productionPicture.imageName) }}" alt="image">
                     </a>
-                    <div class="col-md-offset-4 col-md-5">
-                            {{ form_start(delete_form[productionPicture.id]) }}
-                            <input type="submit" class="btn btn-danger"  value="Supprimer"/>
-                            {{ form_end(delete_form[productionPicture.id]) }}
+                    <div class="col-md-offset-3 col-md-5">
+                        {{ form_start(delete_form[productionPicture.id]) }}
+                        <input type="submit" class="btn btn-danger"  value="Supprimer"/>
+                        {{ form_end(delete_form[productionPicture.id]) }}
                     </div>
                 </div>
             {% endfor %}
@@ -21,5 +22,3 @@
     </section>
 
 {% endblock %}
-
-
