@@ -7,7 +7,7 @@
 .title-production {
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    font-size: 1vw;
+    font-size: 0.7vw;
 }
 
 .title-realisation-carousel{
@@ -120,16 +120,23 @@
 }
 
 .customer-reviews-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 3%;
+    margin-left:15%;
+    margin-right: 15%;
 }
 
 .customer-reviews-text{
     font-style: italic;
     font-size: 18px;
+    width: 70%;
 }
 
 .customer-reviews-stars{
     text-align: center;
+    width: 30%;
 }
 
 .glyphicon-star{
@@ -141,5 +148,54 @@
 }
 
 .shadow-content-production{
-    height: 29vh;
+    height: 31vh;
+}
+
+.shadow-content-show-production{
+    height: 15vh;
+}
+
+.folders-content{
+    display: flex;
+    justify-content: center;
+}
+
+.title-folder{
+    text-align: center;
+    font-size: 30px;
+}
+
+.img-production-list{
+    max-height: 200px;
+    border: 3px double rgb(211, 211, 211);
+    padding: 10px;
+    border-radius: 5px;
+}
+.realisation-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.realisation-title-step{
+    margin-top: 9%;
+    font-size: 25px;
+    margin-left: -1%;
+    /*background-image: linear-gradient(to left, #00a500, rgba(255,0,0,0));*/
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    margin-bottom: 2%;
+    /*width: 30%;*/
+}
+.logo-house-production-img-content{
+    margin-top: 8%;
+    /*display: block;*/
+    /*width: 50%;*/
+    /*margin-top: -6%;*/
+    /*top: -15px;*/
+}
+
+.production-head-content{
+    display: flex;
+    justify-content: center;
 }

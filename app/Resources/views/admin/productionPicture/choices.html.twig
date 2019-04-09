@@ -1,0 +1,23 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+
+    <section class="container-fluid">
+        <h1 class="text-center title-realisation">Choisissez le dossier d'images Avant/Après </h1>
+        <div class="row sketchs-content folders-content">
+            <div class="col-md-3">
+                <a href="{{ path('productionPictures_choosen_folder_before', { 'productionId': productionId }) }}">
+                    <p class="title-folder">Images avant projet</p>
+                    <p class="title-folder"><span class="glyphicon glyphicon-folder-open"></span></p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ path('productionPictures_choosen_folder_after', { 'productionId': productionId }) }}">
+                    <p class="title-folder">Images après projet</p>
+                    <p class="title-folder"><span class="glyphicon glyphicon-folder-open"></span></p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

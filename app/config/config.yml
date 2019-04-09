@@ -39,6 +39,8 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
 
 # Doctrine Configuration
 doctrine:
@@ -106,10 +108,16 @@ vich_uploader:
             upload_destination: '%kernel.root_dir%/../web/uploads/love'
             namer:              vich_uploader.namer_uniqid
 
-ivory_ck_editor:
+fos_ck_editor:
     configs:
-        ck_home_config:
-            toolbar: [ ["Source", "Save", "cut", "Copy", "Paste", "-", "Bold", "Italic", "Strike", "-", "RemoveFormat" ],["NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote"],["Undo", "Redo", "Maximize"] ]
+        my_config_1:
+            toolbar: "ck_home_config"
+        my_config_2:
+            toolbar: "ck_youtube_config"
+    toolbars:
+        configs:
+            ck_home_config: [ ["Source", "Save", "cut", "Copy", "Paste", "-", "Bold", "Italic", "Strike", "-", "RemoveFormat" ],["NumberedList", "BulletedList", "-", "Outdent", "Indent", "-", "Blockquote"],["Undo", "Redo", "Maximize"] ]
+            ck_youtube_config: [ ["Youtube"] ]
 
 # FOSUserBundle
 fos_user:

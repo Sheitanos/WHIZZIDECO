@@ -18,14 +18,12 @@
                 <div class="col-md-5">
                     <h3>Céline Brissaire</h3>
                     <div class="contact-info">
-                        <p class="contact-text"><span class="glyphicon glyphicon-home"></span>150 Rue Marcel Belot 45160 Olivet</p>
-                        <p class="contact-text"><span class="glyphicon glyphicon-earphone"></span>06-63-77-87-72</p>
+                        <p class="contact-text"><span class="glyphicon glyphicon-home"></span>{{ contactsDatas.address }}</p>
+                        <p class="contact-text"><span class="glyphicon glyphicon-earphone"></span>{{ contactsDatas.phoneNumber }}</p>
                         <p class="contact-text"><a class="contactLink" href="whizzideco@gmail.com"><span
-                                        class="glyphicon glyphicon-envelope"></span>whizzideco@gmail.com</a>
+                                        class="glyphicon glyphicon-envelope"></span>{{ contactsDatas.mail }}</a>
                         </p>
-                        <p class="contact-text">
-                            Lundi sur RDV - du Mardi au Vendredi de 10h00 à 12h00 et de 14h00 à 18h00 - Le samedi 10h - 12h
-                        </p>
+                        <p class="contact-text">{{ contactsDatas.schedule|raw }}</p>
                     </div>
                 </div>
                 <div class="col-md-offset-1 col-md-1">
