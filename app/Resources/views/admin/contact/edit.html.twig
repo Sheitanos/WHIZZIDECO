@@ -1,0 +1,22 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+    {% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+    <div class="container-fluid">
+
+        <h1 class="admin-title-center">Editer Ma page contact</h1>
+
+        <div class="whizzi-form">
+            {{ form_start(edit_form) }}
+            {{ form_widget(edit_form) }}
+            <input type="submit" class="btn btn-success"  value="Valider"/>
+            {{ form_end(edit_form) }}
+        </div>
+        <div class="col-md-offset-10 col-md-1 back-button">
+            <a href="{{ path('admin') }}">
+                <button class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Retour</button>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

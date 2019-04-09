@@ -16,6 +16,10 @@ class ContactController extends controller
      */
     public function indexAction(Request $request, \Swift_Mailer $mailer)
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $contactsDatas = $em->getRepository('AppBundle:Contact')->findOneBy([]);
+
         $form = $this->createForm('AppBundle\Form\SendMailType');
         $form->handleRequest($request);
 
@@ -51,9 +55,9 @@ class ContactController extends controller
             return $this->redirectToRoute('homepage');
         }
 
-        return $this->render('contact/contact.html.twig',
-            [
-                'form' => $form->createView()
-            ]);
+        return $this->render('contact/contact.html.twig',array(
+            'form' => $form->createView(),
+            'contactsDatas' => $contactsDatas
+        ));
     }
 }

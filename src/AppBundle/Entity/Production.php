@@ -50,6 +50,22 @@ class Production
     private $textAfter;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="customer_review", type="text", nullable=true)
+     */
+    private $customerReview;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="rate", type="integer", nullable=true)
+     */
+    private $rate;
+
+
+
+    /**
      *
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\ProductionPicture", mappedBy="beforeProduction")
      * @ORM\JoinColumn(name="beforePictures", nullable=true)
@@ -244,6 +260,42 @@ class Production
     public function getAfterPictures()
     {
         return $this->afterPictures;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomerReview()
+    {
+        return $this->customerReview;
+    }
+
+    /**
+     * @param string $customerReview
+     * @return Production
+     */
+    public function setCustomerReview($customerReview)
+    {
+        $this->customerReview = $customerReview;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRate()
+    {
+        return $this->rate;
+    }
+
+    /**
+     * @param int $rate
+     * @return Production
+     */
+    public function setRate($rate)
+    {
+        $this->rate = $rate;
+        return $this;
     }
 
     public function __toString() {
