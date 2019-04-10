@@ -14,11 +14,14 @@
             {% for productionPicture in productionPictures %}
                 {% for newTab in newTabs %}
                     {% if productionPicture.updatedAt == newTab[1] %}
-                    <div class="col-xs-6 col-md-2 realisation-content">
-                        <p class="title-production">{{ productionPicture.afterProduction.title }}. {{ productionPicture.afterProduction.address }}</p>
-                        <a href="{{ path('production_show', { 'id': productionPicture.afterProduction.id }) }}" class="">
-                            <img src="{{ asset( 'uploads/production/' ~ productionPicture.imageName) }}" alt="image" class="img-production-list">
+                    <div class="col-xs-6 col-md-2">
+                        <a href="{{ path('production_show', { 'id': productionPicture.afterProduction.id }) }}" class="thumbnail">
+                            <div class="production-list-img" style="background-image: url({{ asset( 'uploads/production/' ~ productionPicture.imageName) }});">
+
+                            </div>
+                            {#<img src="{{ asset( 'uploads/production/' ~ productionPicture.imageName) }}" alt="image" class="">#}
                         </a>
+                        <p class="title-production">{{ productionPicture.afterProduction.title }}. {{ productionPicture.afterProduction.address }}</p>
                     </div>
                     {% endif %}
                 {% endfor %}
